@@ -73,12 +73,33 @@ footer {
   display: flex;
   gap: 1rem;
   font-weight: 500;
+  align-items: center;
 }
 
 .nav-links a {
   padding: 0.5rem 0.75rem;
   border-radius: 999px;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(29, 78, 216, 0.25);
+  background: transparent;
+  color: var(--color-accent);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus {
+  background: rgba(29, 78, 216, 0.08);
+  outline: none;
 }
 
 .nav-links a:hover,
@@ -366,6 +387,11 @@ footer .wrapper {
 
   .nav-links a {
     padding: 0.45rem 0.35rem;
+  }
+
+  .lang-toggle {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .hero {

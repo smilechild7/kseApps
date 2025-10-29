@@ -7,35 +7,37 @@
   <title>Terms of Service — KSE Apps</title>
   <meta name="description" content="KSE Apps 서비스 이용약관 안내" />
   <link rel="stylesheet" href="/assets/styles.css" />
+  <script src="/assets/lang.js" defer></script>
 </head>
 
 <body>
   <header class="site-header">
     <div class="wrapper">
       <nav>
-        <a class="brand" href="/"><span>KSE</span> Apps</a>
+        <a class="brand" data-i18n="nav.brand" href="/"><span>KSE</span> Apps</a>
         <div class="nav-links">
-          <a href="/projects/">Projects</a>
-          <a href="/privacy/">Privacy</a>
-          <a href="/terms/">Terms</a>
-          <a href="mailto:smilechild1005@gmail.com">Contact</a>
+          <a data-i18n="nav.projects" href="/projects/">Projects</a>
+          <a data-i18n="nav.privacy" href="/privacy/">Privacy</a>
+          <a data-i18n="nav.terms" href="/terms/">Terms</a>
+          <a data-i18n="nav.contact" href="mailto:smilechild1005@gmail.com">Contact</a>
+          <button type="button" class="lang-toggle" data-lang-toggle data-i18n="nav.language">English</button>
         </div>
       </nav>
     </div>
   </header>
   <main>
     <section class="wrapper hero">
-      <div class="eyebrow">Terms</div>
-      <h1>서비스 이용 약관</h1>
-      <p>앱 이용자와 파트너가 같은 기준으로 소통할 수 있도록,<br />명확한 이용 약관을 정리했습니다.</p>
+      <div class="eyebrow" data-i18n="terms.hero.eyebrow">Terms</div>
+      <h1 data-i18n="terms.hero.heading">서비스 이용 약관</h1>
+      <p data-i18n="terms.hero.body">앱 이용자와 파트너가 같은 기준으로 소통할 수 있도록,<br />명확한 이용 약관을 정리했습니다.</p>
     </section>
     <section class="wrapper">
       <div class="card-grid">
         <a class="card card-link" href="/terms/todayverse.html">
-          <div class="eyebrow">TodayVerse</div>
-          <h3>오늘의 성경 말씀 이용약관</h3>
-          <p>앱 이용 규칙, 권리·의무, 콘텐츠 이용 등 필수 안내를 확인하세요.</p>
-          <p class="card-subtext">App Store 링크는 상세 약관 페이지에서 확인 가능합니다.</p>
+          <div class="eyebrow" data-i18n="terms.card.todayverse.tag">TodayVerse</div>
+          <h3 data-i18n="terms.card.todayverse.title">오늘의 성경 말씀 이용약관</h3>
+          <p data-i18n="terms.card.todayverse.body">앱 이용 규칙, 권리·의무, 콘텐츠 이용 등 필수 안내를 확인하세요.</p>
+          <p class="card-subtext" data-i18n="terms.card.todayverse.note">App Store 링크는 상세 약관 페이지에서 확인 가능합니다.</p>
         </a>
       </div>
     </section>
@@ -44,8 +46,8 @@
     <div class="wrapper">
       <div>© 2025 KSE Apps</div>
       <div class="footer-links">
-        <a href="/privacy/">Privacy Policies</a>
-        <a href="/terms/">Terms of Service</a>
+        <a data-i18n="footer.privacy" href="/privacy/">Privacy Policies</a>
+        <a data-i18n="footer.terms" href="/terms/">Terms of Service</a>
         <a href="/app-ads.txt">app-ads.txt</a>
       </div>
     </div>

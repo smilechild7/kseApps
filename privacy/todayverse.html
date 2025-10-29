@@ -6,17 +6,19 @@
   <title>오늘의 성경 말씀 - 개인정보 처리방침 | KSE Apps</title>
   <meta name="description" content="오늘의 성경 말씀 앱에서 수집·이용하는 개인정보 처리방침 안내" />
   <link rel="stylesheet" href="/assets/styles.css" />
+  <script src="/assets/lang.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="wrapper">
       <nav>
-        <a class="brand" href="/"><span>KSE</span> Apps</a>
+        <a class="brand" data-i18n="nav.brand" href="/"><span>KSE</span> Apps</a>
         <div class="nav-links">
-          <a href="/projects/">Projects</a>
-          <a href="/privacy/">Privacy</a>
-          <a href="/terms/">Terms</a>
-          <a href="mailto:smilechild1005@gmail.com">Contact</a>
+          <a data-i18n="nav.projects" href="/projects/">Projects</a>
+          <a data-i18n="nav.privacy" href="/privacy/">Privacy</a>
+          <a data-i18n="nav.terms" href="/terms/">Terms</a>
+          <a data-i18n="nav.contact" href="mailto:smilechild1005@gmail.com">Contact</a>
+          <button type="button" class="lang-toggle" data-lang-toggle data-i18n="nav.language">English</button>
         </div>
       </nav>
     </div>
@@ -24,60 +26,60 @@
   <main>
     <section class="wrapper policy-section">
       <article class="policy-article">
-        <div class="eyebrow">Privacy Policy</div>
-        <h1>오늘의 성경 말씀 개인정보 처리방침</h1>
-        <p class="policy-meta"><strong>최종 업데이트:</strong> 2025년 10월 12일</p>
+        <div class="eyebrow" data-i18n="privacy.hero.eyebrow">Privacy Policy</div>
+        <h1 data-i18n="privacy.todayverse.title">오늘의 성경 말씀 개인정보 처리방침</h1>
+        <p class="policy-meta" data-i18n="privacy.todayverse.updated"><strong>최종 업데이트:</strong> 2025년 10월 12일</p>
         <div class="policy-actions">
-          <a class="cta-button cta-compact" href="https://apps.apple.com/kr/app/%EC%98%A4%EB%8A%98%EC%9D%98-%EC%84%B1%EA%B2%BD-%EB%A7%90%EC%94%80/id6753909849" target="_blank" rel="noopener">App Store에서 앱 보기</a>
-          <a class="cta-button cta-secondary cta-compact" href="/projects/">프로젝트 개요</a>
+          <a class="cta-button cta-compact" data-i18n="privacy.todayverse.cta.app" href="https://apps.apple.com/kr/app/%EC%98%A4%EB%8A%98%EC%9D%98-%EC%84%B1%EA%B2%BD-%EB%A7%90%EC%94%80/id6753909849" target="_blank" rel="noopener">App Store에서 앱 보기</a>
+          <a class="cta-button cta-secondary cta-compact" data-i18n="privacy.todayverse.cta.projects" href="/projects/">프로젝트 개요</a>
         </div>
 
-        <h2>1. 수집하는 정보</h2>
-        <ul>
+        <h2 data-i18n="privacy.todayverse.collect">1. 수집하는 정보</h2>
+        <ul data-i18n="privacy.todayverse.collect.list">
           <li>사용자가 입력한 고민/기도 제목 등의 텍스트 (최대 50자)</li>
           <li>언어 설정 및 위젯 상태와 같은 앱 환경 정보</li>
           <li>앱과 위젯이 최근에 추천한 성경 구절의 식별자</li>
           <li>광고 제공을 위한 기기 광고 식별자(Advertising ID/IDFA) 및 기본 광고 이벤트</li>
         </ul>
 
-        <h2>2. 사용 목적</h2>
-        <ul>
+        <h2 data-i18n="privacy.todayverse.usage">2. 사용 목적</h2>
+        <ul data-i18n="privacy.todayverse.usage.list">
           <li>입력된 텍스트를 기반으로 맞춤형 성경 구절을 추천하기 위해 OpenAI API에 전달합니다.</li>
           <li>추천 결과를 앱과 위젯에서 표시하고, 동일한 구절이 반복되지 않도록 히스토리를 관리합니다.</li>
           <li>언어 및 설정 정보를 저장하여 사용자 경험을 유지합니다.</li>
           <li>Google AdMob을 통해 광고를 노출하고, 부정 클릭 방지 및 성과 분석을 수행합니다.</li>
         </ul>
 
-        <h2>3. 보관 및 파기</h2>
-        <p>최근 추천 정보와 언어 설정은 App Group UserDefaults에 저장되며, 사용자가 앱을 삭제하면 함께 삭제됩니다. OpenAI API 호출 시 전달된 데이터는 응답 생성 목적에만 사용되며, 앱 내에서 별도로 장기 보관하지 않습니다.</p>
+        <h2 data-i18n="privacy.todayverse.storage">3. 보관 및 파기</h2>
+        <p data-i18n="privacy.todayverse.storage.body">최근 추천 정보와 언어 설정은 App Group UserDefaults에 저장되며, 사용자가 앱을 삭제하면 함께 삭제됩니다. OpenAI API 호출 시 전달된 데이터는 응답 생성 목적에만 사용되며, 앱 내에서 별도로 장기 보관하지 않습니다.</p>
 
-        <h2>4. 데이터 공유</h2>
-        <ul>
+        <h2 data-i18n="privacy.todayverse.share">4. 데이터 공유</h2>
+        <ul data-i18n="privacy.todayverse.share.list">
           <li>사용자 입력 텍스트는 맞춤 추천 생성을 위해 OpenAI Responses API에 전송됩니다.</li>
           <li>광고 제공을 위해 Google AdMob SDK가 기기 광고 식별자 및 기본 광고 성과 데이터를 수집할 수 있습니다.</li>
           <li>이 외의 제3자에게는 개인 정보를 제공하지 않습니다.</li>
         </ul>
 
-        <h2>5. 이용자의 권리</h2>
-        <ul>
+        <h2 data-i18n="privacy.todayverse.rights">5. 이용자의 권리</h2>
+        <ul data-i18n="privacy.todayverse.rights.list">
           <li>앱을 삭제하면 저장된 로컬 데이터가 모두 제거됩니다.</li>
           <li>기기 설정에서 맞춤형 광고 추적 제한(광고 추적 제한/앱 추적 투명성)을 설정할 수 있습니다.</li>
           <li>문의: <a href="mailto:smilechild1005@gmail.com">smilechild1005@gmail.com</a></li>
         </ul>
 
-        <h2>6. 개인정보 보호 문의</h2>
-        <ul>
+        <h2 data-i18n="privacy.todayverse.contact">6. 개인정보 보호 문의</h2>
+        <ul data-i18n="privacy.todayverse.contact.list">
           <li>이메일: <a href="mailto:smilechild1005@gmail.com">smilechild1005@gmail.com</a></li>
           <li>개발자명: 김성은</li>
         </ul>
 
-        <h2>7. 아동 보호</h2>
-        <p>본 앱은 만 13세 미만 아동을 대상으로 하지 않으며, 관련 법규 및 플랫폼 정책을 준수합니다.</p>
+        <h2 data-i18n="privacy.todayverse.children">7. 아동 보호</h2>
+        <p data-i18n="privacy.todayverse.children.body">본 앱은 만 13세 미만 아동을 대상으로 하지 않으며, 관련 법규 및 플랫폼 정책을 준수합니다.</p>
 
-        <h2>8. 정책 변경</h2>
-        <p>중요 변경 사항이 있을 경우 앱 내 공지 및 본 페이지를 통해 고지합니다.</p>
+        <h2 data-i18n="privacy.todayverse.changes">8. 정책 변경</h2>
+        <p data-i18n="privacy.todayverse.changes.body">중요 변경 사항이 있을 경우 앱 내 공지 및 본 페이지를 통해 고지합니다.</p>
 
-        <a class="policy-back" href="/privacy/">← Privacy Policies로 돌아가기</a>
+        <a class="policy-back" data-i18n="privacy.todayverse.back" href="/privacy/">← Privacy Policies로 돌아가기</a>
       </article>
     </section>
   </main>
@@ -85,8 +87,8 @@
     <div class="wrapper">
       <div>© 2025 KSE Apps</div>
       <div class="footer-links">
-        <a href="/privacy/">Privacy Policies</a>
-        <a href="/terms/">Terms of Service</a>
+        <a data-i18n="footer.privacy" href="/privacy/">Privacy Policies</a>
+        <a data-i18n="footer.terms" href="/terms/">Terms of Service</a>
         <a href="/app-ads.txt">app-ads.txt</a>
       </div>
     </div>

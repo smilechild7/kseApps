@@ -7,55 +7,60 @@
   <title>KSE Apps — Personal App Studio</title>
   <meta name="description" content="KSE Apps — 1인 개발자 김성은의 서비스 포트폴리오와 공식 정책 페이지" />
   <link rel="stylesheet" href="/assets/styles.css" />
+  <script src="/assets/lang.js" defer></script>
 </head>
 
 <body>
   <header class="site-header">
     <div class="wrapper">
       <nav>
-        <a class="brand" href="/"><span>KSE</span> Apps</a>
+        <a class="brand" data-i18n="nav.brand" href="/"><span>KSE</span> Apps</a>
         <div class="nav-links">
-          <a href="/projects/">Projects</a>
-          <a href="/privacy/">Privacy</a>
-          <a href="/terms/">Terms</a>
-          <a href="mailto:smilechild1005@gmail.com">Contact</a>
+          <a data-i18n="nav.projects" href="/projects/">Projects</a>
+          <a data-i18n="nav.privacy" href="/privacy/">Privacy</a>
+          <a data-i18n="nav.terms" href="/terms/">Terms</a>
+          <a data-i18n="nav.contact" href="mailto:smilechild1005@gmail.com">Contact</a>
+          <button type="button" class="lang-toggle" data-lang-toggle data-i18n="nav.language">English</button>
         </div>
       </nav>
     </div>
   </header>
   <main>
     <section class="hero wrapper">
-      <div class="eyebrow">KSE App Studio</div>
-      <h1>1인 개발자 김성은의<br />서비스 개발 일지</h1>
-      <p>최소 1명 이상의 사용자들에게 사랑받을 수 있는 서비스를 만들고 있어요.</p>
+      <div class="eyebrow" data-i18n="hero.eyebrow">KSE App Studio</div>
+      <h1 data-i18n="hero.heading">1인 개발자 김성은의<br />서비스 개발 일지</h1>
+      <p data-i18n="hero.body">최소 1명 이상의 사용자들에게 사랑받을 수 있는 서비스를 만들고 있어요.</p>
       <div class="cta-group">
-        <a class="cta-button cta-compact" href="/projects/">프로젝트 둘러보기</a>
-        <a class="cta-button cta-secondary" href="mailto:smilechild1005@gmail.com">협업/채용 문의</a>
+        <a class="cta-button cta-compact" data-i18n="hero.cta.primary" href="/projects/">프로젝트 둘러보기</a>
+        <a class="cta-button cta-secondary" data-i18n="hero.cta.secondary" href="mailto:smilechild1005@gmail.com">협업/채용
+          문의</a>
       </div>
     </section>
 
     <section class="wrapper">
       <div class="section-heading">
-        <h2>주요 프로젝트</h2>
-        <a href="/projects/">모든 프로젝트</a>
+        <h2 data-i18n="home.projects.title">주요 프로젝트</h2>
+        <a data-i18n="home.projects.link" href="/projects/">모든 프로젝트</a>
       </div>
       <div class="card-grid">
         <a class="card card-link"
           href="https://apps.apple.com/kr/app/%EC%98%A4%EB%8A%98%EC%9D%98-%EC%84%B1%EA%B2%BD-%EB%A7%90%EC%94%80/id6753909849"
           target="_blank" rel="noopener">
-          <div class="eyebrow">iOS · 위젯</div>
-          <h3>TodayVerse</h3>
-          <p>하루 한 구절, 당신의 마음을 채우는 맞춤형 성경 말씀을 제공합니다. 간결한 UI로 영감을 얻고 평온한 루틴을 만들어보세요.</p>
+          <div class="eyebrow" data-i18n="home.projects.todayverse.tag">iOS · 위젯</div>
+          <h3 data-i18n="home.projects.todayverse.title">TodayVerse</h3>
+          <p data-i18n="home.projects.todayverse.body">사용자의 고민을 바탕으로 맞춤형 성경 구절을 제공하는 iOS 앱. 위젯을 통해 일상에서 자연스럽게 말씀을 되뇌일 수
+            있도록 설계했습니다.</p>
           <div class="card-tags">
             <span class="card-tag">SwiftUI</span>
             <span class="card-tag">Widgets</span>
-            <span class="card-tag">OpenAI</span>
+            <span class="card-tag">OpenAi API</span>
           </div>
         </a>
         <article class="card">
-          <div class="eyebrow">In progress</div>
-          <h3>AI 심리 상담 톡</h3>
-          <p>따뜻한 언어로 감정을 정리하고 위로를 건네는 AI 기반 상담 챗을 준비 중입니다. 대화 흐름과 안전성 가이드를 세심하게 설계하고 있어요.</p>
+          <div class="eyebrow" data-i18n="home.projects.aichat.tag">In progress</div>
+          <h3 data-i18n="home.projects.aichat.title">AI 심리 상담 톡</h3>
+          <p data-i18n="home.projects.aichat.body">따뜻한 언어로 감정을 정리하고 위로를 건네는 AI 기반 상담 챗을 준비 중입니다. 대화 흐름과 안전성 가이드를 세심하게
+            설계하고 있어요.</p>
           <div class="card-tags">
             <span class="card-tag">AI Chat</span>
             <span class="card-tag">Mental Health</span>
@@ -66,11 +71,13 @@
     </section>
 
     <section class="wrapper callout">
-      <h2>함께 더 나은 경험을 만들어요</h2>
-      <p>앱 이용자 피드백, 프로젝트 제안, 채용 문의까지 언제든 편하게 연락주세요.<br />세심하게 듣고 답변드리겠습니다.</p>
+      <h2 data-i18n="home.contact.heading">함께 더 나은 경험을 만들어요</h2>
+      <p data-i18n="home.contact.body">앱 이용자 피드백, 프로젝트 제안, 채용 문의까지 언제든 편하게 연락주세요.<br />세심하게 듣고 답변드리겠습니다.</p>
       <div class="contact-list">
-        <span>✉️ <a href="mailto:smilechild1005@gmail.com">smilechild1005@gmail.com</a></span>
-        <span>GitHub · <a href="https://github.com/smilechild1005" target="_blank" rel="noopener">smilechild1005</a></span>
+        <span data-i18n="home.contact.email">✉️ <a
+            href="mailto:smilechild1005@gmail.com">smilechild1005@gmail.com</a></span>
+        <span data-i18n="home.contact.github">GitHub · <a href="https://github.com/smilechild1005" target="_blank"
+            rel="noopener">smilechild1005</a></span>
       </div>
     </section>
   </main>
@@ -78,8 +85,8 @@
     <div class="wrapper">
       <div>© 2025 KSE Apps</div>
       <div class="footer-links">
-        <a href="/privacy/">Privacy Policies</a>
-        <a href="/terms/">Terms of Service</a>
+        <a data-i18n="footer.privacy" href="/privacy/">Privacy Policies</a>
+        <a data-i18n="footer.terms" href="/terms/">Terms of Service</a>
         <a href="/app-ads.txt">app-ads.txt</a>
       </div>
     </div>
