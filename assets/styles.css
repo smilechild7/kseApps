@@ -126,6 +126,7 @@ footer {
 
 .cta-button:hover,
 .cta-button:focus {
+  color: rgba(255, 255, 255, 0.85);
   transform: translateY(-1px);
   box-shadow: 0 16px 32px rgba(29, 78, 216, 0.22);
 }
@@ -134,7 +135,20 @@ footer {
   background: transparent;
   color: var(--color-accent);
   border: 1px solid rgba(29, 78, 216, 0.25);
-  box-shadow: none;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.cta-secondary:hover,
+.cta-secondary:focus {
+  color: var(--color-accent);
+  background: rgba(29, 78, 216, 0.08);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
+}
+
+.cta-compact {
+  padding: 0.55rem 0.95rem;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.16);
 }
 
 .section-heading {
@@ -165,6 +179,7 @@ footer {
   background: var(--color-surface);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card h3 {
@@ -175,6 +190,39 @@ footer {
 .card p {
   margin: 0;
   color: var(--color-muted);
+}
+
+.card-subtext {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.card-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.card-actions .cta-button {
+  font-size: 0.95rem;
+}
+
+.card-actions .cta-button.cta-compact,
+.policy-actions .cta-button.cta-compact {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.14);
+}
+
+.card-link {
+  color: inherit;
+}
+
+.card-link:hover,
+.card-link:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
 }
 
 .hero p,
@@ -280,6 +328,13 @@ footer .wrapper {
   margin-bottom: 0.75rem;
 }
 
+.policy-actions {
+  margin: 1.5rem 0 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .policy-article ul {
   margin: 0;
   padding-left: 1.25rem;
@@ -298,17 +353,28 @@ footer .wrapper {
 }
 
 @media (max-width: 720px) {
+  .wrapper {
+    padding: 0 1.4rem;
+  }
+
   .nav-links {
     width: 100%;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .nav-links a {
-    padding-left: 0;
+    padding: 0.45rem 0.35rem;
   }
 
   .hero {
-    padding-top: 3rem;
+    padding-top: 2.5rem;
+  }
+
+  .hero .cta-group {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .section-heading {
@@ -316,7 +382,27 @@ footer .wrapper {
     align-items: flex-start;
   }
 
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card-actions,
+  .policy-actions {
+    flex-direction: column;
+  }
+
+  .card-actions .cta-button,
+  .policy-actions .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
   .policy-article {
     padding: 2rem;
+  }
+
+  .callout {
+    margin-top: 2rem;
+    padding: 1.75rem;
   }
 }
