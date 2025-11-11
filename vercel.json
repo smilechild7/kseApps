@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/hitthelastone(/.*)?",
+      "destination": "https://hit-the-last-one.vercel.app/$1"
+    }
+  ]
+}

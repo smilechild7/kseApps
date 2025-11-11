@@ -38,11 +38,30 @@
         },
       },
     },
+    {
+      id: "hitthelastone",
+      href: "/hitthelastone/info/",
+      tags: ["Web", "Game", "JavaScript"],
+      copy: {
+        ko: {
+          eyebrow: "Web · Game",
+          title: "Hit the Last One",
+          body:
+            "몬스터의 체력이 거의 남지 않았을 때 정확한 타이밍으로 막타를 치는 미니 웹 게임입니다. 빠른 반응과 집중력을 시험해 보세요.",
+        },
+        en: {
+          eyebrow: "Web · Game",
+          title: "Hit the Last One",
+          body:
+            "A mini web game where you deliver the final blow when a monster’s HP is almost gone. Test your reflexes and focus.",
+        },
+      },
+    },
   ];
 
   const PROJECT_RENDER_ORDER = {
-    home: ["thurry", "todayverse"],
-    projects: ["thurry", "todayverse"],
+    home: ["thurry", "todayverse", "hitthelastone"],
+    projects: ["thurry", "todayverse", "hitthelastone"],
   };
 
   window.PROJECTS_DATA = PROJECTS_DATA;
