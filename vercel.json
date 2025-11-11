@@ -7,23 +7,14 @@
     {
       "source": "/hitthelastone/info/:path*",
       "destination": "/hitthelastone/info/:path*"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/hitthelastone",
-      "destination": "https://hit-the-last-one.vercel.app",
-      "permanent": false
     },
     {
-      "source": "/hitthelastone/",
-      "destination": "https://hit-the-last-one.vercel.app",
-      "permanent": false
+      "source": "/hitthelastone",
+      "destination": "https://hit-the-last-one.vercel.app"
     },
     {
       "source": "/hitthelastone/:path*",
-      "destination": "https://hit-the-last-one.vercel.app/:path*",
-      "permanent": false
+      "destination": "https://hit-the-last-one.vercel.app/:path*"
     }
   ]
 }
