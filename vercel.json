@@ -2,11 +2,7 @@
   "rewrites": [
     {
       "source": "/hitthelastone/info",
-      "destination": "/hitthelastone/info/index.html"
-    },
-    {
-      "source": "/hitthelastone/info/:path*",
-      "destination": "/hitthelastone/info/:path*"
+      "destination": "/hitthelastone-info/index.html"
     },
     {
       "source": "/hitthelastone",
