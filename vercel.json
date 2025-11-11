@@ -5,12 +5,25 @@
       "destination": "/hitthelastone/info/index.html"
     },
     {
+      "source": "/hitthelastone/info/:path*",
+      "destination": "/hitthelastone/info/:path*"
+    }
+  ],
+  "redirects": [
+    {
       "source": "/hitthelastone",
-      "destination": "https://hit-the-last-one.vercel.app"
+      "destination": "https://hit-the-last-one.vercel.app",
+      "permanent": false
+    },
+    {
+      "source": "/hitthelastone/",
+      "destination": "https://hit-the-last-one.vercel.app",
+      "permanent": false
     },
     {
       "source": "/hitthelastone/:path*",
-      "destination": "https://hit-the-last-one.vercel.app/:path*"
+      "destination": "https://hit-the-last-one.vercel.app/:path*",
+      "permanent": false
     }
   ]
 }
