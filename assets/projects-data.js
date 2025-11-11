@@ -40,7 +40,7 @@
     },
     {
       id: "hitthelastone",
-      href: "/hitthelastone/info/",
+      href: "/hitthelastone-info/",
       tags: ["Web", "Game", "JavaScript"],
       copy: {
         ko: {
