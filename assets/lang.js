@@ -25,6 +25,10 @@
       "home.projects.todayverse.title": "TodayVerse",
       "home.projects.todayverse.body":
         "An iOS app that delivers personalised verses based on your concerns, designed so widgets help you revisit scripture throughout the day.",
+      "home.projects.thurry.tag": "Thurry · Bakery deals",
+      "home.projects.thurry.title": "Bakery last-minute platform",
+      "home.projects.thurry.body":
+        "A local platform near Hanyang University where bakeries and cafés sell leftover items at discounts so customers save money and owners reduce waste.",
       "home.projects.aichat.tag": "In progress",
       "home.projects.aichat.title": "AI Emotional Support Chat",
       "home.projects.aichat.body":
@@ -36,7 +40,7 @@
       "home.contact.email":
         "✉️ <a href=\"mailto:smilechild1005@gmail.com\">smilechild1005@gmail.com</a>",
       "home.contact.github":
-        "GitHub · <a href=\"https://github.com/smilechild1005\" target=\"_blank\" rel=\"noopener\">smilechild1005</a>",
+        "GitHub · <a href=\"https://github.com/smilechild7\" target=\"_blank\" rel=\"noopener\">smilechild7</a>",
 
       "footer.privacy": "Privacy Policies",
       "footer.terms": "Terms of Service",
@@ -49,6 +53,10 @@
       "projects.list.todayverse.title": "Daily verses that fill your heart",
       "projects.list.todayverse.body":
         "An iOS app that understands user concerns and recommends scripture. Widgets and notifications make verses part of everyday life.",
+      "projects.list.thurry.tag": "Thurry",
+      "projects.list.thurry.title": "Thurry — bakery last-minute deals",
+      "projects.list.thurry.body":
+        "A Toss Payments + Firestore powered marketplace that lets Hanyang-area bakeries sell leftover items safely at discounts, reducing waste while enabling smart purchases.",
       "projects.list.aichat.title": "AI Emotional Support Chat",
       "projects.list.aichat.body":
         "An empathetic AI chat that understands emotions, offers comforting responses, and follows carefully designed safety guidelines.",
@@ -137,6 +145,8 @@
     },
   };
 
+  window.__KSE_TRANSLATIONS = translations;
+
   function detectInitialLang() {
     const stored = (() => {
       try {
@@ -198,4 +208,11 @@
   const initialLang = detectInitialLang();
   setLang(initialLang);
   initToggle();
+
+  window.__KSE_LANG = {
+    setLang,
+    applyTranslations,
+    getCurrentLang: () => root.getAttribute("data-lang"),
+    translations,
+  };
 })();
