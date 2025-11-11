@@ -1,8 +1,16 @@
 {
   "rewrites": [
     {
-      "source": "/hitthelastone(/.*)?",
-      "destination": "https://hit-the-last-one.vercel.app/$1"
+      "source": "/hitthelastone/info",
+      "destination": "/hitthelastone/info/index.html"
+    },
+    {
+      "source": "/hitthelastone",
+      "destination": "https://hit-the-last-one.vercel.app"
+    },
+    {
+      "source": "/hitthelastone/:path*",
+      "destination": "https://hit-the-last-one.vercel.app/:path*"
     }
   ]
 }
