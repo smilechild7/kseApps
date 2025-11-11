@@ -40,7 +40,7 @@
     },
     {
       id: "hitthelastone",
-      href: "/hitthelastone-info/",
+      href: "https://hit-the-last-one.vercel.app/",
       tags: ["Web", "Game", "JavaScript"],
       copy: {
         ko: {
