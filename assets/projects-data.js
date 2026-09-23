@@ -57,11 +57,49 @@
         },
       },
     },
+    {
+      id: "ai-shopping-agent",
+      href: "https://github.com/smilechild7/Kimseongeun-20260901",
+      tags: ["React", "Express", "SQLite", "OpenAI API"],
+      copy: {
+        ko: {
+          eyebrow: "Web · AI Agent",
+          title: "AI Shopping Agent",
+          body:
+            "과제로 제작한 여성 의류 탐색 AI 에이전트입니다. 자연어로 원하는 조건을 입력하면 실제 상품과 구매후기를 바탕으로 최대 3개의 후보를 추천하고, 추천 근거와 사이즈 정보, 구매 전 확인사항을 함께 보여줍니다.",
+        },
+        en: {
+          eyebrow: "Web · AI Agent",
+          title: "AI Shopping Agent",
+          body:
+            "An AI shopping agent for women’s clothing, built as an assignment. It uses real product data and customer reviews to recommend up to three items based on natural-language requests, with reasons, sizing information, and details to check before buying.",
+        },
+      },
+    },
+    {
+      id: "hasok",
+      href: "https://www.hasok.kr/",
+      tags: ["Web", "Portfolio", "Google Sheets"],
+      copy: {
+        ko: {
+          eyebrow: "Web · 작가 포트폴리오",
+          title: "hasok",
+          body:
+            "작가의 사진과 정보를 모아 소개하는 포트폴리오 웹사이트입니다. Google Sheets를 데이터베이스로 활용해 작가가 직접 콘텐츠에 접근하고 수정할 수 있도록 만들었습니다.",
+        },
+        en: {
+          eyebrow: "Web · Artist Portfolio",
+          title: "hasok",
+          body:
+            "A portfolio website bringing together an artist’s photos and information. Google Sheets serves as the database, allowing the artist to access and update the content directly.",
+        },
+      },
+    },
   ];
 
   const PROJECT_RENDER_ORDER = {
-    home: ["thurry", "todayverse", "hitthelastone"],
-    projects: ["thurry", "todayverse", "hitthelastone"],
+    home: ["thurry", "todayverse", "hitthelastone", "ai-shopping-agent", "hasok"],
+    projects: ["thurry", "todayverse", "hitthelastone", "ai-shopping-agent", "hasok"],
   };
 
   window.PROJECTS_DATA = PROJECTS_DATA;

@@ -29,10 +29,6 @@
       "home.projects.thurry.title": "Bakery last-minute platform",
       "home.projects.thurry.body":
         "A local platform near Hanyang University where bakeries and cafés sell leftover items at discounts so customers save money and owners reduce waste.",
-      "home.projects.aichat.tag": "In progress",
-      "home.projects.aichat.title": "AI Emotional Support Chat",
-      "home.projects.aichat.body":
-        "Developing an AI chat that helps you organise emotions and offers comfort with warm language, while carefully designing flow and safety guidelines.",
 
       "home.contact.heading": "Let’s create better experiences together",
       "home.contact.body":
@@ -57,9 +53,6 @@
       "projects.list.thurry.title": "Thurry — bakery last-minute deals",
       "projects.list.thurry.body":
         "A Toss Payments + Firestore powered marketplace that lets Hanyang-area bakeries sell leftover items safely at discounts, reducing waste while enabling smart purchases.",
-      "projects.list.aichat.title": "AI Emotional Support Chat",
-      "projects.list.aichat.body":
-        "An empathetic AI chat that understands emotions, offers comforting responses, and follows carefully designed safety guidelines.",
 
       "privacy.hero.eyebrow": "Policies",
       "privacy.hero.heading": "Privacy information you can trust",
