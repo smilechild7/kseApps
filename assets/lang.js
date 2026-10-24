@@ -4,6 +4,7 @@
   const STORAGE_KEY = "kseapps.lang";
   const root = document.documentElement;
   const translations = {
+    ko: {},
     en: {
       "nav.brand": `<span>KSE</span> Apps`,
       "nav.projects": "Projects",
@@ -149,6 +150,7 @@
   };
 
   window.__KSE_TRANSLATIONS = translations;
+  const originalAttributes = new WeakMap();
 
   function detectInitialLang() {
     const stored = (() => {
@@ -201,6 +203,24 @@
         node.setAttribute("lang", "ko");
       }
     });
+    // Attribute translations preserve labels on controls and page metadata.
+    for (const attribute of ["aria-label", "content"]) {
+      document.querySelectorAll(`[data-i18n-${attribute}]`).forEach((node) => {
+        if (!originalAttributes.has(node)) originalAttributes.set(node, {});
+        const originals = originalAttributes.get(node);
+        if (!(attribute in originals)) originals[attribute] = node.getAttribute(attribute);
+        const key = node.getAttribute(`data-i18n-${attribute}`);
+        const value = lang === "ko" ? originals[attribute] : translations[lang]?.[key] ?? originals[attribute];
+        if (value !== null) node.setAttribute(attribute, value);
+      });
+    }
+    document.dispatchEvent(new CustomEvent("kse:languagechange", { detail: { lang } }));
+  }
+
+  function t(key, values = {}) {
+    const lang = root.getAttribute("data-lang") || "ko";
+    const message = translations[lang]?.[key] ?? translations.ko[key] ?? key;
+    return message.replace(/\{(\w+)\}/g, (placeholder, name) => values[name] ?? placeholder);
   }
 
   function initToggle() {
@@ -220,6 +240,7 @@
   window.__KSE_LANG = {
     setLang,
     applyTranslations,
+    t,
     getCurrentLang: () => root.getAttribute("data-lang"),
     translations,
   };

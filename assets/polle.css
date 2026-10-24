@@ -17,7 +17,6 @@
 .polle-page .project-employment strong { color: var(--color-text); }
 .polle-page .project-employment span { font-size: .9rem; font-variant-numeric: tabular-nums; }
 .polle-page .project-hero .hero-description { max-width: 47rem; font-size: 1.05rem; line-height: 1.8; }
-.polle-page .project-hero .translation-note { font-size: .875rem; max-width: 47rem; }
 .polle-page .case-section { border-top: 1px solid var(--case-line); padding-block: 3rem; scroll-margin-top: 1.5rem; }
 .polle-page .case-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.4; letter-spacing: -.03em; margin: .75rem 0 1rem; }
 .polle-page .case-section h3 { font-size: 1rem; line-height: 1.5; margin: 0 0 .5rem; }

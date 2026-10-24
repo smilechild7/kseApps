@@ -12,15 +12,15 @@
           action: "개발 사례 보기",
           employment: "(주)어떤사람들 · 8개월 근무",
           body:
-            "React Native 기반 뽈레의 Android 네이티브 전환을 전담했습니다. Compose 화면·제스처, 사진 기반 글쓰기와 방문 넛지, 지도 동기화·GraphQL 통신을 구현했습니다.",
+            "React Native 기반 뽈레의 Android 네이티브 전환을 전담했습니다. 78개 화면과 사진 기반 글쓰기·방문 넛지, 사진 편집·업로드, 지도 동기화를 구현하고 홈 화면의 스크롤 성능을 개선했습니다.",
         },
         en: {
           eyebrow: "ANDROID",
           title: "Polle",
           action: "Read case study",
-          employment: "(주)어떤사람들 · 8 months",
+          employment: "Eotteon Saramdeul Co., Ltd. · 8 months",
           body:
-            "Led Polle’s Android migration from React Native to Kotlin and Jetpack Compose, implementing screens, gestures, photo-assisted writing, visit nudges, map data sync, and typed GraphQL calls.",
+            "Took sole responsibility for Polle’s native Android migration. Built 78 screens, photo-assisted reviews, recent-photo visit nudges, photo editing and uploads, and map data sync, and improved home-screen scrolling.",
         },
       },
     },
@@ -41,7 +41,7 @@
           title: "Thurry",
           action: "View on the App Store",
           body:
-            "A bakery last-minute platform that lets Hanyang University area bakeries and cafés sell remaining items to consumers at discounted prices.",
+            "A platform connecting bakeries and cafés near Hanyang University with customers buying their remaining products at end-of-day discounts.",
         },
       },
     },
@@ -55,14 +55,14 @@
           title: "TodayVerse",
           action: "앱스토어에서 보기",
           body:
-            "사용자의 고민을 바탕으로 맞춤형 성경 구절을 제공하는 iOS 앱. 위젯을 통해 일상에서 자연스럽게 말씀을 되뇌일 수 있도록 설계했습니다.",
+            "사용자의 고민과 상황에 맞는 성경 구절을 추천하는 iOS 앱입니다. 추천받은 말씀을 위젯에서 다시 확인할 수 있도록 구현했습니다.",
         },
         en: {
           eyebrow: "iOS · Widgets",
           title: "TodayVerse",
           action: "View on the App Store",
           body:
-            "An iOS app that recommends personalised Bible verses based on user concerns, designed so widgets help you revisit scripture throughout the day.",
+            "An iOS app that recommends Bible verses based on the user’s concerns and circumstances, with widgets for revisiting the recommended passages.",
         },
       },
     },
@@ -76,14 +76,14 @@
           title: "Hit the Last One",
           action: "게임 플레이하기",
           body:
-            "몬스터의 체력이 거의 남지 않았을 때 정확한 타이밍으로 막타를 치는 미니 웹 게임입니다. 빠른 반응과 집중력을 시험해 보세요.",
+            "몬스터의 체력이 거의 남지 않았을 때 막타를 치는 타이밍을 연습하는 웹 게임입니다. 티어별 난이도를 제공하며 데스크톱·모바일 브라우저에서 플레이할 수 있습니다.",
         },
         en: {
           eyebrow: "Web · Game",
           title: "Hit the Last One",
           action: "Play the game",
           body:
-            "A mini web game where you deliver the final blow when a monster’s HP is almost gone. Test your reflexes and focus.",
+            "A web game for practicing last-hit timing as a monster’s HP runs low, with difficulty levels by tier and support for desktop and mobile browsers.",
         },
       },
     },

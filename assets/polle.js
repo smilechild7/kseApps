@@ -1,4 +1,5 @@
 (() => {
+  const t = (...args) => window.__KSE_LANG.t(...args);
   const remote = document.querySelector('.project-toc');
   const toggle = remote.querySelector('.toc-toggle');
   const links = [...remote.querySelectorAll('a[data-section]')];
@@ -7,7 +8,7 @@
   const setOpen = (open) => {
     remote.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? '목차 닫기' : '목차 열기');
+    toggle.setAttribute('aria-label', t(open ? 'polle.demo.toc.close' : 'polle.demo.toc.open'));
   };
   toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
   remote.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
@@ -67,6 +68,10 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
   window.addEventListener('hashchange', () => { revealTarget(location.hash); onScroll(); });
+  document.addEventListener('kse:languagechange', () => {
+    setOpen(toggle.getAttribute('aria-expanded') === 'true');
+    onScroll();
+  });
   document.querySelectorAll('.case-details').forEach(detail => detail.addEventListener('toggle', onScroll));
   revealTarget(location.hash);
   updateCurrent();
@@ -74,52 +79,65 @@
 
 // Illustrative mockups use local sample state, independently of the Android app.
 (() => {
+  const t = (...args) => window.__KSE_LANG.t(...args);
   const demo = document.querySelector('[data-nav-demo]');
-  const places = { cafe: { name: '샘플 카페', symbol: 'A' }, park: { name: '샘플 공원', symbol: 'B' } };
+  const places = { cafe: { key: 'polle.demo.cafe', symbol: 'A' }, park: { key: 'polle.demo.park', symbol: 'B' } };
   let selected = 'cafe';
+  let statusKey = 'polle.demo.nav.initial';
+  const render = () => {
+    const place = t(places[selected].key);
+    demo.querySelector('[data-place-name]').textContent = place;
+    demo.querySelector('.place-symbol').textContent = places[selected].symbol;
+    demo.querySelector('[data-nav-status]').textContent = t(statusKey, { place });
+  };
   demo.querySelectorAll('[data-place]').forEach(button => button.addEventListener('click', () => {
     selected = button.dataset.place;
     demo.querySelectorAll('[data-place]').forEach(pin => pin.setAttribute('aria-pressed', String(pin === button)));
-    demo.querySelector('[data-place-name]').textContent = places[selected].name;
-    demo.querySelector('.place-symbol').textContent = places[selected].symbol;
-    demo.querySelector('[data-nav-status]').textContent = `${places[selected].name} 선택. 피드로 이동한 뒤 지도로 돌아와 보세요.`;
+    statusKey = 'polle.demo.nav.selected';
+    render();
   }));
   demo.querySelectorAll('[data-demo-tab]').forEach(button => button.addEventListener('click', () => {
     const tab = button.dataset.demoTab;
     demo.querySelectorAll('[data-demo-tab]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
     demo.querySelectorAll('[data-demo-view]').forEach(view => { view.hidden = view.dataset.demoView !== tab; });
-    demo.querySelector('[data-nav-status]').textContent = tab === 'map'
-      ? `${places[selected].name} 선택 상태로 돌아왔습니다.`
-      : '피드를 보고 있습니다. 지도 탭에서 이전 장소를 확인하세요.';
+    statusKey = tab === 'map' ? 'polle.demo.nav.map' : 'polle.demo.nav.feed';
+    render();
   }));
+  document.addEventListener('kse:languagechange', render);
+  render();
 })();
 
 (() => {
+  const t = (...args) => window.__KSE_LANG.t(...args);
   const demo = document.querySelector('[data-nudge-demo]');
   if (!demo) return;
   // Fixed sample data illustrates an app-initiated nudge; no device photos are read.
-  const places = [{ name: '샘플 카페 A', distance: 18 }, { name: '샘플 베이커리 B', distance: 32 }];
+  const places = [{ key: 'polle.demo.cafeA', distance: 18 }, { key: 'polle.demo.bakeryB', distance: 32 }];
   const overlay = demo.querySelector('[data-nudge-overlay]');
   const alternatives = demo.querySelector('[data-nudge-alternatives]');
   const replay = demo.querySelector('[data-nudge-replay]');
   const status = demo.querySelector('[data-nudge-status]');
   let selected = 0;
+  let statusKey = 'polle.demo.nudge.initial';
   const render = () => {
-    demo.querySelector('[data-nudge-place]').textContent = places[selected].name;
-    demo.querySelector('[data-nudge-distance]').textContent = `사진 위치에서 ${places[selected].distance}m`;
+    const place = t(places[selected].key);
+    demo.querySelector('[data-nudge-place]').textContent = place;
+    demo.querySelector('[data-nudge-distance]').textContent = t('polle.demo.nudge.distance', { distance: places[selected].distance });
     demo.querySelectorAll('[data-nudge-candidate]').forEach(button => { button.hidden = Number(button.dataset.nudgeCandidate) === selected; });
-    alternatives.open = false;
+    status.textContent = t(statusKey, { place });
   };
   const dismiss = (confirmed = false) => {
     overlay.hidden = true;
     alternatives.open = false;
-    status.textContent = confirmed ? `${places[selected].name} 방문 넛지를 확인했습니다.` : '넛지를 닫고 홈 화면으로 돌아왔습니다.';
+    statusKey = confirmed ? 'polle.demo.nudge.confirmed' : 'polle.demo.nudge.dismissed';
+    render();
     replay.focus({ preventScroll: true });
   };
   demo.querySelectorAll('[data-nudge-candidate]').forEach(button => button.addEventListener('click', () => {
     selected = Number(button.dataset.nudgeCandidate);
+    statusKey = 'polle.demo.nudge.changed';
+    alternatives.open = false;
     render();
-    status.textContent = `방문 장소 후보를 ${places[selected].name}로 변경했습니다.`;
     alternatives.querySelector('summary').focus({ preventScroll: true });
   }));
   demo.querySelector('[data-nudge-dismiss]').addEventListener('click', () => dismiss());
@@ -130,21 +148,25 @@
   });
   replay.addEventListener('click', () => {
     selected = 0;
+    statusKey = 'polle.demo.nudge.replayed';
+    alternatives.open = false;
     render();
     overlay.hidden = false;
-    status.textContent = '최근 사진을 확인한 뒤 샘플 카페 A의 방문 여부를 묻는 예시입니다.';
     const dialog = demo.querySelector('.nudge-dialog');
     dialog.tabIndex = -1;
     dialog.focus({ preventScroll: true });
   });
+  document.addEventListener('kse:languagechange', render);
+  render();
 })();
 
 (() => {
+  const t = (...args) => window.__KSE_LANG.t(...args);
   const demo = document.querySelector('[data-photo-demo]');
   if (!demo) return;
   const examples = {
-    cafe: { label: '커피', places: ['샘플 카페 A', '샘플 베이커리 B'] },
-    pizza: { label: '피자', places: ['샘플 피자 A', '샘플 레스토랑 B'] },
+    cafe: { label: 'polle.demo.coffee', places: ['polle.demo.cafeA', 'polle.demo.bakeryB'] },
+    pizza: { label: 'polle.demo.pizza', places: ['polle.demo.pizzaA', 'polle.demo.restaurantB'] },
   };
   const status = demo.querySelector('[data-photo-status]');
   const photoChoices = [...demo.querySelectorAll('[data-write-photo]')];
@@ -152,48 +174,62 @@
   let photo = 'cafe';
   let selectedPlace = null;
   let albumPlace = 'cafe';
+  let flow = 'photo';
+  let interacted = false;
   const photoStatus = () => selectedPlace === null
-    ? `${examples[photo].label} 사진의 GPS 주변 장소입니다. 글에 연결할 장소를 선택해 보세요.`
-    : `사진과 ${examples[photo].places[selectedPlace]}를 글에 연결했습니다.`;
-  const albumStatus = () => `샘플 ${albumPlace === 'cafe' ? '카페' : '공원'} 주변의 예시 사진을 먼저 보여줍니다.`;
+    ? t('polle.demo.write.nearby', { photo: t(examples[photo].label) })
+    : t('polle.demo.write.linked', { place: t(examples[photo].places[selectedPlace]) });
+  const albumStatus = () => t('polle.demo.write.album', { place: t('polle.demo.' + albumPlace) });
   const renderPhoto = () => {
     photoChoices.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.writePhoto === photo)));
     placeChoices.forEach((button, index) => {
-      button.textContent = examples[photo].places[index];
+      button.textContent = t(examples[photo].places[index]);
       button.setAttribute('aria-pressed', String(index === selectedPlace));
     });
-    demo.querySelector('[data-write-selected]').textContent = selectedPlace === null ? '장소를 선택해 주세요' : examples[photo].places[selectedPlace];
-    status.textContent = photoStatus();
+    demo.querySelector('[data-write-selected]').textContent = selectedPlace === null ? t('polle.demo.write.choose') : t(examples[photo].places[selectedPlace]);
+  };
+  const renderAlbum = () => {
+    const album = t(albumPlace === 'cafe' ? 'polle.demo.albumCafe' : 'polle.demo.albumPark');
+    demo.querySelectorAll('[data-photo-place]').forEach(item => item.setAttribute('aria-pressed', String(item.dataset.photoPlace === albumPlace)));
+    demo.querySelector('[data-album-count]').textContent = t('polle.demo.write.count', { album });
+    demo.querySelectorAll('[data-photo-grid] .scene-art').forEach((image, index) => {
+      image.classList.toggle('scene-cafe', albumPlace === 'cafe');
+      image.classList.toggle('scene-park', albumPlace === 'park');
+      image.setAttribute('aria-label', t('polle.demo.write.image', { album, number: index + 1 }));
+    });
+  };
+  const render = () => {
+    renderPhoto();
+    renderAlbum();
+    status.textContent = !interacted ? t('polle.demo.write.initial') : flow === 'photo' ? photoStatus() : albumStatus();
   };
   demo.querySelectorAll('[data-write-flow]').forEach(button => button.addEventListener('click', () => {
-    const flow = button.dataset.writeFlow;
+    flow = button.dataset.writeFlow;
+    interacted = true;
     demo.querySelectorAll('[data-write-flow]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
     demo.querySelectorAll('[data-write-panel]').forEach(panel => { panel.hidden = panel.dataset.writePanel !== flow; });
-    status.textContent = flow === 'photo' ? photoStatus() : albumStatus();
+    render();
   }));
   photoChoices.forEach(button => button.addEventListener('click', () => {
     const next = button.dataset.writePhoto;
     if (photo === next) return;
     photo = next;
     selectedPlace = null;
-    renderPhoto();
+    interacted = true;
+    render();
   }));
   placeChoices.forEach(button => button.addEventListener('click', () => {
     selectedPlace = Number(button.dataset.writePlace);
-    renderPhoto();
+    interacted = true;
+    render();
   }));
   demo.querySelectorAll('[data-photo-place]').forEach(button => button.addEventListener('click', () => {
     albumPlace = button.dataset.photoPlace;
-    const label = albumPlace === 'cafe' ? '카페' : '공원';
-    demo.querySelectorAll('[data-photo-place]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-    demo.querySelector('[data-album-count]').textContent = `${label} · 3장`;
-    demo.querySelectorAll('[data-photo-grid] .scene-art').forEach((image, index) => {
-      image.classList.toggle('scene-cafe', albumPlace === 'cafe');
-      image.classList.toggle('scene-park', albumPlace === 'park');
-      image.setAttribute('aria-label', `${label} 사진 예시 ${index + 1}`);
-    });
-    status.textContent = albumStatus();
+    interacted = true;
+    render();
   }));
+  document.addEventListener('kse:languagechange', render);
+  render();
 })();
 
 (() => {

@@ -4,34 +4,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8fafc">
-  <meta name="description" content="(주)어떤사람들에서 2026.01.02 - 2026.08.31, 8개월간 근무한 김성은의 개발 기록. 뽈레 Android 네이티브 전환 전담, 78개 화면 구현과 사진 기반 글쓰기·방문 넛지·지도 동기화·GraphQL·제스처의 엔지니어링 사례.">
-  <title>뽈레 Android 네이티브 전환 — KSE Apps</title>
+  <meta name="description" content="(주)어떤사람들에서 2026.01.02 - 2026.08.31, 8개월간 근무한 김성은의 개발 기록. 뽈레 Android 네이티브 전환 전담, 78개 화면 구현과 사진 기반 글쓰기·방문 넛지·사진 편집·홈 스크롤 개선·지도 동기화·GraphQL의 엔지니어링 사례." data-i18n-content="polle.page.content">
+  <title data-i18n="polle.page.title">뽈레 Android 네이티브 전환 — KSE Apps</title>
   <link rel="stylesheet" href="/assets/styles.css?v=9ccdfff1732a">
-  <link rel="stylesheet" href="/assets/polle.css?v=a27b1f79e598">
+  <link rel="stylesheet" href="/assets/polle.css?v=56dc6869e6f2">
   <script src="/assets/site.js?v=f44e21883037" defer></script>
-  <script src="/assets/lang.js?v=f79cc566bffb" defer></script>
-  <script src="/assets/polle.js?v=04c1846d33d6" defer></script>
+  <script src="/assets/lang.js?v=7c950d1f8cc1" defer></script>
+  <script src="/assets/polle-translations.js?v=3cd244aec0d1" defer></script>
+  <script src="/assets/polle.js?v=66f3b1b43c1c" defer></script>
   <!-- Social sharing -->
   <link rel="canonical" href="https://kseapps.com/android_engineering_portfolio.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KSE Apps">
-  <meta property="og:title" content="뽈레 Android 네이티브 전환 — KSE Apps">
-  <meta property="og:description" content="(주)어떤사람들에서 2026.01.02 - 2026.08.31, 8개월간 근무한 김성은의 개발 기록. 뽈레 Android 네이티브 전환 전담, 78개 화면 구현과 사진 기반 글쓰기·방문 넛지·지도 동기화·GraphQL·제스처의 엔지니어링 사례.">
+  <meta property="og:title" content="뽈레 Android 네이티브 전환 — KSE Apps" data-i18n-content="polle.page.title">
+  <meta property="og:description" content="(주)어떤사람들에서 2026.01.02 - 2026.08.31, 8개월간 근무한 김성은의 개발 기록. 뽈레 Android 네이티브 전환 전담, 78개 화면 구현과 사진 기반 글쓰기·방문 넛지·사진 편집·홈 스크롤 개선·지도 동기화·GraphQL의 엔지니어링 사례." data-i18n-content="polle.page.content">
   <meta property="og:url" content="https://kseapps.com/android_engineering_portfolio.html">
   <meta property="og:image" content="https://kseapps.com/assets/share-polle.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="뽈레 Android 네이티브 전환 · 김성은">
+  <meta property="og:image:alt" content="뽈레 Android 네이티브 전환 · 김성은" data-i18n-content="polle.page.content2">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://kseapps.com/assets/share-polle.png">
-  <meta name="twitter:image:alt" content="뽈레 Android 네이티브 전환 · 김성은">
+  <meta name="twitter:image:alt" content="뽈레 Android 네이티브 전환 · 김성은" data-i18n-content="polle.page.content2">
   <!-- /Social sharing -->
 </head>
 <body>
   <a class="skip-link" data-i18n="nav.skip" href="#main-content">본문으로 바로가기</a>
   <header class="site-header">
     <div class="wrapper">
-      <nav aria-label="메인 메뉴">
+      <nav aria-label="메인 메뉴" data-i18n-aria-label="polle.page.aria-label">
         <a class="brand" data-i18n="nav.brand" href="/"><span>KSE</span> Apps</a>
         <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-navigation"><span data-i18n="nav.menu">메뉴</span><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
         <div class="nav-links" id="primary-navigation">
@@ -44,198 +45,197 @@
       </nav>
     </div>
   </header>
-  <main class="polle-page" id="main-content" lang="ko">
+  <main class="polle-page" id="main-content">
     <section class="hero wrapper project-hero" id="top" aria-labelledby="project-title">
-      <a class="project-back" href="/projects/">← 프로젝트 목록으로</a>
+      <a class="project-back" href="/projects/" data-i18n="polle.hero.a">← 프로젝트 목록으로</a>
       <div class="eyebrow">ANDROID · ENGINEERING CASE STUDIES</div>
-      <h1 id="project-title">뽈레<br><span>Android 네이티브 전환</span></h1>
-      <p class="project-employment"><strong>(주)어떤사람들 · 8개월 근무</strong><span><time datetime="2026-01-02">2026.01.02</time> - <time datetime="2026-08-31">2026.08.31</time></span></p>
-      <p class="hero-description">React Native 기반 뽈레를 Kotlin·Jetpack Compose로 전환하며 Android 개발을 전담했습니다. 78개 화면과 지도·사진·제스처를 구현하고, 사진 기반 글쓰기·방문 넛지와 GraphQL 통신 구조까지 확장했습니다.</p>
-      <p class="translation-note" lang="en">This case study is available in Korean. Site navigation and project cards support English.</p>
-      <div class="cta-group"><a class="cta-button cta-compact" href="#overview">주요 기여 살펴보기 ↓</a><a class="cta-button cta-secondary cta-compact" href="/contact/">협업·채용 문의</a></div>
+      <h1 id="project-title" data-i18n="polle.hero.project-title">뽈레<br><span>Android 네이티브 전환</span></h1>
+      <p class="project-employment"><strong data-i18n="polle.hero.strong">(주)어떤사람들 · 8개월 근무</strong><span><time datetime="2026-01-02">2026.01.02</time> - <time datetime="2026-08-31">2026.08.31</time></span></p>
+      <p class="hero-description" data-i18n="polle.hero.p">React Native 기반 뽈레를 Kotlin·Jetpack Compose로 전환하며 Android 개발을 전담했습니다. 78개 화면과 지도·사진·제스처를 구현하고, 사진 기반 글쓰기·방문 넛지와 GraphQL 통신 구조까지 확장했습니다.</p>
+      <div class="cta-group"><a class="cta-button cta-compact" href="#overview" data-i18n="polle.hero.a2">주요 기여 살펴보기 ↓</a><a class="cta-button cta-secondary cta-compact" href="/contact/" data-i18n="polle.hero.a3">협업·채용 문의</a></div>
     </section>
 
-    <aside class="project-toc" aria-label="페이지 목차">
-      <span class="toc-hint" aria-hidden="true">목차</span>
-      <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="project-toc-panel" aria-label="목차 열기"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true"><path d="M7 5h10M7 10h10M7 15h10M3 5h.01M3 10h.01M3 15h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>목차</button>
-      <nav class="toc-panel" id="project-toc-panel" aria-label="포트폴리오 섹션 탐색">
-        <div class="toc-heading">이 페이지의 내용</div>
+    <aside class="project-toc" aria-label="페이지 목차" data-i18n-aria-label="polle.toc.aria-label">
+      <span class="toc-hint" aria-hidden="true" data-i18n="polle.toc.span">목차</span>
+      <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="project-toc-panel" aria-label="목차 열기" data-i18n-aria-label="polle.toc.aria-label2"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true"><path d="M7 5h10M7 10h10M7 15h10M3 5h.01M3 10h.01M3 15h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span data-i18n="polle.toc.span">목차</span></button>
+      <nav class="toc-panel" id="project-toc-panel" aria-label="포트폴리오 섹션 탐색" data-i18n-aria-label="polle.toc.aria-label3">
+        <div class="toc-heading" data-i18n="polle.toc.div">이 페이지의 내용</div>
         <div class="toc-links">
-          <a href="#overview" data-section="overview" aria-label="주요 기여"><span class="toc-label"><span class="toc-number">01</span>주요 기여</span><span class="toc-mark" aria-hidden="true"></span></a>
-          <a href="#architecture" data-section="architecture" aria-label="탐색과 상태 유지"><span class="toc-label"><span class="toc-number">02</span>탐색과 상태 유지</span><span class="toc-mark" aria-hidden="true"></span></a>
-          <a href="#recommendation" data-section="recommendation" aria-label="최근 사진 기반 방문 넛지"><span class="toc-label"><span class="toc-number">03</span>최근 사진 기반 방문 넛지</span><span class="toc-mark" aria-hidden="true"></span></a>
-          <a href="#discovery" data-section="discovery" aria-label="사진과 장소를 연결하는 글쓰기"><span class="toc-label"><span class="toc-number">04</span>사진·장소와 글쓰기</span><span class="toc-mark" aria-hidden="true"></span></a>
-          <a href="#motion" data-section="motion" aria-label="사진 편집·복원·파일 관리"><span class="toc-label"><span class="toc-number">05</span>사진 편집·복원·파일 관리</span><span class="toc-mark" aria-hidden="true"></span></a>
-          <a href="#decisions" data-section="decisions" aria-label="홈 스크롤 성능 개선"><span class="toc-label"><span class="toc-number">06</span>홈 스크롤 성능 개선</span><span class="toc-mark" aria-hidden="true"></span></a>
-          <a href="#integration" data-section="integration" aria-label="지도 연동과 동기화"><span class="toc-label"><span class="toc-number">07</span>지도 연동과 동기화</span><span class="toc-mark" aria-hidden="true"></span></a>
-          <a href="#api-contract" data-section="api-contract" aria-label="GraphQL 통신 구조"><span class="toc-label"><span class="toc-number">08</span>GraphQL 통신 구조</span><span class="toc-mark" aria-hidden="true"></span></a>
-          <a href="#ai-workflow" data-section="ai-workflow" aria-label="AI 활용 개발"><span class="toc-label"><span class="toc-number">09</span>AI 활용 개발</span><span class="toc-mark" aria-hidden="true"></span></a>
-          <a href="#retrospective" data-section="retrospective" aria-label="핵심 설계 원칙"><span class="toc-label"><span class="toc-number">10</span>핵심 설계 원칙</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#overview" data-section="overview" aria-label="주요 기여" data-i18n-aria-label="polle.toc.aria-label4"><span class="toc-label" data-i18n="polle.toc.span2"><span class="toc-number">01</span>주요 기여</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#architecture" data-section="architecture" aria-label="탐색과 상태 유지" data-i18n-aria-label="polle.toc.aria-label5"><span class="toc-label" data-i18n="polle.toc.span3"><span class="toc-number">02</span>탐색과 상태 유지</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#recommendation" data-section="recommendation" aria-label="최근 사진 기반 방문 넛지" data-i18n-aria-label="polle.toc.aria-label6"><span class="toc-label" data-i18n="polle.toc.span4"><span class="toc-number">03</span>최근 사진 기반 방문 넛지</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#discovery" data-section="discovery" aria-label="사진과 장소를 연결하는 글쓰기" data-i18n-aria-label="polle.toc.aria-label7"><span class="toc-label" data-i18n="polle.toc.span5"><span class="toc-number">04</span>사진·장소와 글쓰기</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#motion" data-section="motion" aria-label="사진 편집·복원·파일 관리" data-i18n-aria-label="polle.toc.aria-label8"><span class="toc-label" data-i18n="polle.toc.span6"><span class="toc-number">05</span>사진 편집·복원·파일 관리</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#decisions" data-section="decisions" aria-label="홈 스크롤 성능 개선" data-i18n-aria-label="polle.toc.aria-label9"><span class="toc-label" data-i18n="polle.toc.span7"><span class="toc-number">06</span>홈 스크롤 성능 개선</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#integration" data-section="integration" aria-label="지도 연동과 동기화" data-i18n-aria-label="polle.toc.aria-label10"><span class="toc-label" data-i18n="polle.toc.span8"><span class="toc-number">07</span>지도 연동과 동기화</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#api-contract" data-section="api-contract" aria-label="GraphQL 통신 구조" data-i18n-aria-label="polle.toc.aria-label11"><span class="toc-label" data-i18n="polle.toc.span9"><span class="toc-number">08</span>GraphQL 통신 구조</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#ai-workflow" data-section="ai-workflow" aria-label="AI 활용 개발" data-i18n-aria-label="polle.toc.aria-label12"><span class="toc-label" data-i18n="polle.toc.span10"><span class="toc-number">09</span>AI 활용 개발</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#retrospective" data-section="retrospective" aria-label="핵심 설계 원칙" data-i18n-aria-label="polle.toc.aria-label13"><span class="toc-label" data-i18n="polle.toc.span11"><span class="toc-number">10</span>핵심 설계 원칙</span><span class="toc-mark" aria-hidden="true"></span></a>
         </div>
-        <a class="toc-top" href="#top">맨 위로 ↑</a>
+        <a class="toc-top" href="#top" data-i18n="polle.toc.a">맨 위로 ↑</a>
       </nav>
     </aside>
 
     <section class="case-section wrapper" id="overview" aria-labelledby="overview-title">
       <div class="eyebrow">01 · OVERVIEW</div>
-      <h2 id="overview-title">주요 기여</h2>
-      <p class="section-lede">홈·타임라인, 지도, 공통 상세, 글쓰기와 사진 편집까지 구현했습니다. 화면을 연결하는 과정에서 특히 세 가지 사용자 경험에 집중했습니다.</p>
+      <h2 id="overview-title" data-i18n="polle.toc.aria-label4">주요 기여</h2>
+      <p class="section-lede" data-i18n="polle.overview.p">홈·타임라인, 지도, 공통 상세, 글쓰기와 사진 편집까지 구현했습니다. 화면을 연결하는 과정에서 특히 세 가지 사용자 경험에 집중했습니다.</p>
       <div class="outcome-grid">
-        <a href="#architecture"><span class="outcome-number">01 / 탐색</span><h3>다시 돌아와도 이어지는 맥락</h3><p>탭별 이동 이력과 지도 인스턴스를 유지하고, 선택한 장소로 복귀하는 흐름을 연결했습니다.</p><span class="case-link">탐색 구조 보기 →</span></a>
-        <a href="#recommendation"><span class="outcome-number">02 / 사진</span><h3>사진에서 방문 기록으로</h3><p>최근 사진으로 방문을 묻는 넛지와, 글쓰기 중 사진·장소를 연결하는 흐름을 구현했습니다.</p><span class="case-link">방문 넛지 보기 →</span></a>
-        <a href="#decisions"><span class="outcome-number">03 / 성능</span><h3>중첩 목록의 스크롤 끊김 줄이기</h3><p>홈 화면의 재구성, 이미지 초기화, 카드 측정과 헤더 처리 비용을 단계적으로 줄였습니다.</p><span class="case-link">홈 성능 개선 보기 →</span></a>
+        <a href="#architecture"><span class="outcome-number" data-i18n="polle.overview.span">01 / 탐색</span><h3 data-i18n="polle.overview.h3">다시 돌아와도 이어지는 맥락</h3><p data-i18n="polle.overview.p2">탭별 이동 이력과 지도 인스턴스를 유지하고, 선택한 장소로 복귀하는 흐름을 연결했습니다.</p><span class="case-link" data-i18n="polle.overview.span2">탐색 구조 보기 →</span></a>
+        <a href="#recommendation"><span class="outcome-number" data-i18n="polle.overview.span3">02 / 사진</span><h3 data-i18n="polle.overview.h32">사진에서 방문 기록으로</h3><p data-i18n="polle.overview.p3">최근 사진으로 방문을 묻는 넛지와, 글쓰기 중 사진·장소를 연결하는 흐름을 구현했습니다.</p><span class="case-link" data-i18n="polle.overview.span4">방문 넛지 보기 →</span></a>
+        <a href="#decisions"><span class="outcome-number" data-i18n="polle.overview.span5">03 / 성능</span><h3 data-i18n="polle.overview.h33">중첩 목록의 스크롤 끊김 줄이기</h3><p data-i18n="polle.overview.p4">홈 화면의 재구성, 이미지 초기화, 카드 측정과 헤더 처리 비용을 단계적으로 줄였습니다.</p><span class="case-link" data-i18n="polle.overview.span6">홈 성능 개선 보기 →</span></a>
       </div>
-      <p class="stack-line"><strong>사용 기술</strong> Kotlin · Jetpack Compose · Coroutines / Flow · Coil · Room · WorkManager · ML Kit · GraphQL · Naver Map SDK</p>
+      <p class="stack-line"><strong data-i18n="polle.overview.strong">사용 기술</strong> Kotlin · Jetpack Compose · Coroutines / Flow · Coil · Room · WorkManager · ML Kit · GraphQL · Naver Map SDK</p>
     </section>
 
     <section class="case-section wrapper" id="architecture" aria-labelledby="architecture-title">
       <div class="eyebrow">02 · NAVIGATION &amp; STATE</div>
-      <h2 id="architecture-title">탭을 이동해도 탐색은 이어지도록</h2>
-      <p class="case-result">탭별 백스택과 지도 인스턴스를 분리해 유지했습니다. 상세 화면에서 돌아왔을 때 이전 장소와 탐색 위치를 다시 보여주도록 연결했습니다.</p>
+      <h2 id="architecture-title" data-i18n="polle.architecture.architecture-title">탭을 이동해도 탐색은 이어지도록</h2>
+      <p class="case-result" data-i18n="polle.architecture.p">탭별 백스택과 지도 인스턴스를 분리해 유지했습니다. 상세 화면에서 돌아왔을 때 이전 장소와 탐색 위치를 다시 보여주도록 연결했습니다.</p>
       <div class="case-body">
-        <div><h3>해결 과제</h3><p>탭 이동이나 상세 화면 진입 때문에 지도와 목록이 초기화되면, 사용자는 방금 보던 장소를 다시 찾아야 했습니다.</p><h3>설계 판단</h3><p>화면의 이동 이력과 지도 View의 수명을 분리했습니다. 공통 상세 라우트는 재사용하면서 각 탭이 자신의 백스택을 갖게 하고, 지도는 NavHost 바깥에서 유지했습니다.</p></div>
+        <div><h3 data-i18n="polle.architecture.h3">해결 과제</h3><p data-i18n="polle.architecture.p2">탭 이동이나 상세 화면 진입 때문에 지도와 목록이 초기화되면, 사용자는 방금 보던 장소를 다시 찾아야 했습니다.</p><h3 data-i18n="polle.architecture.h32">설계 판단</h3><p data-i18n="polle.architecture.p3">화면의 이동 이력과 지도 View의 수명을 분리했습니다. 공통 상세 라우트는 재사용하면서 각 탭이 자신의 백스택을 갖게 하고, 지도는 NavHost 바깥에서 유지했습니다.</p></div>
         <figure class="mockup" data-nav-demo>
-          <figcaption><span class="mockup-label">동작 설명용 목업</span><span>실제 앱 화면이 아닌 간단한 재구성입니다.</span></figcaption>
+          <figcaption><span class="mockup-label" data-i18n="polle.architecture.span">동작 설명용 목업</span><span data-i18n="polle.architecture.span2">실제 앱 화면이 아닌 간단한 재구성입니다.</span></figcaption>
           <div class="phone-frame">
-            <div class="phone-title"><strong>장소 둘러보기</strong><span class="demo-tag">SAMPLE</span></div>
+            <div class="phone-title"><strong data-i18n="polle.architecture.strong">장소 둘러보기</strong><span class="demo-tag">SAMPLE</span></div>
             <div class="nav-demo-map" data-demo-view="map">
-              <div class="map-art"><span class="map-river"></span><span class="map-road road-one"></span><span class="map-road road-two"></span><span class="map-block block-one"></span><span class="map-block block-two"></span><button class="map-pin pin-a" type="button" data-place="cafe" aria-label="샘플 카페 선택" aria-pressed="true">A</button><button class="map-pin pin-b" type="button" data-place="park" aria-label="샘플 공원 선택" aria-pressed="false">B</button></div>
-              <div class="place-preview"><span class="place-symbol" aria-hidden="true">A</span><div><strong data-place-name>샘플 카페</strong><small>선택한 장소</small></div><span aria-hidden="true">↗</span></div>
+              <div class="map-art"><span class="map-river"></span><span class="map-road road-one"></span><span class="map-road road-two"></span><span class="map-block block-one"></span><span class="map-block block-two"></span><button class="map-pin pin-a" type="button" data-place="cafe" aria-label="샘플 카페 선택" aria-pressed="true" data-i18n-aria-label="polle.architecture.aria-label">A</button><button class="map-pin pin-b" type="button" data-place="park" aria-label="샘플 공원 선택" aria-pressed="false" data-i18n-aria-label="polle.architecture.aria-label2">B</button></div>
+              <div class="place-preview"><span class="place-symbol" aria-hidden="true">A</span><div><strong data-place-name data-i18n="polle.architecture.strong2">샘플 카페</strong><small data-i18n="polle.architecture.small">선택한 장소</small></div><span aria-hidden="true">↗</span></div>
             </div>
-            <div class="nav-demo-feed" data-demo-view="feed" hidden><span class="demo-feed-title">피드</span><div class="demo-feed-card"><div class="scene-art scene-cafe" aria-hidden="true"></div><strong>새로운 장소를 둘러보세요</strong><p>지도로 돌아가면 선택한 장소가 유지됩니다.</p></div></div>
-            <div class="demo-tab-bar" role="group" aria-label="목업 화면 전환"><button type="button" data-demo-tab="feed" aria-pressed="false">피드</button><button type="button" data-demo-tab="map" aria-pressed="true">지도</button></div>
+            <div class="nav-demo-feed" data-demo-view="feed" hidden><span class="demo-feed-title" data-i18n="polle.architecture.span3">피드</span><div class="demo-feed-card"><div class="scene-art scene-cafe" aria-hidden="true"></div><strong data-i18n="polle.architecture.strong3">새로운 장소를 둘러보세요</strong><p data-i18n="polle.architecture.p4">지도로 돌아가면 선택한 장소가 유지됩니다.</p></div></div>
+            <div class="demo-tab-bar" role="group" aria-label="목업 화면 전환" data-i18n-aria-label="polle.architecture.aria-label3"><button type="button" data-demo-tab="feed" aria-pressed="false" data-i18n="polle.architecture.span3">피드</button><button type="button" data-demo-tab="map" aria-pressed="true" data-i18n="polle.architecture.button">지도</button></div>
           </div>
-          <p class="demo-instruction" data-nav-status aria-live="polite">A 또는 B 선택 → 피드 → 지도 순서로 눌러 보세요.</p>
+          <p class="demo-instruction" data-nav-status aria-live="polite" data-i18n="polle.architecture.p5">A 또는 B 선택 → 피드 → 지도 순서로 눌러 보세요.</p>
         </figure>
       </div>
-      <details class="case-details" id="lifetime"><summary>상세 구현 · 상태와 작업의 수명</summary><div class="details-content">
-        <div class="responsibility-grid"><div><h3>탭 상태 · Store</h3><p>목록과 지도 상태는 Store가 소유하고, 데이터 로딩은 Store의 CoroutineScope에서 이어가게 했습니다.</p></div><div><h3>상세 상태 · ViewModel</h3><p>상세마다 백스택 단위 ViewModel을 두고, 항목이 제거되면 해당 요청도 함께 정리되도록 했습니다.</p></div><div><h3>화면 효과 · Composition</h3><p>UI에 종속된 작업은 LaunchedEffect에 배치했습니다. 비활성 탭의 컴포지션을 유지하는 경우에는 가시성도 별도로 다뤘습니다.</p></div></div>
-        <p>상태 변경은 Store·ViewModel의 함수로 모으고, UI에는 읽기 전용 StateFlow를 노출했습니다. 글쓰기는 루트에서 모달로 진입하는 별도 흐름으로 구성했습니다.</p>
-        <p>목록·그리드·페이저의 위치는 섹션별 키로 저장했습니다. 스크롤이 멈춘 시점에 위치를 기록하고, 복원할 때는 달라진 항목 수에 맞춰 인덱스를 보정했습니다. 무한 반복 페이저는 내부 인덱스 대신 실제 콘텐츠의 페이지를 기준으로 복원했습니다.</p>
-        <p class="tradeoff"><strong>설계 비용</strong> 지도와 백스택을 따로 유지하는 만큼 뒤로가기·시트 복원·가시성 관리가 복잡해졌습니다. 전역 Store는 테스트에서 교체하기 어렵다는 점도 남았습니다.</p>
+      <details class="case-details" id="lifetime"><summary data-i18n="polle.architecture.summary">상세 구현 · 상태와 작업의 수명</summary><div class="details-content">
+        <div class="responsibility-grid"><div><h3 data-i18n="polle.architecture.h33">탭 상태 · Store</h3><p data-i18n="polle.architecture.p6">목록과 지도 상태는 Store가 소유하고, 데이터 로딩은 Store의 CoroutineScope에서 이어가게 했습니다.</p></div><div><h3 data-i18n="polle.architecture.h34">상세 상태 · ViewModel</h3><p data-i18n="polle.architecture.p7">상세마다 백스택 단위 ViewModel을 두고, 항목이 제거되면 해당 요청도 함께 정리되도록 했습니다.</p></div><div><h3 data-i18n="polle.architecture.h35">화면 효과 · Composition</h3><p data-i18n="polle.architecture.p8">UI에 종속된 작업은 LaunchedEffect에 배치했습니다. 비활성 탭의 컴포지션을 유지하는 경우에는 가시성도 별도로 다뤘습니다.</p></div></div>
+        <p data-i18n="polle.architecture.p9">상태 변경은 Store·ViewModel의 함수로 모으고, UI에는 읽기 전용 StateFlow를 노출했습니다. 글쓰기는 루트에서 모달로 진입하는 별도 흐름으로 구성했습니다.</p>
+        <p data-i18n="polle.architecture.p10">목록·그리드·페이저의 위치는 섹션별 키로 저장했습니다. 스크롤이 멈춘 시점에 위치를 기록하고, 복원할 때는 달라진 항목 수에 맞춰 인덱스를 보정했습니다. 무한 반복 페이저는 내부 인덱스 대신 실제 콘텐츠의 페이지를 기준으로 복원했습니다.</p>
+        <p class="tradeoff" data-i18n="polle.architecture.p11"><strong>설계 비용</strong> 지도와 백스택을 따로 유지하는 만큼 뒤로가기·시트 복원·가시성 관리가 복잡해졌습니다. 전역 Store는 테스트에서 교체하기 어렵다는 점도 남았습니다.</p>
       </div></details>
     </section>
 
     <section class="case-section wrapper" id="recommendation" aria-labelledby="recommendation-title">
       <div class="eyebrow">03 · RECENT-PHOTO VISIT NUDGE</div>
-      <h2 id="recommendation-title">최근 사진에서 시작되는 방문 넛지</h2>
-      <p class="case-result">앱이 기기의 최근 사진을 확인하고 방문 장소를 추정해, 방문 여부를 묻고 리뷰 작성을 제안하는 넛지를 구현했습니다. 사진의 촬영 위치·시각과 음식 분류 결과를 함께 활용했습니다.</p>
+      <h2 id="recommendation-title" data-i18n="polle.recommendation.recommendation-title">최근 사진에서 시작되는 방문 넛지</h2>
+      <p class="case-result" data-i18n="polle.recommendation.p">앱이 기기의 최근 사진을 확인하고 방문 장소를 추정해, 방문 여부를 묻고 리뷰 작성을 제안하는 넛지를 구현했습니다. 사진의 촬영 위치·시각과 음식 분류 결과를 함께 활용했습니다.</p>
       <div class="case-body">
-        <div><h3>해결 과제</h3><p>방문 사진을 찍은 뒤에도 리뷰를 쓰려면 사용자가 직접 글쓰기를 시작하고 장소를 찾아야 했습니다. 최근 사진을 단서로 앱이 먼저 방문을 묻고, 기록을 시작할 계기를 제공하고자 했습니다.</p><h3>설계 판단</h3><p>로그인 상태에서 최근 사진을 자동으로 확인하고, 비슷한 시간과 위치에서 찍힌 사진을 하나의 방문으로 묶었습니다. ML Kit의 음식 라벨에 주변 장소의 메뉴·업종·거리·촬영 당시 영업 여부를 조합해 후보를 정했습니다.</p><p>추정한 장소를 사진과 함께 팝업으로 제안하고, 사용자가 다른 후보를 고르거나 닫을 수 있도록 했습니다.</p></div>
+        <div><h3 data-i18n="polle.architecture.h3">해결 과제</h3><p data-i18n="polle.recommendation.p2">방문 사진을 찍은 뒤에도 리뷰를 쓰려면 사용자가 직접 글쓰기를 시작하고 장소를 찾아야 했습니다. 최근 사진을 단서로 앱이 먼저 방문을 묻고, 기록을 시작할 계기를 제공하고자 했습니다.</p><h3 data-i18n="polle.architecture.h32">설계 판단</h3><p data-i18n="polle.recommendation.p3">로그인 상태에서 최근 사진을 자동으로 확인하고, 비슷한 시간과 위치에서 찍힌 사진을 하나의 방문으로 묶었습니다. ML Kit의 음식 라벨에 주변 장소의 메뉴·업종·거리·촬영 당시 영업 여부를 조합해 후보를 정했습니다.</p><p data-i18n="polle.recommendation.p4">추정한 장소를 사진과 함께 팝업으로 제안하고, 사용자가 다른 후보를 고르거나 닫을 수 있도록 했습니다.</p></div>
         <figure class="mockup" data-nudge-demo>
-          <figcaption><span class="mockup-label">동작 설명용 목업</span><span>최근 사진 확인 후 나타나는 넛지의 예시입니다.</span></figcaption>
+          <figcaption><span class="mockup-label" data-i18n="polle.architecture.span">동작 설명용 목업</span><span data-i18n="polle.recommendation.span">최근 사진 확인 후 나타나는 넛지의 예시입니다.</span></figcaption>
           <div class="phone-frame">
-            <div class="phone-title"><strong>홈</strong><span class="demo-tag">SAMPLE</span></div>
+            <div class="phone-title"><strong data-i18n="polle.recommendation.strong">홈</strong><span class="demo-tag">SAMPLE</span></div>
             <div class="nudge-stage">
-              <div class="nudge-home" aria-hidden="true"><strong>오늘은 어디로 갈까요?</strong><div class="nudge-search">장소 검색</div><div class="scene-art scene-park"></div><span>이웃들의 새로운 발견</span><div class="nudge-feed-placeholder"></div><div class="nudge-feed-placeholder"></div></div>
+              <div class="nudge-home" aria-hidden="true"><strong data-i18n="polle.recommendation.strong2">오늘은 어디로 갈까요?</strong><div class="nudge-search" data-i18n="polle.recommendation.div">장소 검색</div><div class="scene-art scene-park"></div><span data-i18n="polle.recommendation.span2">이웃들의 새로운 발견</span><div class="nudge-feed-placeholder"></div><div class="nudge-feed-placeholder"></div></div>
               <div class="nudge-overlay" data-nudge-overlay>
                 <div class="nudge-dialog" role="dialog" aria-labelledby="nudge-question" aria-describedby="nudge-place nudge-message">
-                  <div class="scene-art scene-cafe" role="img" aria-label="최근 촬영한 커피 사진 예시"></div>
-                  <span class="nudge-photo-caption">최근 촬영한 사진</span>
-                  <h3 id="nudge-question">이 장소에 다녀오셨나요?</h3>
-                  <div class="nudge-place"><strong id="nudge-place" data-nudge-place>샘플 카페 A</strong><span data-nudge-distance>사진 위치에서 18m</span></div>
-                  <p id="nudge-message">리뷰로 방문 이야기를 남겨보세요.</p>
-                  <details class="nudge-alternatives" data-nudge-alternatives><summary>여기가 아니신가요?</summary><div class="nudge-candidates"><button type="button" data-nudge-candidate="0" hidden>샘플 카페 A · 18m</button><button type="button" data-nudge-candidate="1">샘플 베이커리 B · 32m</button></div></details>
-                  <div class="nudge-actions"><button type="button" data-nudge-dismiss>닫기</button><button type="button" data-nudge-confirm>좋아요</button></div>
+                  <div class="scene-art scene-cafe" role="img" aria-label="최근 촬영한 커피 사진 예시" data-i18n-aria-label="polle.recommendation.aria-label"></div>
+                  <span class="nudge-photo-caption" data-i18n="polle.recommendation.span3">최근 촬영한 사진</span>
+                  <h3 id="nudge-question" data-i18n="polle.recommendation.nudge-question">이 장소에 다녀오셨나요?</h3>
+                  <div class="nudge-place"><strong id="nudge-place" data-nudge-place data-i18n="polle.recommendation.nudge-place">샘플 카페 A</strong><span data-nudge-distance data-i18n="polle.recommendation.span4">사진 위치에서 18m</span></div>
+                  <p id="nudge-message" data-i18n="polle.recommendation.nudge-message">리뷰로 방문 이야기를 남겨보세요.</p>
+                  <details class="nudge-alternatives" data-nudge-alternatives><summary data-i18n="polle.recommendation.summary">여기가 아니신가요?</summary><div class="nudge-candidates"><button type="button" data-nudge-candidate="0" hidden data-i18n="polle.recommendation.button">샘플 카페 A · 18m</button><button type="button" data-nudge-candidate="1" data-i18n="polle.recommendation.button2">샘플 베이커리 B · 32m</button></div></details>
+                  <div class="nudge-actions"><button type="button" data-nudge-dismiss data-i18n="polle.recommendation.button3">닫기</button><button type="button" data-nudge-confirm data-i18n="polle.recommendation.button4">좋아요</button></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="demo-replay"><button type="button" data-nudge-replay>넛지 다시 보기 ↻</button></div>
-          <p class="demo-instruction" data-nudge-status aria-live="polite">최근 사진을 바탕으로 앱이 먼저 방문 장소를 묻습니다. 다른 후보를 선택하거나 닫아 보세요.</p>
+          <div class="demo-replay"><button type="button" data-nudge-replay data-i18n="polle.recommendation.button5">넛지 다시 보기 ↻</button></div>
+          <p class="demo-instruction" data-nudge-status aria-live="polite" data-i18n="polle.recommendation.p5">최근 사진을 바탕으로 앱이 먼저 방문 장소를 묻습니다. 다른 후보를 선택하거나 닫아 보세요.</p>
         </figure>
       </div>
-      <details class="case-details"><summary>상세 구현 · 방문 묶음, 음식 분류, 후보 정렬</summary><div class="details-content">
-        <ol class="process-list"><li><strong>방문 단위로 묶기</strong><span>최근 24시간의 사진 중 위치가 있는 사진을 추리고, 30분·100m 기준으로 방문을 나눕니다.</span></li><li><strong>음식 라벨 추출</strong><span>방문마다 최대 5장의 사진을 기기에서 분류하고, 음식 관련 라벨과 신뢰도를 모읍니다.</span></li><li><strong>주변 장소 비교</strong><span>묶음의 평균 좌표 주변을 조회하고, 라벨과 메뉴·업종의 일치 정도에 거리·영업시간을 반영합니다.</span></li></ol>
-        <p>로그인 상태 진입 시 사진 접근과 위치 메타데이터 접근 권한을 확인하고, 최근 24시간에 촬영한 사진을 프로세스당 한 번 백그라운드에서 조회·분석하도록 구성했습니다. 분석할 사진 수를 제한하고, 조회가 연속으로 실패하면 중단하도록 했습니다.</p>
-        <p>사진 분류는 기기에서 수행하고, 주변 장소를 찾을 때는 방문 묶음의 대표 좌표를 서버 검색에 전달했습니다. 영업시간 정보가 없으면 중립적으로 처리하고, 촬영 시각에 닫힌 장소에는 감점을 적용했습니다.</p>
-        <p class="tradeoff"><strong>설계 비용</strong> GPS 오차와 음식 분류의 모호함 때문에 한 장소를 단정하기 어렵습니다. 여러 후보와 선택 UI를 함께 제공하고, 사진 위치 정보가 없는 경우는 분석 대상에서 제외했습니다.</p>
+      <details class="case-details"><summary data-i18n="polle.recommendation.summary2">상세 구현 · 방문 묶음, 음식 분류, 후보 정렬</summary><div class="details-content">
+        <ol class="process-list"><li><strong data-i18n="polle.recommendation.strong3">방문 단위로 묶기</strong><span data-i18n="polle.recommendation.span5">최근 24시간의 사진 중 위치가 있는 사진을 추리고, 30분·100m 기준으로 방문을 나눕니다.</span></li><li><strong data-i18n="polle.recommendation.strong4">음식 라벨 추출</strong><span data-i18n="polle.recommendation.span6">방문마다 최대 5장의 사진을 기기에서 분류하고, 음식 관련 라벨과 신뢰도를 모읍니다.</span></li><li><strong data-i18n="polle.recommendation.strong5">주변 장소 비교</strong><span data-i18n="polle.recommendation.span7">묶음의 평균 좌표 주변을 조회하고, 라벨과 메뉴·업종의 일치 정도에 거리·영업시간을 반영합니다.</span></li></ol>
+        <p data-i18n="polle.recommendation.p6">로그인 상태 진입 시 사진 접근과 위치 메타데이터 접근 권한을 확인하고, 최근 24시간에 촬영한 사진을 프로세스당 한 번 백그라운드에서 조회·분석하도록 구성했습니다. 분석할 사진 수를 제한하고, 조회가 연속으로 실패하면 중단하도록 했습니다.</p>
+        <p data-i18n="polle.recommendation.p7">사진 분류는 기기에서 수행하고, 주변 장소를 찾을 때는 방문 묶음의 대표 좌표를 서버 검색에 전달했습니다. 영업시간 정보가 없으면 중립적으로 처리하고, 촬영 시각에 닫힌 장소에는 감점을 적용했습니다.</p>
+        <p class="tradeoff" data-i18n="polle.recommendation.p8"><strong>설계 비용</strong> GPS 오차와 음식 분류의 모호함 때문에 한 장소를 단정하기 어렵습니다. 여러 후보와 선택 UI를 함께 제공하고, 사진 위치 정보가 없는 경우는 분석 대상에서 제외했습니다.</p>
       </div></details>
     </section>
 
     <section class="case-section wrapper" id="discovery" aria-labelledby="discovery-title">
       <div class="eyebrow">04 · PHOTO &amp; PLACE COMPOSING</div>
-      <h2 id="discovery-title">사진과 장소를 연결하는 글쓰기</h2>
-      <p class="case-result">글쓰기에서 사진을 고르면 촬영 위치 주변의 장소를 추천하고, 장소를 고르면 ‘장소 주변 사진’ 앨범을 보여주도록 구현했습니다. 사용자가 어느 쪽부터 선택하든 작성 흐름을 이어갈 수 있게 했습니다.</p>
+      <h2 id="discovery-title" data-i18n="polle.toc.aria-label7">사진과 장소를 연결하는 글쓰기</h2>
+      <p class="case-result" data-i18n="polle.discovery.p">글쓰기에서 사진을 고르면 촬영 위치 주변의 장소를 추천하고, 장소를 고르면 ‘장소 주변 사진’ 앨범을 보여주도록 구현했습니다. 사용자가 어느 쪽부터 선택하든 작성 흐름을 이어갈 수 있게 했습니다.</p>
       <div class="case-body">
-        <div><h3>해결 과제</h3><p>사진을 첨부한 뒤 장소를 다시 검색하거나, 장소를 고른 뒤 갤러리에서 촬영 날짜를 떠올리며 사진을 찾아야 했습니다. 먼저 선택한 정보로 다음 선택을 도울 필요가 있었습니다.</p><h3>설계 판단</h3><p>사진에서 시작할 때는 선택한 사진의 GPS로 주변 장소를 조회해 추천 칩을 보여줬습니다. 장소에서 시작할 때는 미리 인덱싱한 EXIF 위치를 Room에서 조회해 관련 사진 앨범을 구성했습니다.</p><p>추천 장소를 바로 선택하거나 별도 장소 검색으로 이어갈 수 있게 하고, 기준 좌표가 달라질 때 추천을 갱신했습니다.</p></div>
+        <div><h3 data-i18n="polle.architecture.h3">해결 과제</h3><p data-i18n="polle.discovery.p2">사진을 첨부한 뒤 장소를 다시 검색하거나, 장소를 고른 뒤 갤러리에서 촬영 날짜를 떠올리며 사진을 찾아야 했습니다. 먼저 선택한 정보로 다음 선택을 도울 필요가 있었습니다.</p><h3 data-i18n="polle.architecture.h32">설계 판단</h3><p data-i18n="polle.discovery.p3">사진에서 시작할 때는 선택한 사진의 GPS로 주변 장소를 조회해 추천 칩을 보여줬습니다. 장소에서 시작할 때는 미리 인덱싱한 EXIF 위치를 Room에서 조회해 관련 사진 앨범을 구성했습니다.</p><p data-i18n="polle.discovery.p4">추천 장소를 바로 선택하거나 별도 장소 검색으로 이어갈 수 있게 하고, 기준 좌표가 달라질 때 추천을 갱신했습니다.</p></div>
         <figure class="mockup" data-photo-demo>
-          <figcaption><span class="mockup-label">동작 설명용 목업</span><span>그림과 장소는 설명을 위한 예시입니다.</span></figcaption>
-          <div class="demo-flow-switch" role="group" aria-label="글쓰기 목업 흐름 선택"><button type="button" data-write-flow="photo" aria-pressed="true">사진 → 장소</button><button type="button" data-write-flow="place" aria-pressed="false">장소 → 사진</button></div>
+          <figcaption><span class="mockup-label" data-i18n="polle.architecture.span">동작 설명용 목업</span><span data-i18n="polle.discovery.span">그림과 장소는 설명을 위한 예시입니다.</span></figcaption>
+          <div class="demo-flow-switch" role="group" aria-label="글쓰기 목업 흐름 선택" data-i18n-aria-label="polle.discovery.aria-label"><button type="button" data-write-flow="photo" aria-pressed="true" data-i18n="polle.discovery.button">사진 → 장소</button><button type="button" data-write-flow="place" aria-pressed="false" data-i18n="polle.discovery.button2">장소 → 사진</button></div>
           <div class="phone-frame">
-            <div class="phone-title"><strong>리뷰 작성</strong><span class="demo-tag">SAMPLE</span></div>
+            <div class="phone-title"><strong data-i18n="polle.discovery.strong">리뷰 작성</strong><span class="demo-tag">SAMPLE</span></div>
             <div class="photo-demo-body" data-write-panel="photo">
-              <span class="demo-field-label">첨부할 사진 선택</span>
-              <div class="sample-photo-choices" role="group" aria-label="글쓰기 목업 사진 선택"><button type="button" data-write-photo="cafe" aria-pressed="true"><span class="scene-art scene-cafe" aria-hidden="true"></span><span>커피 사진</span></button><button type="button" data-write-photo="pizza" aria-pressed="false"><span class="scene-art scene-pizza" aria-hidden="true"></span><span>피자 사진</span></button></div>
-              <div class="album-heading"><strong>사진 위치 주변 장소</strong></div>
-              <div class="place-choice write-place-choices" role="group" aria-label="글쓰기 목업 추천 장소 선택"><button type="button" data-write-place="0" aria-pressed="false">샘플 카페 A</button><button type="button" data-write-place="1" aria-pressed="false">샘플 베이커리 B</button></div>
-              <div class="write-place-preview"><span class="demo-field-label">글에 연결한 장소</span><strong data-write-selected>장소를 선택해 주세요</strong></div>
+              <span class="demo-field-label" data-i18n="polle.discovery.span2">첨부할 사진 선택</span>
+              <div class="sample-photo-choices" role="group" aria-label="글쓰기 목업 사진 선택" data-i18n-aria-label="polle.discovery.aria-label2"><button type="button" data-write-photo="cafe" aria-pressed="true"><span class="scene-art scene-cafe" aria-hidden="true"></span><span data-i18n="polle.discovery.span3">커피 사진</span></button><button type="button" data-write-photo="pizza" aria-pressed="false"><span class="scene-art scene-pizza" aria-hidden="true"></span><span data-i18n="polle.discovery.span4">피자 사진</span></button></div>
+              <div class="album-heading"><strong data-i18n="polle.discovery.strong2">사진 위치 주변 장소</strong></div>
+              <div class="place-choice write-place-choices" role="group" aria-label="글쓰기 목업 추천 장소 선택" data-i18n-aria-label="polle.discovery.aria-label3"><button type="button" data-write-place="0" aria-pressed="false" data-i18n="polle.recommendation.nudge-place">샘플 카페 A</button><button type="button" data-write-place="1" aria-pressed="false" data-i18n="polle.discovery.button3">샘플 베이커리 B</button></div>
+              <div class="write-place-preview"><span class="demo-field-label" data-i18n="polle.discovery.span5">글에 연결한 장소</span><strong data-write-selected data-i18n="polle.discovery.strong3">장소를 선택해 주세요</strong></div>
             </div>
-            <div class="photo-demo-body" data-write-panel="place" hidden><span class="demo-field-label">선택한 장소</span><div class="place-choice" role="group" aria-label="목업 장소 선택"><button type="button" data-photo-place="cafe" aria-pressed="true">샘플 카페</button><button type="button" data-photo-place="park" aria-pressed="false">샘플 공원</button></div><div class="album-heading"><strong>장소 주변 사진</strong><span data-album-count>카페 · 3장</span></div><div class="photo-grid" data-photo-grid><div class="scene-art scene-cafe" role="img" aria-label="카페 사진 예시 1"></div><div class="scene-art scene-cafe variant-two" role="img" aria-label="카페 사진 예시 2"></div><div class="scene-art scene-cafe variant-three" role="img" aria-label="카페 사진 예시 3"></div></div><div class="album-secondary"><span>모든 사진</span><div class="photo-grid" aria-hidden="true"><div class="scene-art scene-park"></div><div class="scene-art scene-cafe"></div><div class="scene-art scene-park variant-two"></div></div></div></div>
+            <div class="photo-demo-body" data-write-panel="place" hidden><span class="demo-field-label" data-i18n="polle.architecture.small">선택한 장소</span><div class="place-choice" role="group" aria-label="목업 장소 선택" data-i18n-aria-label="polle.discovery.aria-label4"><button type="button" data-photo-place="cafe" aria-pressed="true" data-i18n="polle.architecture.strong2">샘플 카페</button><button type="button" data-photo-place="park" aria-pressed="false" data-i18n="polle.discovery.button4">샘플 공원</button></div><div class="album-heading"><strong data-i18n="polle.discovery.strong4">장소 주변 사진</strong><span data-album-count data-i18n="polle.discovery.span6">카페 · 3장</span></div><div class="photo-grid" data-photo-grid><div class="scene-art scene-cafe" role="img" aria-label="카페 사진 예시 1" data-i18n-aria-label="polle.discovery.aria-label5"></div><div class="scene-art scene-cafe variant-two" role="img" aria-label="카페 사진 예시 2" data-i18n-aria-label="polle.discovery.aria-label6"></div><div class="scene-art scene-cafe variant-three" role="img" aria-label="카페 사진 예시 3" data-i18n-aria-label="polle.discovery.aria-label7"></div></div><div class="album-secondary"><span data-i18n="polle.discovery.span7">모든 사진</span><div class="photo-grid" aria-hidden="true"><div class="scene-art scene-park"></div><div class="scene-art scene-cafe"></div><div class="scene-art scene-park variant-two"></div></div></div></div>
           </div>
-          <p class="demo-instruction" data-photo-status aria-live="polite">사진을 고른 뒤 추천 장소를 눌러 보세요. 위 버튼으로 반대 방향의 흐름도 볼 수 있습니다.</p>
+          <p class="demo-instruction" data-photo-status aria-live="polite" data-i18n="polle.discovery.p5">사진을 고른 뒤 추천 장소를 눌러 보세요. 위 버튼으로 반대 방향의 흐름도 볼 수 있습니다.</p>
         </figure>
       </div>
-      <details class="case-details"><summary>상세 구현 · 백그라운드 인덱싱과 좌표 검색</summary><div class="details-content">
-        <ol class="process-list"><li><strong>MediaStore</strong><span>기기 사진 목록과 ID를 확인합니다.</span></li><li><strong>EXIF → Room</strong><span>위치 메타데이터를 로컬 데이터베이스에 저장합니다.</span></li><li><strong>좌표 범위 쿼리</strong><span>선택한 장소 주변의 후보 사진을 조회합니다.</span></li></ol>
-        <p>위·경도에 서로 다른 오프셋을 적용한 사각 범위로 후보를 추렸습니다. 사진 메타데이터는 Room에 인덱싱해 기기 안에서 조회하고, WorkManager로 신규·삭제 사진을 반영했습니다.</p>
-        <p>반대 방향의 글쓰기 흐름에서는 선택한 사진 중 첫 GPS 좌표를 서버 검색에 전달해 주변 장소 후보를 보여줬습니다. 사진을 고른 뒤 장소를 붙이거나, 장소를 고른 뒤 관련 사진을 찾는 흐름을 모두 지원했습니다.</p>
-        <p class="tradeoff"><strong>설계 비용</strong> 초기 인덱싱에는 시간이 필요하고, 위치 권한이나 GPS가 없는 사진은 후보에서 빠집니다. 사각 범위 검색은 원형 반경과 차이가 있으며, 신규·삭제 ID 중심 동기화는 기존 사진의 메타데이터 수정까지 추적하지 않습니다.</p>
+      <details class="case-details"><summary data-i18n="polle.discovery.summary">상세 구현 · 백그라운드 인덱싱과 좌표 검색</summary><div class="details-content">
+        <ol class="process-list"><li><strong>MediaStore</strong><span data-i18n="polle.discovery.span8">기기 사진 목록과 ID를 확인합니다.</span></li><li><strong>EXIF → Room</strong><span data-i18n="polle.discovery.span9">위치 메타데이터를 로컬 데이터베이스에 저장합니다.</span></li><li><strong data-i18n="polle.discovery.strong5">좌표 범위 쿼리</strong><span data-i18n="polle.discovery.span10">선택한 장소 주변의 후보 사진을 조회합니다.</span></li></ol>
+        <p data-i18n="polle.discovery.p6">위·경도에 서로 다른 오프셋을 적용한 사각 범위로 후보를 추렸습니다. 사진 메타데이터는 Room에 인덱싱해 기기 안에서 조회하고, WorkManager로 신규·삭제 사진을 반영했습니다.</p>
+        <p data-i18n="polle.discovery.p7">반대 방향의 글쓰기 흐름에서는 선택한 사진 중 첫 GPS 좌표를 서버 검색에 전달해 주변 장소 후보를 보여줬습니다. 사진을 고른 뒤 장소를 붙이거나, 장소를 고른 뒤 관련 사진을 찾는 흐름을 모두 지원했습니다.</p>
+        <p class="tradeoff" data-i18n="polle.discovery.p8"><strong>설계 비용</strong> 초기 인덱싱에는 시간이 필요하고, 위치 권한이나 GPS가 없는 사진은 후보에서 빠집니다. 사각 범위 검색은 원형 반경과 차이가 있으며, 신규·삭제 ID 중심 동기화는 기존 사진의 메타데이터 수정까지 추적하지 않습니다.</p>
       </div></details>
-      <details class="case-details"><summary>상세 구현 · 사진 편집, 임시저장, 리뷰 수정</summary><div class="details-content">
-        <div class="responsibility-grid"><div><h3>편집 상태 복원</h3><p>원본·편집본 URI와 자르기·회전·반전 정보를 임시저장에 함께 기록해, 글쓰기를 다시 열어도 편집을 이어가도록 했습니다.</p></div><div><h3>변경분만 업로드</h3><p>리뷰 수정 시 기존 서버 사진은 유지하고 새로 추가한 사진만 업로드했습니다. 삭제한 사진은 ID 목록으로 구분했습니다.</p></div><div><h3>화면 간 결과 반영</h3><p>수정 완료 후 게시글을 다시 조회해 홈·타임라인·프로필의 내용을 갱신했습니다. 임시 파일은 다른 초안의 참조 여부를 확인한 뒤 정리했습니다.</p></div></div>
+      <details class="case-details"><summary data-i18n="polle.discovery.summary2">상세 구현 · 사진 편집, 임시저장, 리뷰 수정</summary><div class="details-content">
+        <div class="responsibility-grid"><div><h3 data-i18n="polle.discovery.h3">편집 상태 복원</h3><p data-i18n="polle.discovery.p9">원본·편집본 URI와 자르기·회전·반전 정보를 임시저장에 함께 기록해, 글쓰기를 다시 열어도 편집을 이어가도록 했습니다.</p></div><div><h3 data-i18n="polle.discovery.h32">변경분만 업로드</h3><p data-i18n="polle.discovery.p10">리뷰 수정 시 기존 서버 사진은 유지하고 새로 추가한 사진만 업로드했습니다. 삭제한 사진은 ID 목록으로 구분했습니다.</p></div><div><h3 data-i18n="polle.discovery.h33">화면 간 결과 반영</h3><p data-i18n="polle.discovery.p11">수정 완료 후 게시글을 다시 조회해 홈·타임라인·프로필의 내용을 갱신했습니다. 임시 파일은 다른 초안의 참조 여부를 확인한 뒤 정리했습니다.</p></div></div>
       </div></details>
     </section>
 
     <section class="case-section wrapper" id="motion" aria-labelledby="motion-title">
       <div class="eyebrow">05 · PHOTO EDITING &amp; LIFECYCLE</div>
-      <h2 id="motion-title">사진 편집부터 복원·감상·업로드까지</h2>
-      <p class="case-result">사진의 자르기·회전·반전부터 재편집과 임시저장 복원, 전체화면 뷰어, 업로드와 파일 정리까지 구현했습니다. 화면을 옮기거나 글쓰기를 다시 열어도 원본과 편집 상태를 이어가도록 관리했습니다.</p>
-      <ol class="case-chapters" aria-label="사진 처리 구현 과정">
+      <h2 id="motion-title" data-i18n="polle.motion.motion-title">사진 편집부터 복원·감상·업로드까지</h2>
+      <p class="case-result" data-i18n="polle.motion.p">사진의 자르기·회전·반전부터 재편집과 임시저장 복원, 전체화면 뷰어, 업로드와 파일 정리까지 구현했습니다. 화면을 옮기거나 글쓰기를 다시 열어도 원본과 편집 상태를 이어가도록 관리했습니다.</p>
+      <ol class="case-chapters" aria-label="사진 처리 구현 과정" data-i18n-aria-label="polle.motion.aria-label">
         <li id="photo-editing">
           <span class="chapter-number" aria-hidden="true">01</span>
           <div class="chapter-content">
-            <h3>편집 · 화면에서 본 영역을 결과 이미지로</h3>
-            <p>회전된 사진에서는 화면의 자르기 영역과 원본 픽셀 좌표가 어긋날 수 있었습니다. 사진의 회전 메타데이터를 먼저 반영하고, 화면 좌표를 원본 픽셀 좌표로 변환한 뒤 자르기·회전·반전을 적용했습니다.</p>
-            <details class="case-details"><summary>상세 구현 · 좌표 변환과 편집 결과</summary><div class="details-content">
-              <p>자유 비율과 1:1·3:4·4:3·9:16·16:9 등의 고정 비율을 지원했습니다. 자르기 영역은 이미지 경계 안으로 제한하고, 90도 회전 시에는 가로·세로 비율과 반전 축을 함께 보정했습니다.</p>
-              <div class="code-comparison"><div><span>결과 이미지 생성 순서</span><code>원본 회전 반영 → 화면의 자르기 좌표를 픽셀로 변환 → 자르기 → 사용자 반전·회전 적용</code></div></div>
-              <p>비트맵 생성과 파일 저장은 IO 작업으로 분리하고, 편집 결과는 별도 파일로 저장했습니다. 다시 편집할 때 사용할 원본도 함께 추적했습니다.</p>
+            <h3 data-i18n="polle.motion.h3">편집 · 화면에서 본 영역을 결과 이미지로</h3>
+            <p data-i18n="polle.motion.p2">회전된 사진에서는 화면의 자르기 영역과 원본 픽셀 좌표가 어긋날 수 있었습니다. 사진의 회전 메타데이터를 먼저 반영하고, 화면 좌표를 원본 픽셀 좌표로 변환한 뒤 자르기·회전·반전을 적용했습니다.</p>
+            <details class="case-details"><summary data-i18n="polle.motion.summary">상세 구현 · 좌표 변환과 편집 결과</summary><div class="details-content">
+              <p data-i18n="polle.motion.p3">자유 비율과 1:1·3:4·4:3·9:16·16:9 등의 고정 비율을 지원했습니다. 자르기 영역은 이미지 경계 안으로 제한하고, 90도 회전 시에는 가로·세로 비율과 반전 축을 함께 보정했습니다.</p>
+              <div class="code-comparison"><div><span data-i18n="polle.motion.span">결과 이미지 생성 순서</span><code data-i18n="polle.motion.code">원본 회전 반영 → 화면의 자르기 좌표를 픽셀로 변환 → 자르기 → 사용자 반전·회전 적용</code></div></div>
+              <p data-i18n="polle.motion.p4">비트맵 생성과 파일 저장은 IO 작업으로 분리하고, 편집 결과는 별도 파일로 저장했습니다. 다시 편집할 때 사용할 원본도 함께 추적했습니다.</p>
             </div></details>
           </div>
         </li>
         <li id="photo-restoration">
           <span class="chapter-number" aria-hidden="true">02</span>
           <div class="chapter-content">
-            <h3>상태 복원 · 앨범을 옮기고 다시 열어도 이어서</h3>
-            <p>앨범 이동이나 사진 목록 갱신으로 편집본이 원본으로 돌아가는 문제를 다뤘습니다. 사진 ID를 기준으로 목록·선택 상태에 편집 결과를 함께 반영하고, 임시저장에는 원본·편집본 URI와 편집 정보를 기록했습니다.</p>
-            <details class="case-details"><summary>상세 구현 · 원본 보존과 재편집</summary><div class="details-content">
-              <p>편집 결과의 치수·회전 정보와 자르기 영역·반전·선택 비율을 직렬화했습니다. 다시 열 때는 원본 이미지 위에 편집 상태를 복원해, 이미 잘린 결과물을 다시 자르는 방식으로 품질과 편집 범위가 줄어들지 않도록 했습니다.</p>
-              <p>이전 자르기 영역을 이미지 영역에 대한 상대 좌표로 바꾸고, 새 화면의 이미지 영역에 다시 매핑했습니다. 기기 목록을 인덱싱된 목록으로 교체할 때도 선택한 편집본 URI를 유지했습니다.</p>
+            <h3 data-i18n="polle.motion.h32">상태 복원 · 앨범을 옮기고 다시 열어도 이어서</h3>
+            <p data-i18n="polle.motion.p5">앨범 이동이나 사진 목록 갱신으로 편집본이 원본으로 돌아가는 문제를 다뤘습니다. 사진 ID를 기준으로 목록·선택 상태에 편집 결과를 함께 반영하고, 임시저장에는 원본·편집본 URI와 편집 정보를 기록했습니다.</p>
+            <details class="case-details"><summary data-i18n="polle.motion.summary2">상세 구현 · 원본 보존과 재편집</summary><div class="details-content">
+              <p data-i18n="polle.motion.p6">편집 결과의 치수·회전 정보와 자르기 영역·반전·선택 비율을 직렬화했습니다. 다시 열 때는 원본 이미지 위에 편집 상태를 복원해, 이미 잘린 결과물을 다시 자르는 방식으로 품질과 편집 범위가 줄어들지 않도록 했습니다.</p>
+              <p data-i18n="polle.motion.p7">이전 자르기 영역을 이미지 영역에 대한 상대 좌표로 바꾸고, 새 화면의 이미지 영역에 다시 매핑했습니다. 기기 목록을 인덱싱된 목록으로 교체할 때도 선택한 편집본 URI를 유지했습니다.</p>
             </div></details>
           </div>
         </li>
         <li id="photo-viewer">
           <span class="chapter-number" aria-hidden="true">03</span>
           <div class="chapter-content">
-            <h3>뷰어 · 확대·넘김·닫기를 상태에 따라 구분</h3>
-            <p>기본 배율에서는 좌우 넘김과 수직 드래그 닫기를, 확대 상태에서는 사진 내부 이동을 처리했습니다. 손가락 중심을 기준으로 확대하고, 손을 뗐을 때의 관성과 경계 복귀를 X·Y축별로 관리했습니다.</p>
-            <details class="case-details"><summary>상세 구현 · 제스처와 화면 전환</summary><div class="details-content">
-              <div class="responsibility-grid"><div><h4>확대와 경계 저항</h4><p>핀치와 더블탭으로 확대하고, 손을 떼면 1–3배 범위로 복귀하도록 했습니다. 입력값과 표시값을 분리해 경계 저항이 반복 적용되는 떨림을 막았습니다.</p></div><div><h4>축별 관성</h4><p>축마다 Animatable을 두어 한 축이 경계에 닿아도 다른 축은 감속을 이어가게 했습니다. 새 터치가 시작되면 진행 중인 관성을 멈췄습니다.</p></div><div><h4>열기와 닫기</h4><p>썸네일의 위치·크기에서 전체화면으로 펼쳤습니다. 닫기 버튼·뒤로가기는 원본 위치로 복귀하고, 수직 드래그 닫기는 화면 밖으로 이동하게 했습니다.</p></div></div>
-              <p>Predictive Back 진행도에 따라 전환을 적용하고, 취소하면 스프링으로 복원했습니다. 원본 셀의 위치를 알 수 없는 사진은 페이드로 닫았습니다.</p>
-              <p class="tradeoff"><strong>설계 비용</strong> 확대·이동·닫기의 입력 우선순위와 전환 상태를 함께 관리해야 했습니다. Dialog 해제 안정성을 위해 하드웨어 비트맵을 피한 선택은 메모리 비용을 늘릴 수 있습니다.</p>
+            <h3 data-i18n="polle.motion.h33">뷰어 · 확대·넘김·닫기를 상태에 따라 구분</h3>
+            <p data-i18n="polle.motion.p8">기본 배율에서는 좌우 넘김과 수직 드래그 닫기를, 확대 상태에서는 사진 내부 이동을 처리했습니다. 손가락 중심을 기준으로 확대하고, 손을 뗐을 때의 관성과 경계 복귀를 X·Y축별로 관리했습니다.</p>
+            <details class="case-details"><summary data-i18n="polle.motion.summary3">상세 구현 · 제스처와 화면 전환</summary><div class="details-content">
+              <div class="responsibility-grid"><div><h4 data-i18n="polle.motion.h4">확대와 경계 저항</h4><p data-i18n="polle.motion.p9">핀치와 더블탭으로 확대하고, 손을 떼면 1–3배 범위로 복귀하도록 했습니다. 입력값과 표시값을 분리해 경계 저항이 반복 적용되는 떨림을 막았습니다.</p></div><div><h4 data-i18n="polle.motion.h42">축별 관성</h4><p data-i18n="polle.motion.p10">축마다 Animatable을 두어 한 축이 경계에 닿아도 다른 축은 감속을 이어가게 했습니다. 새 터치가 시작되면 진행 중인 관성을 멈췄습니다.</p></div><div><h4 data-i18n="polle.motion.h43">열기와 닫기</h4><p data-i18n="polle.motion.p11">썸네일의 위치·크기에서 전체화면으로 펼쳤습니다. 닫기 버튼·뒤로가기는 원본 위치로 복귀하고, 수직 드래그 닫기는 화면 밖으로 이동하게 했습니다.</p></div></div>
+              <p data-i18n="polle.motion.p12">Predictive Back 진행도에 따라 전환을 적용하고, 취소하면 스프링으로 복원했습니다. 원본 셀의 위치를 알 수 없는 사진은 페이드로 닫았습니다.</p>
+              <p class="tradeoff" data-i18n="polle.motion.p13"><strong>설계 비용</strong> 확대·이동·닫기의 입력 우선순위와 전환 상태를 함께 관리해야 했습니다. Dialog 해제 안정성을 위해 하드웨어 비트맵을 피한 선택은 메모리 비용을 늘릴 수 있습니다.</p>
             </div></details>
           </div>
         </li>
         <li id="photo-delivery">
           <span class="chapter-number" aria-hidden="true">04</span>
           <div class="chapter-content">
-            <h3>업로드·파일 관리 · 변경한 사진과 파일 수명 구분</h3>
-            <p>업로드 전 사진을 긴 변 기준 최대 2048px로 변환했습니다. 리뷰 수정에서는 기존 서버 사진과 새로 추가한 사진을 구분해 신규 사진만 업로드하고, 삭제한 사진은 ID 목록으로 전달했습니다.</p>
-            <details class="case-details"><summary>상세 구현 · 이미지 변환, 파일 정리, 갤러리 저장</summary><div class="details-content">
-              <p>먼저 이미지 치수를 읽고 샘플링해 디코딩한 뒤, EXIF 회전과 리사이즈를 적용해 업로드용 JPEG를 생성했습니다. 변환용 임시 파일과 글쓰기의 편집본 파일은 별도로 관리했습니다.</p>
-              <p>업로드 후 편집본을 정리할 때는 다른 임시저장 글에서 참조하는지 확인했습니다. 리뷰 수정이 끝나면 게시글을 다시 조회해 홈·타임라인·프로필에 결과를 반영했습니다.</p>
-              <p>갤러리 저장은 Coil 디스크 캐시의 바이트를 우선 사용하고, 캐시를 사용할 수 없으면 비트맵을 JPEG로 변환했습니다. 저장 작업은 뷰어를 닫아도 이어지도록 앱 수명의 코루틴에서 실행했습니다.</p>
+            <h3 data-i18n="polle.motion.h34">업로드·파일 관리 · 변경한 사진과 파일 수명 구분</h3>
+            <p data-i18n="polle.motion.p14">업로드 전 사진을 긴 변 기준 최대 2048px로 변환했습니다. 리뷰 수정에서는 기존 서버 사진과 새로 추가한 사진을 구분해 신규 사진만 업로드하고, 삭제한 사진은 ID 목록으로 전달했습니다.</p>
+            <details class="case-details"><summary data-i18n="polle.motion.summary4">상세 구현 · 이미지 변환, 파일 정리, 갤러리 저장</summary><div class="details-content">
+              <p data-i18n="polle.motion.p15">먼저 이미지 치수를 읽고 샘플링해 디코딩한 뒤, EXIF 회전과 리사이즈를 적용해 업로드용 JPEG를 생성했습니다. 변환용 임시 파일과 글쓰기의 편집본 파일은 별도로 관리했습니다.</p>
+              <p data-i18n="polle.motion.p16">업로드 후 편집본을 정리할 때는 다른 임시저장 글에서 참조하는지 확인했습니다. 리뷰 수정이 끝나면 게시글을 다시 조회해 홈·타임라인·프로필에 결과를 반영했습니다.</p>
+              <p data-i18n="polle.motion.p17">갤러리 저장은 Coil 디스크 캐시의 바이트를 우선 사용하고, 캐시를 사용할 수 없으면 비트맵을 JPEG로 변환했습니다. 저장 작업은 뷰어를 닫아도 이어지도록 앱 수명의 코루틴에서 실행했습니다.</p>
             </div></details>
           </div>
         </li>
@@ -244,72 +244,72 @@
 
     <section class="case-section wrapper" id="decisions" aria-labelledby="decisions-title">
       <div class="eyebrow">06 · HOMESCREEN SCROLL PERFORMANCE</div>
-      <h2 id="decisions-title">중첩 목록 홈 화면의 스크롤 성능 개선</h2>
-      <p class="case-result">여러 가로 목록을 세로로 쌓은 HomeScreen의 빠른 스크롤 끊김을 개선했습니다. 재구성 범위, 새 카드의 이미지 초기화, 레이아웃 측정, 헤더 스크롤 처리를 단계적으로 조정했습니다.</p>
-      <p class="structure-note"><strong>화면 구조</strong> <code>LazyColumn → 섹션별 LazyRow·HorizontalPager → 사진 카드</code></p>
-      <div class="case-body text-only"><div><h3>해결 과제</h3><p>빠르게 스크롤하면 사진 카드 여러 개가 한꺼번에 화면에 들어왔습니다. 이때 새 카드의 구성·이미지 초기화·측정 비용이 누적됐고, 스크롤을 따라 움직이는 헤더의 상태 갱신도 함께 처리해야 했습니다.</p></div><div><h3>설계 판단</h3><p>Compose compiler의 reports·metrics 설정과 스크롤 trace를 바탕으로 반복 작업을 나눠 살폈습니다. 상태를 읽는 범위부터 카드 구성과 측정 비용까지 줄이고, 릴리스 테스트에서 불필요한 최적화는 다시 제거했습니다.</p></div></div>
-      <div class="performance-records" aria-label="개발 당시 커밋에 기록된 성능 비교">
-        <div><span class="record-label">이미지 초기화 경로 변경</span><h3>HomePlaceCard 1회 composition</h3><p class="record-value"><span>11.5ms</span><span aria-hidden="true">→</span><strong>5.4ms</strong></p><small>2026.06.02</small></div>
-        <div><span class="record-label">카드 레이아웃 단순화</span><h3>빠른 스크롤의 첫 프레임 doFrame</h3><p class="record-value"><span>84.5ms</span><span aria-hidden="true">→</span><strong>64.2ms</strong></p><small>2026.06.02</small></div>
+      <h2 id="decisions-title" data-i18n="polle.decisions.decisions-title">중첩 목록 홈 화면의 스크롤 성능 개선</h2>
+      <p class="case-result" data-i18n="polle.decisions.p">여러 가로 목록을 세로로 쌓은 HomeScreen의 빠른 스크롤 끊김을 개선했습니다. 재구성 범위, 새 카드의 이미지 초기화, 레이아웃 측정, 헤더 스크롤 처리를 단계적으로 조정했습니다.</p>
+      <p class="structure-note"><strong data-i18n="polle.decisions.strong">화면 구조</strong> <code data-i18n="polle.decisions.code">LazyColumn → 섹션별 LazyRow·HorizontalPager → 사진 카드</code></p>
+      <div class="case-body text-only"><div><h3 data-i18n="polle.architecture.h3">해결 과제</h3><p data-i18n="polle.decisions.p2">빠르게 스크롤하면 사진 카드 여러 개가 한꺼번에 화면에 들어왔습니다. 이때 새 카드의 구성·이미지 초기화·측정 비용이 누적됐고, 스크롤을 따라 움직이는 헤더의 상태 갱신도 함께 처리해야 했습니다.</p></div><div><h3 data-i18n="polle.architecture.h32">설계 판단</h3><p data-i18n="polle.decisions.p3">Compose compiler의 reports·metrics 설정과 스크롤 trace를 바탕으로 반복 작업을 나눠 살폈습니다. 상태를 읽는 범위부터 카드 구성과 측정 비용까지 줄이고, 릴리스 테스트에서 불필요한 최적화는 다시 제거했습니다.</p></div></div>
+      <div class="performance-records" aria-label="개발 당시 커밋에 기록된 성능 비교" data-i18n-aria-label="polle.decisions.aria-label">
+        <div><span class="record-label" data-i18n="polle.decisions.span">이미지 초기화 경로 변경</span><h3 data-i18n="polle.decisions.h3">HomePlaceCard 1회 composition</h3><p class="record-value"><span>11.5ms</span><span aria-hidden="true">→</span><strong>5.4ms</strong></p><small>2026.06.02</small></div>
+        <div><span class="record-label" data-i18n="polle.decisions.span2">카드 레이아웃 단순화</span><h3 data-i18n="polle.decisions.h32">빠른 스크롤의 첫 프레임 doFrame</h3><p class="record-value"><span>84.5ms</span><span aria-hidden="true">→</span><strong>64.2ms</strong></p><small>2026.06.02</small></div>
       </div>
-      <p class="record-note">개발 당시 커밋 메시지에 기록된 빠른 스크롤 trace 비교입니다. 두 수치는 서로 다른 변경 단계에서 기록한 독립적인 비교입니다.</p>
-      <details class="case-details" id="diagnosis"><summary>개선 과정 · 재구성에서 헤더 처리까지</summary><div class="details-content">
+      <p class="record-note" data-i18n="polle.decisions.p4">개발 당시 커밋 메시지에 기록된 빠른 스크롤 trace 비교입니다. 두 수치는 서로 다른 변경 단계에서 기록한 독립적인 비교입니다.</p>
+      <details class="case-details" id="diagnosis"><summary data-i18n="polle.decisions.summary">개선 과정 · 재구성에서 헤더 처리까지</summary><div class="details-content">
         <ol class="optimization-steps">
-          <li><div class="step-heading"><span>01 · 2026.06.01</span><h3>스크롤에 따라 다시 구성되는 범위 줄이기</h3></div><p>헤더 위치 등 자주 바뀌는 값을 offset·graphicsLayer·레이아웃 단계에서 읽도록 조정했습니다. 모델의 안정성을 정리하고 Store와 섹션 인자를 ImmutableList로 전환했으며, 가로 목록에 항목 키와 contentType을 지정했습니다.</p></li>
-          <li><div class="step-heading"><span>02 · 2026.06.02</span><h3>새 카드마다 반복되는 이미지 초기화 줄이기</h3></div><p>빠른 스크롤 중 AsyncImagePainter의 초기화 비용이 카드마다 누적되는 지점을 확인했습니다. HomeScreen의 이미지 표시 9곳을 FastAsyncImage로 교체해 LaunchedEffect에서 ImageLoader.execute()를 호출하고, Coil 로더와 캐시는 그대로 공유했습니다.</p><div class="code-comparison"><div><span>변경한 홈 카드의 이미지 경로</span><code>LaunchedEffect(uri) → ImageLoader.execute() → Image(bitmap)</code></div></div></li>
-          <li><div class="step-heading"><span>03 · 2026.06.02</span><h3>카드의 측정·배치와 로딩 준비 비용 줄이기</h3></div><p>이미지를 감싸던 중복 Box를 제거하고 해당 modifier를 이미지에 적용했습니다. Spacer 일부는 padding·spacedBy로 바꿔 간격을 유지하면서 노드 수를 줄였습니다. 로딩용 임시 항목 수도 줄여 목록 생성과 묶음 계산의 부담을 낮췄습니다.</p></li>
-          <li><div class="step-heading"><span>04 · 2026.06.05</span><h3>헤더 스크롤의 멈춤과 터치 지연 처리</h3></div><p>onPreScroll마다 실행하던 코루틴과 snapTo를 동기 상태 갱신으로 교체했습니다. 스크롤 연결 객체는 유지하고 최신 헤더 높이를 참조하게 했으며, 측정 도중 상태를 쓰던 코드는 onSizeChanged로 옮겼습니다.</p><p>표시용 목록은 remember(places)로 재사용하고, 페이지마다 반복하던 Map 상태 구독은 페이저 바깥으로 모았습니다. 콘텐츠의 관성 스크롤이 헤더 애니메이션의 종료를 기다리지 않도록 분리했습니다.</p></li>
-          <li><div class="step-heading"><span>05 · 2026.06.22</span><h3>같은 구조의 홈 섹션 재사용 보강</h3></div><p>세로 목록에서 반복되는 HomeDefaultSection에도 contentType을 지정했습니다. 안쪽 카드뿐 아니라 바깥 목록의 섹션 구조도 재사용 기준에 포함했습니다.</p></li>
-          <li><div class="step-heading"><span>06 · 2026.07.02</span><h3>릴리스에서 불필요한 최적화 다시 걷어내기</h3></div><p>초기에 추가했던 최상위 TextStyle 캐시 9개는 릴리스 빌드의 스크롤 테스트 후 제거했습니다. 유지할 이유가 확인된 변경을 남기고, 불필요한 캐시와 코드 복잡도는 줄였습니다.</p></li>
+          <li><div class="step-heading"><span>01 · 2026.06.01</span><h3 data-i18n="polle.decisions.h33">스크롤에 따라 다시 구성되는 범위 줄이기</h3></div><p data-i18n="polle.decisions.p5">헤더 위치 등 자주 바뀌는 값을 offset·graphicsLayer·레이아웃 단계에서 읽도록 조정했습니다. 모델의 안정성을 정리하고 Store와 섹션 인자를 ImmutableList로 전환했으며, 가로 목록에 항목 키와 contentType을 지정했습니다.</p></li>
+          <li><div class="step-heading"><span>02 · 2026.06.02</span><h3 data-i18n="polle.decisions.h34">새 카드마다 반복되는 이미지 초기화 줄이기</h3></div><p data-i18n="polle.decisions.p6">빠른 스크롤 중 AsyncImagePainter의 초기화 비용이 카드마다 누적되는 지점을 확인했습니다. HomeScreen의 이미지 표시 9곳을 FastAsyncImage로 교체해 LaunchedEffect에서 ImageLoader.execute()를 호출하고, Coil 로더와 캐시는 그대로 공유했습니다.</p><div class="code-comparison"><div><span data-i18n="polle.decisions.span3">변경한 홈 카드의 이미지 경로</span><code>LaunchedEffect(uri) → ImageLoader.execute() → Image(bitmap)</code></div></div></li>
+          <li><div class="step-heading"><span>03 · 2026.06.02</span><h3 data-i18n="polle.decisions.h35">카드의 측정·배치와 로딩 준비 비용 줄이기</h3></div><p data-i18n="polle.decisions.p7">이미지를 감싸던 중복 Box를 제거하고 해당 modifier를 이미지에 적용했습니다. Spacer 일부는 padding·spacedBy로 바꿔 간격을 유지하면서 노드 수를 줄였습니다. 로딩용 임시 항목 수도 줄여 목록 생성과 묶음 계산의 부담을 낮췄습니다.</p></li>
+          <li><div class="step-heading"><span>04 · 2026.06.05</span><h3 data-i18n="polle.decisions.h36">헤더 스크롤의 멈춤과 터치 지연 처리</h3></div><p data-i18n="polle.decisions.p8">onPreScroll마다 실행하던 코루틴과 snapTo를 동기 상태 갱신으로 교체했습니다. 스크롤 연결 객체는 유지하고 최신 헤더 높이를 참조하게 했으며, 측정 도중 상태를 쓰던 코드는 onSizeChanged로 옮겼습니다.</p><p data-i18n="polle.decisions.p9">표시용 목록은 remember(places)로 재사용하고, 페이지마다 반복하던 Map 상태 구독은 페이저 바깥으로 모았습니다. 콘텐츠의 관성 스크롤이 헤더 애니메이션의 종료를 기다리지 않도록 분리했습니다.</p></li>
+          <li><div class="step-heading"><span>05 · 2026.06.22</span><h3 data-i18n="polle.decisions.h37">같은 구조의 홈 섹션 재사용 보강</h3></div><p data-i18n="polle.decisions.p10">세로 목록에서 반복되는 HomeDefaultSection에도 contentType을 지정했습니다. 안쪽 카드뿐 아니라 바깥 목록의 섹션 구조도 재사용 기준에 포함했습니다.</p></li>
+          <li><div class="step-heading"><span>06 · 2026.07.02</span><h3 data-i18n="polle.decisions.h38">릴리스에서 불필요한 최적화 다시 걷어내기</h3></div><p data-i18n="polle.decisions.p11">초기에 추가했던 최상위 TextStyle 캐시 9개는 릴리스 빌드의 스크롤 테스트 후 제거했습니다. 유지할 이유가 확인된 변경을 남기고, 불필요한 캐시와 코드 복잡도는 줄였습니다.</p></li>
         </ol>
-        <p class="tradeoff"><strong>설계 비용</strong> 경량 이미지 경로는 crossfade·범용 error painter 등을 생략하고 비트맵 Drawable을 전제로 했습니다. 적용 화면에서 필요한 기능을 확인하고, 다른 용도의 범용 이미지 컴포넌트는 유지했습니다.</p>
+        <p class="tradeoff" data-i18n="polle.decisions.p12"><strong>설계 비용</strong> 경량 이미지 경로는 crossfade·범용 error painter 등을 생략하고 비트맵 Drawable을 전제로 했습니다. 적용 화면에서 필요한 기능을 확인하고, 다른 용도의 범용 이미지 컴포넌트는 유지했습니다.</p>
       </div></details>
     </section>
 
     <section class="case-section wrapper" id="integration" aria-labelledby="integration-title">
       <div class="eyebrow">07 · MAP INTEGRATION &amp; SYNC</div>
-      <h2 id="integration-title">저장한 장소를 로컬과 서버에서 일관되게</h2>
-      <p class="case-result">저장한 장소를 로컬 데이터로 먼저 보여주고, 서버의 추가·수정·삭제 내역을 동기화했습니다. 장소 지도에서는 화면에 보이는 영역을 우선 조회하도록 요청 순서를 구성했습니다.</p>
-      <div class="case-body text-only"><div><h3>해결 과제</h3><p>저장한 장소를 표시할 때마다 서버 응답을 기다리지 않으면서, 다른 기기에서 바뀐 정보와 삭제 내역도 반영해야 했습니다. 계정이 바뀌면 이전 계정의 로컬 데이터도 구분해야 했습니다.</p></div><div><h3>설계 판단</h3><p>Room에 저장한 장소의 복제본을 두고 화면을 먼저 구성했습니다. 수정 시각 이후의 변경분과 별도 삭제 내역을 합치고, 복제본의 소유 계정과 동기화 진행 상태를 함께 관리했습니다.</p></div></div>
-      <details class="case-details"><summary>상세 구현 · 저장한 장소의 로컬 복제본과 증분 동기화</summary><div class="details-content">
-        <ol class="process-list"><li><strong>저장된 핀 먼저 표시</strong><span>Room의 장소 목록으로 지도를 먼저 구성하고, 세션 내 중복 동기화 요청을 막습니다.</span></li><li><strong>변경 내역 합치기</strong><span>수정 시각 이후의 항목을 추가·갱신하고, 별도 삭제 내역으로 해제된 핀을 제거합니다.</span></li><li><strong>계정과 커서 확인</strong><span>소유 계정이 바뀌면 로컬 데이터를 비우고, 커서가 전진하지 않는 응답은 반복 조회를 멈춥니다.</span></li></ol>
-        <p>프로필의 장소 지도에서는 확대 수준과 화면에 보이는 타일을 기준으로 요청 순서를 정했습니다. 중간 확대 구간은 보이는 상세 타일부터 가져오고 넓은 영역 조회는 뒤로 미뤘습니다. 타일별 데이터 유무와 요청 상태를 공유해 빈 영역과 중복 요청을 건너뛰었습니다.</p>
-        <p class="tradeoff"><strong>설계 비용</strong> 먼저 보여준 로컬 데이터와 서버 상태는 동기화 전까지 다를 수 있습니다. 추가·수정뿐 아니라 삭제 내역과 계정 전환까지 별도로 다뤄야 했습니다.</p>
+      <h2 id="integration-title" data-i18n="polle.integration.integration-title">저장한 장소를 로컬과 서버에서 일관되게</h2>
+      <p class="case-result" data-i18n="polle.integration.p">저장한 장소를 로컬 데이터로 먼저 보여주고, 서버의 추가·수정·삭제 내역을 동기화했습니다. 장소 지도에서는 화면에 보이는 영역을 우선 조회하도록 요청 순서를 구성했습니다.</p>
+      <div class="case-body text-only"><div><h3 data-i18n="polle.architecture.h3">해결 과제</h3><p data-i18n="polle.integration.p2">저장한 장소를 표시할 때마다 서버 응답을 기다리지 않으면서, 다른 기기에서 바뀐 정보와 삭제 내역도 반영해야 했습니다. 계정이 바뀌면 이전 계정의 로컬 데이터도 구분해야 했습니다.</p></div><div><h3 data-i18n="polle.architecture.h32">설계 판단</h3><p data-i18n="polle.integration.p3">Room에 저장한 장소의 복제본을 두고 화면을 먼저 구성했습니다. 수정 시각 이후의 변경분과 별도 삭제 내역을 합치고, 복제본의 소유 계정과 동기화 진행 상태를 함께 관리했습니다.</p></div></div>
+      <details class="case-details"><summary data-i18n="polle.integration.summary">상세 구현 · 저장한 장소의 로컬 복제본과 증분 동기화</summary><div class="details-content">
+        <ol class="process-list"><li><strong data-i18n="polle.integration.strong">저장된 핀 먼저 표시</strong><span data-i18n="polle.integration.span">Room의 장소 목록으로 지도를 먼저 구성하고, 세션 내 중복 동기화 요청을 막습니다.</span></li><li><strong data-i18n="polle.integration.strong2">변경 내역 합치기</strong><span data-i18n="polle.integration.span2">수정 시각 이후의 항목을 추가·갱신하고, 별도 삭제 내역으로 해제된 핀을 제거합니다.</span></li><li><strong data-i18n="polle.integration.strong3">계정과 커서 확인</strong><span data-i18n="polle.integration.span3">소유 계정이 바뀌면 로컬 데이터를 비우고, 커서가 전진하지 않는 응답은 반복 조회를 멈춥니다.</span></li></ol>
+        <p data-i18n="polle.integration.p4">프로필의 장소 지도에서는 확대 수준과 화면에 보이는 타일을 기준으로 요청 순서를 정했습니다. 중간 확대 구간은 보이는 상세 타일부터 가져오고 넓은 영역 조회는 뒤로 미뤘습니다. 타일별 데이터 유무와 요청 상태를 공유해 빈 영역과 중복 요청을 건너뛰었습니다.</p>
+        <p class="tradeoff" data-i18n="polle.integration.p5"><strong>설계 비용</strong> 먼저 보여준 로컬 데이터와 서버 상태는 동기화 전까지 다를 수 있습니다. 추가·수정뿐 아니라 삭제 내역과 계정 전환까지 별도로 다뤄야 했습니다.</p>
       </div></details>
     </section>
 
     <section class="case-section wrapper" id="api-contract" aria-labelledby="api-contract-title">
       <div class="eyebrow">08 · TYPED GRAPHQL</div>
-      <h2 id="api-contract-title">요청과 응답의 계약을 타입으로 연결</h2>
-      <p class="case-result">문자열 쿼리와 수동 응답 처리를 생성된 GraphQL 타입에 맞춘 API 호출로 전환했습니다. 요청 변수와 응답 타입을 함께 연결하고, 목록 데이터와 페이지 커서를 분리했습니다.</p>
-      <div class="case-body text-only"><div><h3>해결 과제</h3><p>쿼리와 응답 모델을 따로 관리하면 필드 변경이 화면까지 전달되는 과정에서 불일치가 생길 수 있습니다. 목록을 갱신할 때 다음 페이지의 커서를 함께 잃지 않도록 관리할 필요도 있었습니다.</p></div><div><h3>설계 판단</h3><p>생성된 Operation에 Variables·Data 타입을 묶어 API와 검색 호출에 적용했습니다. 페이지 응답의 행과 커서는 별도 상태로 보관해, 항목 교체와 추가 로딩을 독립적으로 처리했습니다.</p></div></div>
-      <details class="case-details"><summary>상세 구현 · 타입 연결, 오류 처리, 페이지 응답</summary><div class="details-content">
-        <div class="code-comparison"><div><span>기존 호출 구조</span><code>문자열 쿼리 + 변수 구성 → 수동 응답 해석</code></div><div><span>타입을 연결한 호출 구조</span><code>Api.query(Operation&lt;Variables, Data&gt;, Variables) → Data</code></div></div>
-        <div class="responsibility-grid"><div><h3>호출 단위의 타입</h3><p>Operation이 변수와 결과의 직렬화 정보를 제공하도록 연결하고, 생성된 Fragment 타입을 화면 모델에 활용했습니다.</p></div><div><h3>실패 경로 구분</h3><p>HTTP 인증 실패, GraphQL 오류, 앱 업데이트 요구를 공통 통신 계층에서 구분해 처리했습니다.</p></div><div><h3>페이지 응답 분리</h3><p>행 목록과 next·prev 커서를 분리했습니다. 개별 항목을 교체해도 서버가 내려준 페이지 커서를 유지했습니다.</p></div></div>
-        <p>알 수 없는 enum 값의 보존, null 변수의 생략, 응답의 페이지 커서 처리를 확인하는 테스트를 추가했습니다.</p>
-        <p class="tradeoff"><strong>설계 비용</strong> 스키마와 생성 코드를 함께 관리해야 합니다. 타입 검사로 구조의 불일치를 줄이면서도, 인증·서버 오류와 예상하지 못한 응답 값은 실행 시점에 별도로 처리했습니다.</p>
+      <h2 id="api-contract-title" data-i18n="polle.api-contract.api-contract-title">요청과 응답의 계약을 타입으로 연결</h2>
+      <p class="case-result" data-i18n="polle.api-contract.p">문자열 쿼리와 수동 응답 처리를 생성된 GraphQL 타입에 맞춘 API 호출로 전환했습니다. 요청 변수와 응답 타입을 함께 연결하고, 목록 데이터와 페이지 커서를 분리했습니다.</p>
+      <div class="case-body text-only"><div><h3 data-i18n="polle.architecture.h3">해결 과제</h3><p data-i18n="polle.api-contract.p2">쿼리와 응답 모델을 따로 관리하면 필드 변경이 화면까지 전달되는 과정에서 불일치가 생길 수 있습니다. 목록을 갱신할 때 다음 페이지의 커서를 함께 잃지 않도록 관리할 필요도 있었습니다.</p></div><div><h3 data-i18n="polle.architecture.h32">설계 판단</h3><p data-i18n="polle.api-contract.p3">생성된 Operation에 Variables·Data 타입을 묶어 API와 검색 호출에 적용했습니다. 페이지 응답의 행과 커서는 별도 상태로 보관해, 항목 교체와 추가 로딩을 독립적으로 처리했습니다.</p></div></div>
+      <details class="case-details"><summary data-i18n="polle.api-contract.summary">상세 구현 · 타입 연결, 오류 처리, 페이지 응답</summary><div class="details-content">
+        <div class="code-comparison"><div><span data-i18n="polle.api-contract.span">기존 호출 구조</span><code data-i18n="polle.api-contract.code">문자열 쿼리 + 변수 구성 → 수동 응답 해석</code></div><div><span data-i18n="polle.api-contract.span2">타입을 연결한 호출 구조</span><code>Api.query(Operation&lt;Variables, Data&gt;, Variables) → Data</code></div></div>
+        <div class="responsibility-grid"><div><h3 data-i18n="polle.api-contract.h3">호출 단위의 타입</h3><p data-i18n="polle.api-contract.p4">Operation이 변수와 결과의 직렬화 정보를 제공하도록 연결하고, 생성된 Fragment 타입을 화면 모델에 활용했습니다.</p></div><div><h3 data-i18n="polle.api-contract.h32">실패 경로 구분</h3><p data-i18n="polle.api-contract.p5">HTTP 인증 실패, GraphQL 오류, 앱 업데이트 요구를 공통 통신 계층에서 구분해 처리했습니다.</p></div><div><h3 data-i18n="polle.api-contract.h33">페이지 응답 분리</h3><p data-i18n="polle.api-contract.p6">행 목록과 next·prev 커서를 분리했습니다. 개별 항목을 교체해도 서버가 내려준 페이지 커서를 유지했습니다.</p></div></div>
+        <p data-i18n="polle.api-contract.p7">알 수 없는 enum 값의 보존, null 변수의 생략, 응답의 페이지 커서 처리를 확인하는 테스트를 추가했습니다.</p>
+        <p class="tradeoff" data-i18n="polle.api-contract.p8"><strong>설계 비용</strong> 스키마와 생성 코드를 함께 관리해야 합니다. 타입 검사로 구조의 불일치를 줄이면서도, 인증·서버 오류와 예상하지 못한 응답 값은 실행 시점에 별도로 처리했습니다.</p>
       </div></details>
     </section>
 
     <section class="case-section wrapper" id="ai-workflow" aria-labelledby="ai-title">
       <div class="eyebrow">09 · AI-ASSISTED DEVELOPMENT</div>
-      <h2 id="ai-title">작업을 나누고, 설계 기준은 함께 공유</h2>
-      <p class="case-result">Claude로 분리 가능한 작업을 병렬로 진행하고, 상태 소유권과 개발 규칙을 지침으로 공유했습니다. 구현 방향을 정하고 결과를 프로젝트에 통합하는 역할은 직접 맡았습니다.</p>
-      <div class="case-body text-only"><div><h3>해결 과제</h3><p>여러 영역을 동시에 수정하면 컴포넌트마다 상태를 저장하는 위치나 비동기 작업의 수명이 달라질 수 있었습니다.</p></div><div><h3>설계 판단</h3><p>구현 전에 변경 범위와 공통 규칙을 정리했습니다. 화면·로직 작업을 나누더라도 기존 Store·ViewModel 구조와 사용자 흐름을 기준으로 결과를 검토했습니다.</p></div></div>
-      <details class="case-details"><summary>상세 구현 · 공유한 기준</summary><div class="details-content">
-        <div class="ai-rule-tabs" role="tablist" aria-label="공유한 개발 기준"><button type="button" role="tab" id="ai-tab-ownership" aria-selected="true" aria-controls="ai-panel-ownership" data-ai-tab="ownership">상태 소유권</button><button type="button" role="tab" id="ai-tab-review" aria-selected="false" aria-controls="ai-panel-review" data-ai-tab="review" tabindex="-1">통합 검토</button></div>
-        <div class="ai-rule-pane" role="tabpanel" id="ai-panel-ownership" aria-labelledby="ai-tab-ownership" data-ai-panel="ownership"><p>탭과 함께 유지할 정보는 Store, 상세 화면에 종속된 정보는 백스택 ViewModel, UI 효과는 Composition에 배치하는 기준을 공유했습니다.</p><pre><code>탭 상태     → Store
+      <h2 id="ai-title" data-i18n="polle.ai-workflow.ai-title">작업을 나누고, 설계 기준은 함께 공유</h2>
+      <p class="case-result" data-i18n="polle.ai-workflow.p">Claude로 분리 가능한 작업을 병렬로 진행하고, 상태 소유권과 개발 규칙을 지침으로 공유했습니다. 구현 방향을 정하고 결과를 프로젝트에 통합하는 역할은 직접 맡았습니다.</p>
+      <div class="case-body text-only"><div><h3 data-i18n="polle.architecture.h3">해결 과제</h3><p data-i18n="polle.ai-workflow.p2">여러 영역을 동시에 수정하면 컴포넌트마다 상태를 저장하는 위치나 비동기 작업의 수명이 달라질 수 있었습니다.</p></div><div><h3 data-i18n="polle.architecture.h32">설계 판단</h3><p data-i18n="polle.ai-workflow.p3">구현 전에 변경 범위와 공통 규칙을 정리했습니다. 화면·로직 작업을 나누더라도 기존 Store·ViewModel 구조와 사용자 흐름을 기준으로 결과를 검토했습니다.</p></div></div>
+      <details class="case-details"><summary data-i18n="polle.ai-workflow.summary">상세 구현 · 공유한 기준</summary><div class="details-content">
+        <div class="ai-rule-tabs" role="tablist" aria-label="공유한 개발 기준" data-i18n-aria-label="polle.ai-workflow.aria-label"><button type="button" role="tab" id="ai-tab-ownership" aria-selected="true" aria-controls="ai-panel-ownership" data-ai-tab="ownership" data-i18n="polle.ai-workflow.ai-tab-ownership">상태 소유권</button><button type="button" role="tab" id="ai-tab-review" aria-selected="false" aria-controls="ai-panel-review" data-ai-tab="review" tabindex="-1" data-i18n="polle.ai-workflow.ai-tab-review">통합 검토</button></div>
+        <div class="ai-rule-pane" role="tabpanel" id="ai-panel-ownership" aria-labelledby="ai-tab-ownership" data-ai-panel="ownership"><p data-i18n="polle.ai-workflow.p4">탭과 함께 유지할 정보는 Store, 상세 화면에 종속된 정보는 백스택 ViewModel, UI 효과는 Composition에 배치하는 기준을 공유했습니다.</p><pre><code data-i18n="polle.ai-workflow.code">탭 상태     → Store
 상세 상태   → ViewModel
 화면 효과   → Composition</code></pre></div>
-        <div class="ai-rule-pane" role="tabpanel" id="ai-panel-review" aria-labelledby="ai-tab-review" data-ai-panel="review" hidden><p>생성된 구현이 기존 설계와 맞는지 판단할 때 다음 지점을 살폈습니다.</p><ul><li>상태의 소유자와 정리 시점</li><li>코루틴의 취소·중복 요청 처리</li><li>컴포넌트가 연결되는 화면 이동과 사용자 흐름</li></ul></div>
+        <div class="ai-rule-pane" role="tabpanel" id="ai-panel-review" aria-labelledby="ai-tab-review" data-ai-panel="review" hidden><p data-i18n="polle.ai-workflow.p5">생성된 구현이 기존 설계와 맞는지 판단할 때 다음 지점을 살폈습니다.</p><ul><li data-i18n="polle.ai-workflow.li">상태의 소유자와 정리 시점</li><li data-i18n="polle.ai-workflow.li2">코루틴의 취소·중복 요청 처리</li><li data-i18n="polle.ai-workflow.li3">컴포넌트가 연결되는 화면 이동과 사용자 흐름</li></ul></div>
       </div></details>
     </section>
 
     <section class="case-section wrapper" id="retrospective" aria-labelledby="retrospective-title">
       <div class="eyebrow">10 · RETROSPECTIVE</div>
-      <h2 id="retrospective-title">핵심 설계 원칙</h2>
-      <div class="responsibility-grid lessons"><div><span>01</span><h3>상태의 수명부터 정하기</h3><p>어디에 저장할지에 앞서, 누가 소유하고 언제 정리할지 결정합니다.</p></div><div><span>02</span><h3>반복되는 경로에 집중하기</h3><p>변경할 범위를 좁히고, 다른 화면에서 필요한 범용 기능은 유지합니다.</p></div><div><span>03</span><h3>제약과 선택을 함께 설명하기</h3><p>설계로 얻은 이점과 감수한 비용을 사용자 경험에 연결해 설명합니다.</p></div></div>
-      <div class="project-return"><a class="project-back" href="/projects/">← 프로젝트 목록으로</a><a class="project-back" href="#top">맨 위로 ↑</a></div>
+      <h2 id="retrospective-title" data-i18n="polle.toc.aria-label13">핵심 설계 원칙</h2>
+      <div class="responsibility-grid lessons"><div><span>01</span><h3 data-i18n="polle.retrospective.h3">상태의 수명부터 정하기</h3><p data-i18n="polle.retrospective.p">어디에 저장할지에 앞서, 누가 소유하고 언제 정리할지 결정합니다.</p></div><div><span>02</span><h3 data-i18n="polle.retrospective.h32">반복되는 경로에 집중하기</h3><p data-i18n="polle.retrospective.p2">변경할 범위를 좁히고, 다른 화면에서 필요한 범용 기능은 유지합니다.</p></div><div><span>03</span><h3 data-i18n="polle.retrospective.h33">제약과 선택을 함께 설명하기</h3><p data-i18n="polle.retrospective.p3">설계로 얻은 이점과 감수한 비용을 사용자 경험에 연결해 설명합니다.</p></div></div>
+      <div class="project-return"><a class="project-back" href="/projects/" data-i18n="polle.hero.a">← 프로젝트 목록으로</a><a class="project-back" href="#top" data-i18n="polle.toc.a">맨 위로 ↑</a></div>
     </section>
   </main>
   <footer>
