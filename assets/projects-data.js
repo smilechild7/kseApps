@@ -12,7 +12,7 @@
           action: "개발 사례 보기",
           employment: "(주)어떤사람들 · 8개월 근무",
           body:
-            "React Native 기반 뽈레의 Android 네이티브 전환을 전담했습니다. Kotlin·Jetpack Compose로 화면 구현, 성능 최적화, 탐색 구조와 지도·제스처 연동을 설계했습니다.",
+            "React Native 기반 뽈레의 Android 네이티브 전환을 전담했습니다. Compose 화면·제스처, 사진 기반 글쓰기와 방문 넛지, 지도 동기화·GraphQL 통신을 구현했습니다.",
         },
         en: {
           eyebrow: "ANDROID",
@@ -20,7 +20,7 @@
           action: "Read case study",
           employment: "(주)어떤사람들 · 8 months",
           body:
-            "Led Android development for Polle’s migration from React Native to Kotlin and Jetpack Compose, implementing screens, performance improvements, navigation, maps, and gestures.",
+            "Led Polle’s Android migration from React Native to Kotlin and Jetpack Compose, implementing screens, gestures, photo-assisted writing, visit nudges, map data sync, and typed GraphQL calls.",
         },
       },
     },
