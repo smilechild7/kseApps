@@ -55,6 +55,32 @@
 .polle-page .code-comparison { display: grid; gap: .75rem; margin: 1rem 0; }
 .polle-page .code-comparison > div { display: grid; gap: .35rem; padding: 1rem; background: var(--color-background); border-radius: 8px; }
 .polle-page .code-comparison span { font-size: .8rem; color: var(--color-muted); }
+/* Photo processing is explained as a sequence, without a simulated editor. */
+.polle-page .case-chapters { list-style: none; margin: 2rem 0 0; padding: 0; }
+.polle-page .case-chapters > li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 1rem; padding-block: 1.5rem; border-top: 1px solid var(--case-line); scroll-margin-top: 1.5rem; }
+.polle-page .case-chapters > li:last-child { padding-bottom: 0; }
+.polle-page .chapter-number { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--case-soft); color: var(--color-accent); font-size: .8rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.polle-page .chapter-content > h3 { font-size: 1.1rem; margin: .2rem 0 .6rem; }
+.polle-page .chapter-content > p { margin-bottom: 0; }
+.polle-page .chapter-content .case-details { margin-top: 1rem; }
+.polle-page .chapter-content h4 { margin: 0 0 .5rem; font-size: .9rem; }
+.polle-page .structure-note { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem 1rem; padding: 1rem 1.25rem; border: 1px solid var(--case-line); border-radius: 8px; }
+.polle-page .structure-note strong { color: var(--color-text); font-size: .8rem; }
+.polle-page .structure-note code { font-size: .8rem; }
+.polle-page .performance-records { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0 .75rem; }
+.polle-page .performance-records > div { padding: 1.4rem; background: var(--color-surface); border: 1px solid var(--case-line); border-radius: var(--radius-md); }
+.polle-page .record-label { display: block; margin-bottom: .5rem; color: var(--color-accent); font-size: .75rem; font-weight: 600; }
+.polle-page .performance-records h3 { font-size: .9rem; }
+.polle-page .performance-records .record-value { display: flex; align-items: baseline; flex-wrap: wrap; gap: .6rem; margin: .8rem 0 .4rem; font-size: clamp(1.2rem, 3vw, 1.6rem); line-height: 1.5; font-variant-numeric: tabular-nums; }
+.polle-page .record-value strong { color: var(--color-accent); }
+.polle-page .performance-records small { color: var(--color-muted); font-size: .75rem; }
+.polle-page .case-section .record-note { font-size: .8rem; }
+.polle-page .optimization-steps { list-style: none; padding: 0; margin: 0; }
+.polle-page .optimization-steps > li { padding-block: 1.25rem; border-bottom: 1px solid var(--case-line); }
+.polle-page .optimization-steps > li:first-child { padding-top: 0; }
+.polle-page .optimization-steps > li:last-child { border: 0; }
+.polle-page .step-heading > span { display: block; margin-bottom: .5rem; color: var(--color-accent); font-size: .75rem; font-variant-numeric: tabular-nums; }
+.polle-page .step-heading h3 { font-size: 1rem; }
 .polle-page .ai-rule-tabs { display: flex; flex-wrap: wrap; gap: .5rem; }
 .polle-page .ai-rule-tabs button { padding: .7rem 1rem; border: 1px solid var(--case-line); border-radius: 8px; background: var(--color-surface); color: var(--color-muted); font-size: .875rem; }
 .polle-page .ai-rule-tabs button[aria-selected="true"] { background: var(--color-accent); border-color: var(--color-accent); color: white; }
@@ -64,9 +90,6 @@
 .polle-page .lessons { margin-top: 1.5rem; }
 .polle-page .lessons > div { padding-top: 1rem; border-top: 2px solid var(--case-line); }
 .polle-page .lessons span { display: block; color: var(--color-accent); font-size: .8rem; margin-bottom: .5rem; }
-.polle-page .project-contact { margin-top: 2rem; padding: 2rem; border-radius: var(--radius-md); background: var(--color-surface); box-shadow: var(--shadow-soft); }
-.polle-page .project-contact h3 { font-size: 1.3rem; }
-.polle-page .project-contact .cta-group { display: flex; gap: .75rem; flex-wrap: wrap; }
 .polle-page .project-return { margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
 
 /* Illustrative product mockups; no real app screens or photos are used. */
@@ -158,19 +181,6 @@
 .polle-page .album-secondary { margin-top: 1rem; }
 .polle-page .album-secondary > span { display: block; color: var(--color-muted); font-size: .75rem; margin-bottom: .6rem; }
 .polle-page .album-secondary .photo-grid { opacity: .65; }
-.polle-page .viewer-closed { padding: 1.5rem; min-height: 295px; display: grid; place-items: center; }
-.polle-page .photo-open { width: 100%; display: grid; gap: .75rem; border: 0; padding: 0; background: transparent; color: var(--color-accent); font-size: .8rem; }
-.polle-page .photo-open .scene-art { height: 165px; }
-.polle-page .viewer-open { background: #0f172a; color: #e2e8f0; }
-.polle-page .viewer-toolbar { display: flex; align-items: center; justify-content: space-between; padding: .5rem .75rem; font-size: .75rem; }
-.polle-page .viewer-toolbar button { background: transparent; border: 0; color: white; font-size: .75rem; padding: .5rem; }
-.polle-page .viewer-stage { height: 145px; overflow: hidden; display: grid; place-items: center; }
-.polle-page .viewer-stage .scene-art { width: 78%; height: 125px; border-radius: 2px; }
-.polle-page .viewer-controls { padding: .75rem 1rem; }
-.polle-page .viewer-controls label { display: flex; justify-content: space-between; font-size: .75rem; }
-.polle-page .viewer-controls input { width: 100%; margin: .65rem 0; accent-color: #bfdbfe; }
-.polle-page .scale-values { display: flex; justify-content: space-between; font-size: .7rem; }
-.polle-page .viewer-controls p { font-size: .7rem; color: #cbd5e1; margin: .5rem 0 0; }
 .polle-page .toc-hint { position: absolute; right: 5px; top: -23px; font-size: .7rem; color: var(--color-muted); white-space: nowrap; }
 .polle-page .project-toc:is(:hover, :focus-within, .is-open) .toc-hint { opacity: 0; }
 
@@ -180,10 +190,10 @@
   .polle-page .outcome-grid, .polle-page .case-body, .polle-page .case-body.text-only { grid-template-columns: 1fr; gap: 1.25rem; }
   .polle-page .outcome-grid a { padding: 1.25rem; }
   .polle-page .responsibility-grid, .polle-page .process-list { grid-template-columns: 1fr; gap: .75rem; }
+  .polle-page .case-chapters > li { grid-template-columns: minmax(0, 1fr); gap: .65rem; }
+  .polle-page .performance-records { grid-template-columns: 1fr; }
+  .polle-page .performance-records > div { padding: 1.25rem; }
   .polle-page .case-section .case-result { padding: 1rem; }
-  .polle-page .project-contact { padding: 1.5rem; }
-  .polle-page .project-contact .cta-group { flex-direction: column; align-items: stretch; }
-  .polle-page .project-contact .cta-button { justify-content: center; }
   .polle-page .project-return { padding-bottom: 2rem; }
 }
 @media (max-width: 1199px), (hover: none) { .polle-page .toc-hint { display: none; } }

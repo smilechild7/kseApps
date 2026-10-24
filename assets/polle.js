@@ -197,37 +197,6 @@
 })();
 
 (() => {
-  const demo = document.querySelector('[data-motion-demo]');
-  const slider = demo.querySelector('#motion-raw-range');
-  const open = demo.querySelector('[data-viewer-open]');
-  const close = demo.querySelector('[data-viewer-close]');
-  const update = () => {
-    const raw = Number(slider.value);
-    const display = raw < 1 ? 1 - (1 - raw) * .5 : raw > 4 ? 4 + (raw - 4) * .5 : raw;
-    const format = value => value.toFixed(2) + '×';
-    demo.querySelector('#motion-raw-label').textContent = format(raw);
-    demo.querySelector('#motion-raw-value').textContent = format(raw);
-    demo.querySelector('#motion-display-value').textContent = format(display);
-    demo.querySelector('#motion-tile').style.transform = `scale(${display})`;
-    demo.querySelector('#motion-stage-text').textContent = raw < 1 ? '하한 경계 저항' : raw > 4 ? '상한 경계 저항' : '기본 확대 범위';
-  };
-  const setViewer = (visible) => {
-    demo.querySelector('[data-viewer]').hidden = !visible;
-    demo.querySelector('[data-viewer-closed]').hidden = visible;
-    slider.value = '1';
-    update();
-    (visible ? close : open).focus({ preventScroll: true });
-  };
-  open.addEventListener('click', () => setViewer(true));
-  close.addEventListener('click', () => setViewer(false));
-  demo.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && !demo.querySelector('[data-viewer]').hidden) setViewer(false);
-  });
-  slider.addEventListener('input', update);
-  update();
-})();
-
-(() => {
   const tabs = [...document.querySelectorAll('[data-ai-tab]')];
   const panes = [...document.querySelectorAll('[data-ai-panel]')];
   const select = (key, focus) => {
