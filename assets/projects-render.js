@@ -1,95 +1,45 @@
 (function () {
-  const projects = (window.PROJECTS_DATA || []).reduce((map, project) => {
-    map[project.id] = project;
-    return map;
-  }, {});
+  const escape = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  })[char]);
 
-  if (!Object.keys(projects).length) {
+  // Used both by the static-page generator and the browser fallback.
+  const renderCard = (project, origin = 'https://kseapps.com') => {
+    const copy = project.copy.ko;
+    const external = new URL(project.href, origin).origin !== new URL(origin).origin;
+    const translated = (key) => `data-i18n="project.${escape(project.id)}.${key}"`;
+    const period = project.period
+      ? `<span class="card-period"><time datetime="${escape(project.period.start)}">${project.period.start.replaceAll('-', '.')}</time> - <time datetime="${escape(project.period.end)}">${project.period.end.replaceAll('-', '.')}</time></span>`
+      : '';
+    const employment = copy.employment
+      ? `<div class="card-employment"><span ${translated('employment')}>${escape(copy.employment)}</span>${period}</div>`
+      : '';
+    return `<a class="card card-link" data-project-id="${escape(project.id)}" href="${escape(project.href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>
+  <div class="eyebrow" ${translated('eyebrow')}>${escape(copy.eyebrow)}</div>
+  <h3 ${translated('title')}>${escape(copy.title)}</h3>${employment ? `\n  ${employment}` : ''}
+  <p ${translated('body')}>${escape(copy.body)}</p>
+  <div class="card-tags">${project.tags.map(tag => `<span class="card-tag">${escape(tag)}</span>`).join('')}</div>
+  <div class="card-destination"><span ${translated('action')}>${escape(copy.action)}</span><span aria-hidden="true">${external ? '↗' : '→'}</span>${external ? '<span class="sr-only" data-i18n="link.newTab"> (새 탭에서 열림)</span>' : ''}</div>
+</a>`;
+  };
+
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { renderCard };
     return;
   }
 
-  const orders = window.PROJECT_RENDER_ORDER || {};
-
-  const createElement = (tag, className) => {
-    const el = document.createElement(tag);
-    if (className) el.className = className;
-    return el;
-  };
-
-  const setI18nText = (node, key, text) => {
-    node.setAttribute("data-i18n", key);
-    node.dataset.i18nKo = text;
-    node.innerHTML = text;
-  };
-
-  const createCard = (project) => {
-    const link = createElement("a", "card card-link");
-    link.href = project.href;
-    link.target = "_blank";
-    link.rel = "noopener";
-
-    const eyebrow = createElement("div", "eyebrow");
-    setI18nText(eyebrow, `project.${project.id}.eyebrow`, project.copy.ko.eyebrow);
-
-    const title = createElement("h3");
-    setI18nText(title, `project.${project.id}.title`, project.copy.ko.title);
-
-    const body = createElement("p");
-    setI18nText(body, `project.${project.id}.body`, project.copy.ko.body);
-
-    const tagsWrap = createElement("div", "card-tags");
-    project.tags.forEach((label) => {
-      const tag = createElement("span", "card-tag");
-      tag.textContent = label;
-      tagsWrap.appendChild(tag);
+  document.addEventListener('DOMContentLoaded', () => {
+    const projects = new Map((window.PROJECTS_DATA || []).map(project => [project.id, project]));
+    document.querySelectorAll('[data-project-list]').forEach(container => {
+      // Static cards remain usable before JavaScript loads and when it is disabled.
+      if (container.querySelector('[data-project-id]')) return;
+      const context = container.getAttribute('data-project-list');
+      const order = window.PROJECT_RENDER_ORDER?.[context] || [...projects.keys()];
+      const reserved = container.querySelector('[data-project-reserved]');
+      const cards = order.filter(id => projects.has(id)).map(id => renderCard(projects.get(id), window.location.origin)).join('\n');
+      if (reserved) reserved.insertAdjacentHTML('beforebegin', cards);
+      else container.insertAdjacentHTML('beforeend', cards);
     });
-
-    link.appendChild(eyebrow);
-    link.appendChild(title);
-    link.appendChild(body);
-    link.appendChild(tagsWrap);
-
-    return link;
-  };
-
-  const renderContainer = (container) => {
-    const context = container.getAttribute("data-project-list") || "home";
-    const order =
-      orders[context] ||
-      Object.keys(projects).sort((a, b) => a.localeCompare(b));
-
-    const reserved = Array.from(
-      container.querySelectorAll("[data-project-reserved]")
-    );
-    reserved.forEach((node) => node.remove());
-
-    container.innerHTML = "";
-
-    const frag = document.createDocumentFragment();
-    order.forEach((id) => {
-      const project = projects[id];
-      if (project) {
-        frag.appendChild(createCard(project));
-      }
-    });
-
-    container.appendChild(frag);
-    reserved.forEach((node) => container.appendChild(node));
-  };
-
-  const applyCurrentLanguage = () => {
-    if (
-      window.__KSE_LANG &&
-      typeof window.__KSE_LANG.getCurrentLang === "function" &&
-      typeof window.__KSE_LANG.applyTranslations === "function"
-    ) {
-      const current = window.__KSE_LANG.getCurrentLang();
-      window.__KSE_LANG.applyTranslations(current || "ko");
-    }
-  };
-
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("[data-project-list]").forEach(renderContainer);
-    applyCurrentLanguage();
+    window.__KSE_LANG?.applyTranslations(window.__KSE_LANG.getCurrentLang() || 'ko');
   });
 })();

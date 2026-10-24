@@ -1,0 +1,29 @@
+.contact-page .nav-links a[aria-current="page"] {
+  background: rgba(29, 78, 216, 0.08);
+  color: var(--color-accent);
+}
+
+.contact-page .hero {
+  padding-inline: 0;
+}
+
+.contact-name {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.contact-details {
+  margin: 0;
+}
+
+.contact-details .card {
+  min-width: 0;
+}
+
+.contact-details dd {
+  margin: 0;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}

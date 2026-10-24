@@ -6,35 +6,51 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>KSE Apps — Personal App Studio</title>
   <meta name="description" content="KSE Apps — 1인 개발자 김성은의 서비스 포트폴리오와 공식 정책 페이지" />
-  <link rel="stylesheet" href="/assets/styles.css" />
-  <script src="/assets/lang.js" defer></script>
-  <script src="/assets/projects-data.js" defer></script>
-  <script src="/assets/projects-render.js" defer></script>
+  <link rel="stylesheet" href="/assets/styles.css?v=9ccdfff1732a" />
+  <script src="/assets/site.js?v=f44e21883037" defer></script>
+  <script src="/assets/lang.js?v=f79cc566bffb" defer></script>
+  <script src="/assets/projects-data.js?v=c989f49aa1aa" defer></script>
+  <script src="/assets/projects-render.js?v=39b9d246df6f" defer></script>
+  <!-- Social sharing -->
+  <link rel="canonical" href="https://kseapps.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KSE Apps">
+  <meta property="og:title" content="KSE Apps — Personal App Studio">
+  <meta property="og:description" content="KSE Apps — 1인 개발자 김성은의 서비스 포트폴리오와 공식 정책 페이지">
+  <meta property="og:url" content="https://kseapps.com/">
+  <meta property="og:image" content="https://kseapps.com/assets/share-site.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="개발자 김성은의 서비스 포트폴리오 · KSE Apps">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://kseapps.com/assets/share-site.png">
+  <meta name="twitter:image:alt" content="개발자 김성은의 서비스 포트폴리오 · KSE Apps">
+  <!-- /Social sharing -->
 </head>
 
 <body>
+  <a class="skip-link" data-i18n="nav.skip" href="#main-content">본문으로 바로가기</a>
   <header class="site-header">
     <div class="wrapper">
-      <nav>
+      <nav aria-label="메인 메뉴">
         <a class="brand" data-i18n="nav.brand" href="/"><span>KSE</span> Apps</a>
-        <div class="nav-links">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-navigation"><span data-i18n="nav.menu">메뉴</span><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+        <div class="nav-links" id="primary-navigation">
           <a data-i18n="nav.projects" href="/projects/">Projects</a>
-          <a data-i18n="nav.privacy" href="/privacy/">Privacy</a>
-          <a data-i18n="nav.terms" href="/terms/">Terms</a>
-          <a data-i18n="nav.contact" href="mailto:smilechild1005@gmail.com">Contact</a>
+          <a data-i18n="nav.contact" href="/contact/">Contact</a>
           <button type="button" class="lang-toggle" data-lang-toggle data-i18n="nav.language">English</button>
         </div>
       </nav>
     </div>
   </header>
-  <main>
+  <main id="main-content">
     <section class="hero wrapper">
       <div class="eyebrow" data-i18n="hero.eyebrow">KSE App Studio</div>
       <h1 data-i18n="hero.heading">개발자 김성은의<br />서비스 개발 일지</h1>
       <p data-i18n="hero.body">최소 1명 이상의 사용자들에게 사랑받을 수 있는 서비스를 만들고 있어요.</p>
       <div class="cta-group">
         <a class="cta-button cta-compact" data-i18n="hero.cta.primary" href="/projects/">프로젝트 둘러보기</a>
-        <a class="cta-button cta-secondary" data-i18n="hero.cta.secondary" href="mailto:smilechild1005@gmail.com">협업/채용
+        <a class="cta-button cta-secondary" data-i18n="hero.cta.secondary" href="/contact/">협업/채용
           문의</a>
       </div>
     </section>
@@ -44,7 +60,53 @@
         <h2 data-i18n="home.projects.title">주요 프로젝트</h2>
         <a data-i18n="home.projects.link" href="/projects/">모든 프로젝트</a>
       </div>
-      <div class="card-grid" data-project-list="home"></div>
+      <div class="card-grid" data-project-list="home">
+<!-- projects:start home -->
+<a class="card card-link" data-project-id="polle" href="/android_engineering_portfolio.html">
+  <div class="eyebrow" data-i18n="project.polle.eyebrow">ANDROID</div>
+  <h3 data-i18n="project.polle.title">뽈레</h3>
+  <div class="card-employment"><span data-i18n="project.polle.employment">(주)어떤사람들 · 8개월 근무</span><span class="card-period"><time datetime="2026-01-02">2026.01.02</time> - <time datetime="2026-08-31">2026.08.31</time></span></div>
+  <p data-i18n="project.polle.body">React Native 기반 뽈레의 Android 네이티브 전환을 전담했습니다. Kotlin·Jetpack Compose로 화면 구현, 성능 최적화, 탐색 구조와 지도·제스처 연동을 설계했습니다.</p>
+  <div class="card-tags"><span class="card-tag">Kotlin</span><span class="card-tag">Jetpack Compose</span><span class="card-tag">Android</span></div>
+  <div class="card-destination"><span data-i18n="project.polle.action">개발 사례 보기</span><span aria-hidden="true">→</span></div>
+</a>
+<a class="card card-link" data-project-id="thurry" href="https://apps.apple.com/kr/app/%EB%96%A0%EB%A6%AC-%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC-%EB%A7%90%EA%B0%90%ED%95%A0%EC%9D%B8/id6742439407" target="_blank" rel="noopener noreferrer">
+  <div class="eyebrow" data-i18n="project.thurry.eyebrow">iOS · Android</div>
+  <h3 data-i18n="project.thurry.title">떠리</h3>
+  <p data-i18n="project.thurry.body">한양대 근처 베이커리·카페에서 남은 상품을 소비자에게 할인 판매할 수 있도록 만든 베이커리 마감할인 플랫폼입니다.</p>
+  <div class="card-tags"><span class="card-tag">iOS</span><span class="card-tag">Android</span><span class="card-tag">Toss Payments</span><span class="card-tag">Firebase</span></div>
+  <div class="card-destination"><span data-i18n="project.thurry.action">앱스토어에서 보기</span><span aria-hidden="true">↗</span><span class="sr-only" data-i18n="link.newTab"> (새 탭에서 열림)</span></div>
+</a>
+<a class="card card-link" data-project-id="todayverse" href="https://apps.apple.com/kr/app/%EC%98%A4%EB%8A%98%EC%9D%98-%EC%84%B1%EA%B2%BD-%EB%A7%90%EC%94%80/id6753909849" target="_blank" rel="noopener noreferrer">
+  <div class="eyebrow" data-i18n="project.todayverse.eyebrow">iOS · 위젯</div>
+  <h3 data-i18n="project.todayverse.title">TodayVerse</h3>
+  <p data-i18n="project.todayverse.body">사용자의 고민을 바탕으로 맞춤형 성경 구절을 제공하는 iOS 앱. 위젯을 통해 일상에서 자연스럽게 말씀을 되뇌일 수 있도록 설계했습니다.</p>
+  <div class="card-tags"><span class="card-tag">SwiftUI</span><span class="card-tag">Widgets</span><span class="card-tag">OpenAI API</span></div>
+  <div class="card-destination"><span data-i18n="project.todayverse.action">앱스토어에서 보기</span><span aria-hidden="true">↗</span><span class="sr-only" data-i18n="link.newTab"> (새 탭에서 열림)</span></div>
+</a>
+<a class="card card-link" data-project-id="hitthelastone" href="https://hit-the-last-one.vercel.app/" target="_blank" rel="noopener noreferrer">
+  <div class="eyebrow" data-i18n="project.hitthelastone.eyebrow">Web · Game</div>
+  <h3 data-i18n="project.hitthelastone.title">Hit the Last One</h3>
+  <p data-i18n="project.hitthelastone.body">몬스터의 체력이 거의 남지 않았을 때 정확한 타이밍으로 막타를 치는 미니 웹 게임입니다. 빠른 반응과 집중력을 시험해 보세요.</p>
+  <div class="card-tags"><span class="card-tag">Web</span><span class="card-tag">Game</span><span class="card-tag">JavaScript</span></div>
+  <div class="card-destination"><span data-i18n="project.hitthelastone.action">게임 플레이하기</span><span aria-hidden="true">↗</span><span class="sr-only" data-i18n="link.newTab"> (새 탭에서 열림)</span></div>
+</a>
+<a class="card card-link" data-project-id="ai-shopping-agent" href="https://github.com/smilechild7/Kimseongeun-20260901" target="_blank" rel="noopener noreferrer">
+  <div class="eyebrow" data-i18n="project.ai-shopping-agent.eyebrow">Web · AI Agent</div>
+  <h3 data-i18n="project.ai-shopping-agent.title">AI Shopping Agent</h3>
+  <p data-i18n="project.ai-shopping-agent.body">과제로 제작한 여성 의류 탐색 AI 에이전트입니다. 자연어로 원하는 조건을 입력하면 실제 상품과 구매후기를 바탕으로 최대 3개의 후보를 추천하고, 추천 근거와 사이즈 정보, 구매 전 확인사항을 함께 보여줍니다.</p>
+  <div class="card-tags"><span class="card-tag">React</span><span class="card-tag">Express</span><span class="card-tag">SQLite</span><span class="card-tag">OpenAI API</span></div>
+  <div class="card-destination"><span data-i18n="project.ai-shopping-agent.action">소스 코드 보기</span><span aria-hidden="true">↗</span><span class="sr-only" data-i18n="link.newTab"> (새 탭에서 열림)</span></div>
+</a>
+<a class="card card-link" data-project-id="hasok" href="https://www.hasok.kr/" target="_blank" rel="noopener noreferrer">
+  <div class="eyebrow" data-i18n="project.hasok.eyebrow">Web · 작가 포트폴리오</div>
+  <h3 data-i18n="project.hasok.title">hasok</h3>
+  <p data-i18n="project.hasok.body">작가의 사진과 정보를 모아 소개하는 포트폴리오 웹사이트입니다. Google Sheets를 데이터베이스로 활용해 작가가 직접 콘텐츠에 접근하고 수정할 수 있도록 만들었습니다.</p>
+  <div class="card-tags"><span class="card-tag">Web</span><span class="card-tag">Portfolio</span><span class="card-tag">Google Sheets</span></div>
+  <div class="card-destination"><span data-i18n="project.hasok.action">사이트 방문하기</span><span aria-hidden="true">↗</span><span class="sr-only" data-i18n="link.newTab"> (새 탭에서 열림)</span></div>
+</a>
+<!-- projects:end home -->
+</div>
     </section>
 
     <section class="wrapper callout">
@@ -52,7 +114,7 @@
       <p data-i18n="home.contact.body">앱 이용자 피드백, 프로젝트 제안, 채용 문의까지 언제든 편하게 연락주세요.<br />세심하게 듣고 답변드리겠습니다.</p>
       <div class="contact-list">
         <span data-i18n="home.contact.email">✉️ <a
-            href="mailto:smilechild1005@gmail.com">smilechild1005@gmail.com</a></span>
+            href="/contact/">smilechild1005@naver.com</a></span>
         <span data-i18n="home.contact.github">GitHub · <a href="https://github.com/smilechild7" target="_blank"
             rel="noopener">smilechild7</a></span>
       </div>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="0" y="0" width="12" height="630" fill="#1d4ed8"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif">
+    <text x="80" y="97" fill="#0f172a" font-size="30" font-weight="700"><tspan fill="#1d4ed8">KSE</tspan> Apps</text>
+    <text x="80" y="226" fill="#64748b" font-size="20" letter-spacing="3">PERSONAL APP STUDIO</text>
+    <g fill="#0f172a" font-size="64" font-weight="700" letter-spacing="-2">
+      <text x="76" y="316">개발자 김성은의</text>
+      <text x="76" y="396">서비스 개발 일지</text>
+    </g>
+    <text x="80" y="464" fill="#475569" font-size="24">Android · iOS · Web</text>
+    <path d="M80 534H1120" stroke="#e2e8f0"/>
+    <text x="80" y="580" fill="#475569" font-size="20">작은 아이디어에서, 누군가의 일상으로.</text>
+    <text x="1120" y="580" text-anchor="end" fill="#1d4ed8" font-size="20">kseapps.com</text>
+  </g>
+  <g transform="translate(865 245)" fill="none" stroke="#1d4ed8" stroke-width="3">
+    <rect x="0" y="0" width="128" height="182" rx="20" fill="#eff6ff"/>
+    <path d="M40 18h48M50 161h28" stroke-linecap="round"/>
+    <rect x="64" y="53" width="158" height="112" rx="12" fill="#fff"/>
+    <path d="M65 80h156" stroke="#bfdbfe"/>
+    <path d="m103 109-14 14 14 14m72-28 14 14-14 14m-32-35-12 50" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

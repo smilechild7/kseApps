@@ -11,6 +11,9 @@
       "nav.terms": "Terms",
       "nav.contact": "Contact",
       "nav.language": "한국어",
+      "nav.menu": "Menu",
+      "nav.skip": "Skip to content",
+      "link.newTab": " (opens in a new tab)",
 
       "hero.eyebrow": "KSE App Studio",
       "hero.heading": "Seongeun Kim’s solo developer<br />service journal",
@@ -34,9 +37,16 @@
       "home.contact.body":
         "I’m always open to app feedback, new project ideas, or hiring opportunities. I listen carefully and respond thoughtfully.",
       "home.contact.email":
-        "✉️ <a href=\"mailto:smilechild1005@gmail.com\">smilechild1005@gmail.com</a>",
+        "✉️ <a href=\"/contact/\">smilechild1005@naver.com</a>",
       "home.contact.github":
         "GitHub · <a href=\"https://github.com/smilechild7\" target=\"_blank\" rel=\"noopener\">smilechild7</a>",
+
+      "contact.hero.heading": "Get in touch",
+      "contact.hero.body":
+        "For app feedback, project ideas, or partnership and hiring inquiries, you can reach me at the email address or phone number below.",
+      "contact.name": "Seongeun Kim",
+      "contact.email": "Email",
+      "contact.phone": "Phone",
 
       "footer.privacy": "Privacy Policies",
       "footer.terms": "Terms of Service",
@@ -160,6 +170,7 @@
       lang = "ko";
     }
     root.setAttribute("data-lang", lang);
+    root.setAttribute("lang", lang);
     applyTranslations(lang);
     try {
       localStorage.setItem(STORAGE_KEY, lang);
@@ -178,12 +189,16 @@
 
       if (lang === "ko") {
         node.innerHTML = node.dataset.i18nKo;
+        node.setAttribute("lang", "ko");
         return;
       }
 
       const map = translations[lang];
       if (map && Object.prototype.hasOwnProperty.call(map, key)) {
         node.innerHTML = map[key];
+        node.setAttribute("lang", lang);
+      } else {
+        node.setAttribute("lang", "ko");
       }
     });
   }

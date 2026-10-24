@@ -1,0 +1,187 @@
+/* Project-specific styles reuse the site's typography and navy/blue palette. */
+.polle-page {
+  --case-line: #e2e8f0;
+  --case-faint: #64748b;
+  --case-soft: #eff6ff;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.polle-page [hidden] { display: none !important; }
+.polle-page button, .polle-page input { font: inherit; }
+.polle-page button { cursor: pointer; }
+.polle-page .project-hero { padding-block: 3rem; gap: 1.1rem; }
+.polle-page .project-back { color: var(--color-accent); font-size: .9rem; width: fit-content; }
+.polle-page .project-hero h1 { letter-spacing: -.025em; }
+.polle-page .project-hero h1 span { color: var(--color-accent); }
+.polle-page .project-hero .project-employment { display: grid; gap: .25rem; font-size: 1rem; }
+.polle-page .project-employment strong { color: var(--color-text); }
+.polle-page .project-employment span { font-size: .9rem; font-variant-numeric: tabular-nums; }
+.polle-page .project-hero .hero-description { max-width: 47rem; font-size: 1.05rem; line-height: 1.8; }
+.polle-page .project-hero .translation-note { font-size: .875rem; max-width: 47rem; }
+.polle-page .case-section { border-top: 1px solid var(--case-line); padding-block: 3rem; scroll-margin-top: 1.5rem; }
+.polle-page .case-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.4; letter-spacing: -.03em; margin: .75rem 0 1rem; }
+.polle-page .case-section h3 { font-size: 1rem; line-height: 1.5; margin: 0 0 .5rem; }
+.polle-page .case-section .eyebrow { color: var(--color-accent); font-size: .8rem; }
+.polle-page .case-section p { color: var(--color-muted); font-size: .95rem; line-height: 1.8; margin: 0 0 1rem; }
+.polle-page .section-lede { max-width: 44rem; }
+.polle-page .outcome-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.polle-page .outcome-grid a { display: flex; flex-direction: column; gap: .65rem; padding: 1.5rem; background: var(--color-surface); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
+.polle-page .outcome-grid a:hover { box-shadow: 0 12px 32px rgba(29, 78, 216, .12); }
+.polle-page .outcome-number { font-size: .75rem; color: var(--color-accent); font-weight: 600; }
+.polle-page .outcome-grid h3 { margin: 0; }
+.polle-page .outcome-grid p { font-size: .875rem; margin: 0; }
+.polle-page .case-link { margin-top: auto; padding-top: .5rem; font-size: .8rem; font-weight: 600; color: var(--color-accent); }
+.polle-page .stack-line { font-size: .8rem; margin: 1.5rem 0 0; }
+.polle-page .stack-line strong { color: var(--color-text); margin-right: .5rem; }
+.polle-page .case-section .case-result { padding: 1.1rem 1.3rem; border-left: 3px solid var(--color-accent); background: var(--case-soft); border-radius: 0 8px 8px 0; color: var(--color-text); margin-bottom: 1.75rem; }
+.polle-page .case-body { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 2.5rem; align-items: start; }
+.polle-page .case-body > div > h3:not(:first-child) { margin-top: 1.5rem; }
+.polle-page .case-body.text-only { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.polle-page .case-details { margin-top: 1.5rem; border: 1px solid var(--case-line); border-radius: var(--radius-md); background: var(--color-surface); scroll-margin-top: 1.5rem; }
+.polle-page .case-details > summary { cursor: pointer; padding: 1.15rem 1.25rem; font-size: .9rem; font-weight: 600; }
+.polle-page .case-details[open] > summary { border-bottom: 1px solid var(--case-line); }
+.polle-page .details-content { padding: 1.25rem; }
+.polle-page .details-content p, .polle-page .details-content li { font-size: .875rem; }
+.polle-page .details-content > :last-child { margin-bottom: 0; }
+.polle-page .responsibility-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.polle-page .tradeoff { padding: 1rem; background: var(--color-background); border-radius: 8px; }
+.polle-page .tradeoff strong { color: var(--color-text); }
+.polle-page .process-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding: 0; margin: 0 0 1.25rem; }
+.polle-page .process-list li { padding: 1rem; border-radius: 8px; background: var(--case-soft); }
+.polle-page .process-list strong, .polle-page .process-list span { display: block; }
+.polle-page .process-list strong { margin-bottom: .5rem; }
+.polle-page .process-list span { color: var(--color-muted); }
+.polle-page code { font-size: .85em; overflow-wrap: anywhere; }
+.polle-page .code-comparison { display: grid; gap: .75rem; margin: 1rem 0; }
+.polle-page .code-comparison > div { display: grid; gap: .35rem; padding: 1rem; background: var(--color-background); border-radius: 8px; }
+.polle-page .code-comparison span { font-size: .8rem; color: var(--color-muted); }
+.polle-page .ai-rule-tabs { display: flex; flex-wrap: wrap; gap: .5rem; }
+.polle-page .ai-rule-tabs button { padding: .7rem 1rem; border: 1px solid var(--case-line); border-radius: 8px; background: var(--color-surface); color: var(--color-muted); font-size: .875rem; }
+.polle-page .ai-rule-tabs button[aria-selected="true"] { background: var(--color-accent); border-color: var(--color-accent); color: white; }
+.polle-page .ai-rule-pane { padding-top: 1rem; }
+.polle-page .ai-rule-pane pre { padding: 1rem; border-radius: 8px; background: var(--color-background); white-space: pre-wrap; }
+.polle-page .ai-rule-pane li { color: var(--color-muted); margin-bottom: .4rem; }
+.polle-page .lessons { margin-top: 1.5rem; }
+.polle-page .lessons > div { padding-top: 1rem; border-top: 2px solid var(--case-line); }
+.polle-page .lessons span { display: block; color: var(--color-accent); font-size: .8rem; margin-bottom: .5rem; }
+.polle-page .project-contact { margin-top: 2rem; padding: 2rem; border-radius: var(--radius-md); background: var(--color-surface); box-shadow: var(--shadow-soft); }
+.polle-page .project-contact h3 { font-size: 1.3rem; }
+.polle-page .project-contact .cta-group { display: flex; gap: .75rem; flex-wrap: wrap; }
+.polle-page .project-return { margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+
+/* Illustrative product mockups; no real app screens or photos are used. */
+.polle-page .mockup { margin: 0; min-width: 0; }
+.polle-page .mockup figcaption { display: grid; gap: .2rem; margin: 0 0 .75rem; text-align: center; color: var(--color-muted); font-size: .72rem; }
+.polle-page .mockup-label { color: var(--color-accent); font-weight: 600; font-size: .8rem; }
+.polle-page .phone-frame { width: 280px; max-width: 100%; margin: 0 auto; overflow: hidden; border: 2px solid #cbd5e1; border-radius: 22px; background: var(--color-surface); box-shadow: 0 10px 28px rgba(15, 23, 42, .06); }
+.polle-page .phone-title { padding: 1rem; border-bottom: 1px solid var(--case-line); display: flex; align-items: center; justify-content: space-between; gap: .5rem; font-size: .85rem; }
+.polle-page .demo-tag { font-size: .6rem; letter-spacing: .08em; color: var(--color-muted); }
+.polle-page .map-art { height: 185px; position: relative; overflow: hidden; background: #eef1ed; }
+.polle-page .map-river { position: absolute; background: #bfdbfe; width: 80px; height: 300px; top: -50px; left: 5%; transform: rotate(25deg); }
+.polle-page .map-road { position: absolute; background: white; border: 1px solid #e2e8f0; width: 360px; height: 16px; transform: rotate(-22deg); top: 65px; left: -20px; }
+.polle-page .road-two { top: 105px; transform: rotate(55deg); }
+.polle-page .map-block { position: absolute; background: #d9e5d5; border: 4px solid white; width: 70px; height: 50px; border-radius: 8px; right: 22px; top: 25px; transform: rotate(-22deg); }
+.polle-page .block-two { top: 125px; right: 40px; width: 50px; height: 40px; }
+.polle-page .map-pin { position: absolute; width: 38px; height: 38px; border: 2px solid white; border-radius: 50% 50% 50% 4px; background: var(--color-surface); color: var(--color-accent); box-shadow: 0 3px 9px rgba(15, 23, 42, .15); font-weight: 700; }
+.polle-page .pin-a { left: 110px; top: 95px; }
+.polle-page .pin-b { right: 35px; top: 40px; }
+.polle-page .map-pin[aria-pressed="true"] { color: white; background: var(--color-accent); }
+.polle-page .place-preview { display: flex; align-items: center; gap: .75rem; padding: .85rem 1rem; }
+.polle-page .place-preview > div { flex: 1; }
+.polle-page .place-preview strong { display: block; font-size: .85rem; }
+.polle-page .place-preview small { display: block; font-size: .7rem; color: var(--color-muted); }
+.polle-page .place-symbol { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 8px; background: var(--case-soft); color: var(--color-accent); font-weight: 700; }
+.polle-page .demo-tab-bar { display: flex; border-top: 1px solid var(--case-line); }
+.polle-page .demo-tab-bar button { flex: 1; border: 0; padding: .8rem; background: white; color: var(--color-muted); font-size: .8rem; }
+.polle-page .demo-tab-bar button[aria-pressed="true"] { background: var(--case-soft); color: var(--color-accent); font-weight: 700; }
+.polle-page .nav-demo-feed { min-height: 252px; padding: 1rem; }
+.polle-page .demo-feed-title { font-size: .8rem; font-weight: 600; }
+.polle-page .demo-feed-card { display: grid; gap: .5rem; margin-top: .65rem; }
+.polle-page .demo-feed-card .scene-art { height: 100px; }
+.polle-page .demo-feed-card strong { font-size: .8rem; }
+.polle-page .demo-feed-card p { font-size: .75rem; line-height: 1.6; margin: 0; }
+.polle-page .mockup .demo-instruction { max-width: 280px; margin: .75rem auto 0; font-size: .75rem; line-height: 1.6; color: var(--color-muted); }
+.polle-page .scene-art { display: block; position: relative; overflow: hidden; height: 80px; border-radius: 7px; background: #e6edf5; }
+.polle-page .scene-cafe { background: linear-gradient(155deg, #e7dfd1 0 57%, #ad8d73 57%); }
+.polle-page .scene-cafe::before { content: ''; position: absolute; width: 32px; height: 28px; background: #fff8ec; border-radius: 3px 3px 12px 12px; left: calc(50% - 19px); top: calc(50% - 11px); border-top: 5px solid #6f4e37; box-shadow: 0 6px 0 -2px #ded1bf; }
+.polle-page .scene-cafe::after { content: ''; position: absolute; width: 10px; height: 13px; border: 4px solid #fff8ec; border-radius: 50%; left: calc(50% + 7px); top: calc(50% - 5px); }
+.polle-page .scene-park { background: linear-gradient(#d7e9f5 0 55%, #9db88d 55%); }
+.polle-page .scene-park::before { content: ''; position: absolute; width: 45%; height: 90%; border-radius: 80% 0 0; background: #eee7d6; left: 37%; top: 53%; transform: rotate(15deg); }
+.polle-page .scene-park::after { content: ''; position: absolute; width: 25%; aspect-ratio: 1; border-radius: 50%; background: #68856c; top: 23%; left: 15%; box-shadow: 38px -12px 0 -5px #7d9a71; }
+.polle-page .variant-two { filter: hue-rotate(-12deg); }
+.polle-page .variant-three { filter: hue-rotate(12deg); }
+.polle-page .photo-demo-body { padding: 1rem; }
+.polle-page .demo-field-label { display: block; font-size: .7rem; color: var(--color-muted); margin-bottom: .5rem; }
+.polle-page .place-choice { display: flex; gap: .4rem; }
+.polle-page .place-choice button { padding: .5rem .65rem; border: 1px solid var(--case-line); border-radius: 7px; color: var(--color-muted); background: white; font-size: .75rem; min-height: 40px; }
+.polle-page .place-choice button[aria-pressed="true"] { border-color: var(--color-accent); color: var(--color-accent); background: var(--case-soft); }
+.polle-page .album-heading { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin: 1.25rem 0 .65rem; font-size: .8rem; }
+.polle-page .album-heading > span { color: var(--color-muted); font-size: .65rem; }
+.polle-page .photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+.polle-page .photo-grid .scene-art { height: 70px; }
+.polle-page .album-secondary { margin-top: 1rem; }
+.polle-page .album-secondary > span { display: block; color: var(--color-muted); font-size: .75rem; margin-bottom: .6rem; }
+.polle-page .album-secondary .photo-grid { opacity: .65; }
+.polle-page .viewer-closed { padding: 1.5rem; min-height: 295px; display: grid; place-items: center; }
+.polle-page .photo-open { width: 100%; display: grid; gap: .75rem; border: 0; padding: 0; background: transparent; color: var(--color-accent); font-size: .8rem; }
+.polle-page .photo-open .scene-art { height: 165px; }
+.polle-page .viewer-open { background: #0f172a; color: #e2e8f0; }
+.polle-page .viewer-toolbar { display: flex; align-items: center; justify-content: space-between; padding: .5rem .75rem; font-size: .75rem; }
+.polle-page .viewer-toolbar button { background: transparent; border: 0; color: white; font-size: .75rem; padding: .5rem; }
+.polle-page .viewer-stage { height: 145px; overflow: hidden; display: grid; place-items: center; }
+.polle-page .viewer-stage .scene-art { width: 78%; height: 125px; border-radius: 2px; }
+.polle-page .viewer-controls { padding: .75rem 1rem; }
+.polle-page .viewer-controls label { display: flex; justify-content: space-between; font-size: .75rem; }
+.polle-page .viewer-controls input { width: 100%; margin: .65rem 0; accent-color: #bfdbfe; }
+.polle-page .scale-values { display: flex; justify-content: space-between; font-size: .7rem; }
+.polle-page .viewer-controls p { font-size: .7rem; color: #cbd5e1; margin: .5rem 0 0; }
+.polle-page .toc-hint { position: absolute; right: 5px; top: -23px; font-size: .7rem; color: var(--color-muted); white-space: nowrap; }
+.polle-page .project-toc:is(:hover, :focus-within, .is-open) .toc-hint { opacity: 0; }
+
+@media (max-width: 720px) {
+  .polle-page .project-hero { padding-block: 2rem; }
+  .polle-page .case-section { padding-block: 2rem; }
+  .polle-page .outcome-grid, .polle-page .case-body, .polle-page .case-body.text-only { grid-template-columns: 1fr; gap: 1.25rem; }
+  .polle-page .outcome-grid a { padding: 1.25rem; }
+  .polle-page .responsibility-grid, .polle-page .process-list { grid-template-columns: 1fr; gap: .75rem; }
+  .polle-page .case-section .case-result { padding: 1rem; }
+  .polle-page .project-contact { padding: 1.5rem; }
+  .polle-page .project-contact .cta-group { flex-direction: column; align-items: stretch; }
+  .polle-page .project-contact .cta-button { justify-content: center; }
+  .polle-page .project-return { padding-bottom: 2rem; }
+}
+@media (max-width: 1199px), (hover: none) { .polle-page .toc-hint { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .polle-page *, .polle-page *::before, .polle-page *::after { scroll-behavior: auto; transition: none; }
+}
+/* A compact reading rail opens into a section remote on hover or focus. */
+.polle-page .project-toc { position: fixed; z-index: 30; right: 16px; top: 50%; transform: translateY(-50%); }
+.polle-page .toc-toggle { display: none; }
+.polle-page .toc-panel { width: 40px; padding: 8px; border: 1px solid transparent; border-radius: var(--radius-md); transition: width .18s ease, background-color .18s ease, box-shadow .18s ease; }
+.polle-page .toc-heading, .polle-page .toc-top { display: block; height: 0; overflow: hidden; opacity: 0; white-space: nowrap; }
+.polle-page .toc-links { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; }
+.polle-page .toc-links a { display: flex; align-items: center; justify-content: flex-end; gap: 12px; min-width: 0; min-height: 32px; padding: 6px 3px; border-radius: 6px; color: var(--color-muted); }
+.polle-page .toc-label { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; opacity: 0; font-size: .8rem; }
+.polle-page .toc-number { display: inline-block; width: 1.6rem; color: var(--case-faint); font-size: .7rem; font-variant-numeric: tabular-nums; }
+.polle-page .toc-mark { flex: none; width: 12px; height: 3px; border-radius: 2px; background: #94a3b8; transition: width .18s ease, background-color .18s ease; }
+.polle-page .toc-links a[aria-current] { color: var(--color-accent); font-weight: 600; }
+.polle-page .toc-links a[aria-current] .toc-mark { width: 20px; background: var(--color-accent); }
+.polle-page .project-toc:is(:hover, :focus-within, .is-open) .toc-panel { width: 252px; padding: 16px; border-color: var(--case-line); background: var(--color-surface); box-shadow: var(--shadow-soft); max-height: calc(100dvh - 48px); overflow-y: auto; }
+.polle-page .project-toc:is(:hover, :focus-within, .is-open) .toc-heading { height: auto; margin-bottom: 10px; opacity: 1; color: var(--color-text); font-size: .8rem; font-weight: 600; }
+.polle-page .project-toc:is(:hover, :focus-within, .is-open) .toc-top { height: auto; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--case-line); opacity: 1; color: var(--color-accent); font-size: .75rem; }
+.polle-page .project-toc:is(:hover, :focus-within, .is-open) .toc-label { opacity: 1; }
+.polle-page .toc-links a:hover, .polle-page .toc-links a:focus-visible { background: var(--case-soft); color: var(--color-accent); }
+@media (max-width: 1199px), (hover: none) {
+  .polle-page .project-toc { top: auto; bottom: max(16px, env(safe-area-inset-bottom)); right: 16px; transform: none; }
+  .polle-page .toc-toggle { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .65rem 1rem; border: 1px solid var(--case-line); border-radius: 999px; background: var(--color-surface); color: var(--color-accent); box-shadow: var(--shadow-soft); font-size: .85rem; font-weight: 600; cursor: pointer; }
+  .polle-page .toc-panel { display: none; }
+  .polle-page .project-toc.is-open .toc-panel { display: block; position: absolute; right: 0; bottom: calc(100% + 12px); width: min(280px, calc(100vw - 32px)); max-height: calc(100dvh - 100px); padding: 16px; }
+  .polle-page .toc-links a { min-height: 40px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.polle-page) { scroll-behavior: smooth; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .polle-page .toc-panel, .polle-page .toc-mark { transition: none; }
+}
