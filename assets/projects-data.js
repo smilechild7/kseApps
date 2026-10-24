@@ -12,7 +12,7 @@
           action: "개발 사례 보기",
           employment: "(주)어떤사람들 · 8개월 근무",
           body:
-            "React Native 기반 뽈레의 Android 네이티브 전환을 전담했습니다. 78개 화면과 사진 기반 글쓰기·방문 넛지, 사진 편집·업로드, 지도 동기화를 구현하고 홈 화면의 스크롤 성능을 개선했습니다.",
+            "React Native 기반 뽈레의 Android 앱 전체 재구현을 전담했습니다. 홈 화면의 스크롤 성능과 탭별 탐색 상태를 다루고, 사진 편집·복원·업로드, 사진 기반 글쓰기·방문 넛지와 지도 동기화를 구현했습니다.",
         },
         en: {
           eyebrow: "ANDROID",
@@ -20,7 +20,7 @@
           action: "Read case study",
           employment: "Eotteon Saramdeul Co., Ltd. · 8 months",
           body:
-            "Took sole responsibility for Polle’s native Android migration. Built 78 screens, photo-assisted reviews, recent-photo visit nudges, photo editing and uploads, and map data sync, and improved home-screen scrolling.",
+            "Took sole responsibility for rebuilding Polle’s Android app in native code. Worked on home-screen scrolling and tab navigation state, and built photo editing, restoration and uploads, photo-assisted reviews, visit nudges, and map data sync.",
         },
       },
     },

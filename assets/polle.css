@@ -13,6 +13,11 @@
 .polle-page .project-back { color: var(--color-accent); font-size: .9rem; width: fit-content; }
 .polle-page .project-hero h1 { letter-spacing: -.025em; }
 .polle-page .project-hero h1 span { color: var(--color-accent); }
+.polle-page .project-hero .project-person { display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem .75rem; margin: .5rem 0 0; font-size: .9rem; }
+.polle-page .project-person strong { color: var(--color-text); }
+.polle-page .project-person span { color: var(--color-muted); }
+.polle-page .project-facts { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 0; padding: 0; }
+.polle-page .project-facts li { padding: .4rem .8rem; border: 1px solid var(--case-line); border-radius: 999px; color: var(--color-accent); font-size: .8rem; font-weight: 600; }
 .polle-page .project-hero .project-employment { display: grid; gap: .25rem; font-size: 1rem; }
 .polle-page .project-employment strong { color: var(--color-text); }
 .polle-page .project-employment span { font-size: .9rem; font-variant-numeric: tabular-nums; }
@@ -50,6 +55,35 @@
 .polle-page .process-list strong, .polle-page .process-list span { display: block; }
 .polle-page .process-list strong { margin-bottom: .5rem; }
 .polle-page .process-list span { color: var(--color-muted); }
+.polle-page .lifetime-diagram { margin: 1.75rem 0 0; padding: 1.25rem; border: 1px solid var(--case-line); border-radius: var(--radius-md); background: var(--color-surface); }
+.polle-page .lifetime-diagram figcaption { display: grid; gap: .25rem; margin-bottom: 1.25rem; font-size: .9rem; }
+.polle-page .lifetime-diagram figcaption span { font-size: .8rem; color: var(--color-muted); }
+.polle-page .lifetime-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.polle-page .lifetime-owner { display: flex; flex-direction: column; padding: 1rem; background: var(--case-soft); border-radius: 8px; }
+.polle-page .owner-scope { color: var(--color-accent); font-size: .75rem; margin-bottom: .4rem; }
+.polle-page .lifetime-owner p { font-size: .8rem; margin-bottom: .5rem; }
+.polle-page .lifetime-arrow { color: var(--color-accent); margin-top: auto; margin-bottom: .4rem; }
+.polle-page .lifetime-owner .owner-boundary { border-top: 1px solid #dbeafe; padding-top: .75rem; margin-bottom: 0; color: var(--color-text); }
+.polle-page .lifetime-diagram .diagram-note { margin: 1rem 0 0; font-size: .8rem; }
+.polle-page .photo-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; }
+.polle-page .photo-flow a { display: flex; flex-direction: column; gap: .4rem; padding: 1rem; border: 1px solid var(--case-line); border-radius: 8px; background: var(--color-surface); }
+.polle-page .photo-flow a:hover { border-color: var(--color-accent); }
+.polle-page .photo-flow strong { font-size: .85rem; }
+.polle-page .photo-flow span { color: var(--color-muted); font-size: .75rem; }
+.polle-page .photo-flow .flow-number { color: var(--color-accent); font-variant-numeric: tabular-nums; }
+.polle-page .platform-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.polle-page .platform-grid > div { border-top: 2px solid var(--case-line); padding-top: 1.25rem; }
+.polle-page .platform-number { display: block; color: var(--color-accent); font-size: .75rem; margin-bottom: .75rem; font-variant-numeric: tabular-nums; }
+.polle-page .platform-grid p { font-size: .875rem; }
+.polle-page .verification-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+.polle-page .verification-grid > div { padding: 1.25rem; background: var(--color-surface); border: 1px solid var(--case-line); border-radius: var(--radius-md); }
+.polle-page .verification-grid p { font-size: .875rem; margin: 0; }
+.polle-page .verification-note { padding: 1.1rem 1.25rem; background: var(--case-soft); border-radius: 8px; }
+.polle-page .verification-note h3 { font-size: .85rem; }
+.polle-page .verification-note p { font-size: .85rem; margin: 0; }
+.polle-page .case-section .reflection-note { margin-top: 1.5rem; }
+.polle-page .case-section .section-crosslink { margin-top: 1.25rem; font-size: .875rem; }
+.polle-page .section-crosslink a { color: var(--color-accent); text-decoration: underline; text-underline-offset: .2em; }
 .polle-page code { font-size: .85em; overflow-wrap: anywhere; }
 .polle-page .code-comparison { display: grid; gap: .75rem; margin: 1rem 0; }
 .polle-page .code-comparison > div { display: grid; gap: .35rem; padding: 1rem; background: var(--color-background); border-radius: 8px; }
@@ -66,14 +100,6 @@
 .polle-page .structure-note { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem 1rem; padding: 1rem 1.25rem; border: 1px solid var(--case-line); border-radius: 8px; }
 .polle-page .structure-note strong { color: var(--color-text); font-size: .8rem; }
 .polle-page .structure-note code { font-size: .8rem; }
-.polle-page .performance-records { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0 .75rem; }
-.polle-page .performance-records > div { padding: 1.4rem; background: var(--color-surface); border: 1px solid var(--case-line); border-radius: var(--radius-md); }
-.polle-page .record-label { display: block; margin-bottom: .5rem; color: var(--color-accent); font-size: .75rem; font-weight: 600; }
-.polle-page .performance-records h3 { font-size: .9rem; }
-.polle-page .performance-records .record-value { display: flex; align-items: baseline; flex-wrap: wrap; gap: .6rem; margin: .8rem 0 .4rem; font-size: clamp(1.2rem, 3vw, 1.6rem); line-height: 1.5; font-variant-numeric: tabular-nums; }
-.polle-page .record-value strong { color: var(--color-accent); }
-.polle-page .performance-records small { color: var(--color-muted); font-size: .75rem; }
-.polle-page .case-section .record-note { font-size: .8rem; }
 .polle-page .optimization-steps { list-style: none; padding: 0; margin: 0; }
 .polle-page .optimization-steps > li { padding-block: 1.25rem; border-bottom: 1px solid var(--case-line); }
 .polle-page .optimization-steps > li:first-child { padding-top: 0; }
@@ -190,8 +216,8 @@
   .polle-page .outcome-grid a { padding: 1.25rem; }
   .polle-page .responsibility-grid, .polle-page .process-list { grid-template-columns: 1fr; gap: .75rem; }
   .polle-page .case-chapters > li { grid-template-columns: minmax(0, 1fr); gap: .65rem; }
-  .polle-page .performance-records { grid-template-columns: 1fr; }
-  .polle-page .performance-records > div { padding: 1.25rem; }
+  .polle-page .lifetime-grid, .polle-page .platform-grid, .polle-page .verification-grid { grid-template-columns: 1fr; }
+  .polle-page .photo-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .polle-page .case-section .case-result { padding: 1rem; }
   .polle-page .project-return { padding-bottom: 2rem; }
 }
