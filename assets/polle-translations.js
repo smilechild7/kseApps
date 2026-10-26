@@ -233,7 +233,7 @@
     "polle.motion.flow3-description": "Changed photos and file references",
     "polle.overview.title": "Why the rewrite and what I worked on",
     "polle.overview.context-title": "Why native",
-    "polle.overview.context": "The app needed precise photo editing and data previews that could use multiple threads. Constraints in the existing React Native implementation led the CEO to decide on a full native rewrite.",
+    "polle.overview.context": "Photo editing needed finer control over cropping, rotation, and gesture response, while data previews needed better responsiveness through multithreading. Rebuilt the app in Kotlin and Jetpack Compose to manage image processing, background work, and UI updates directly on Android.",
     "polle.overview.scope-title": "Sole responsibility for Android",
     "polle.overview.scope": "Handled all Android development while the CEO worked on iOS. Built the tabs, detail screens, maps, review composer, photo handling, and API integration in Kotlin and Jetpack Compose. Also joined UI design meetings to discuss Android-specific requirements.",
     "polle.overview.feature0.label": "01 / PERFORMANCE",
