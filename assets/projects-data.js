@@ -12,7 +12,7 @@
           action: "개발 사례 보기",
           employment: "(주)어떤사람들 · 8개월 근무",
           body:
-            "React Native 기반 뽈레의 Android 앱 전체 재구현을 전담했습니다. 홈 화면의 스크롤 성능과 탭별 탐색 상태를 다루고, 사진 편집·복원·업로드, 사진 기반 글쓰기·방문 넛지와 지도 동기화를 구현했습니다.",
+            "뽈레의 Android 앱을 Kotlin·Jetpack Compose로 다시 만드는 일을 전담했습니다. 홈 스크롤이 끊기는 원인을 찾아 반복 작업을 줄이고, 탭을 바꿔도 탐색 상태가 유지되도록 했습니다. 사진 편집·복원·업로드, 방문 넛지와 지도 동기화도 구현했습니다.",
         },
         en: {
           eyebrow: "ANDROID",
@@ -20,7 +20,7 @@
           action: "Read case study",
           employment: "Eotteon Saramdeul Co., Ltd. · 8 months",
           body:
-            "Took sole responsibility for rebuilding Polle’s Android app in native code. Worked on home-screen scrolling and tab navigation state, and built photo editing, restoration and uploads, photo-assisted reviews, visit nudges, and map data sync.",
+            "Rebuilt Polle’s Android app in Kotlin and Jetpack Compose as the sole Android developer. Investigated home-screen scrolling stutter, reduced repeated work, and kept browsing state across tab switches. Built photo editing, restoration and uploads, visit nudges, and map data sync.",
         },
       },
     },
