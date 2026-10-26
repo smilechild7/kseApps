@@ -7,10 +7,10 @@
   <meta name="description" content="뽈레의 Android 앱을 Kotlin·Jetpack Compose로 전체 재구현했습니다. 홈 스크롤 개선, 탐색 상태 유지, 사진 편집·복원·업로드와 Android UI 대응 과정을 정리했습니다. 김성은 · (주)어떤사람들 · 2026.01.02–2026.08.31." data-i18n-content="polle.page.content">
   <title data-i18n="polle.page.title">뽈레 Android 네이티브 전환 — KSE Apps</title>
   <link rel="stylesheet" href="/assets/styles.css?v=9ccdfff1732a">
-  <link rel="stylesheet" href="/assets/polle.css?v=1f8415cecaf6">
+  <link rel="stylesheet" href="/assets/polle.css?v=f239aa6871a5">
   <script src="/assets/site.js?v=f44e21883037" defer></script>
   <script src="/assets/lang.js?v=7c950d1f8cc1" defer></script>
-  <script src="/assets/polle-translations.js?v=fd345f20ce07" defer></script>
+  <script src="/assets/polle-translations.js?v=8b32608d69bc" defer></script>
   <script src="/assets/polle.js?v=66f3b1b43c1c" defer></script>
   <!-- Social sharing -->
   <link rel="canonical" href="https://kseapps.com/android_engineering_portfolio.html">
@@ -48,13 +48,12 @@
   <main class="polle-page" id="main-content">
     <section class="hero wrapper project-hero" id="top" aria-labelledby="project-title">
       <a class="project-back" href="/projects/" data-i18n="polle.hero.a">← 프로젝트 목록으로</a>
-      <p class="project-person" data-i18n="polle.hero.identity"><strong>김성은</strong><span>Android Engineer</span></p>
       <div class="eyebrow">ANDROID · ENGINEERING CASE STUDIES</div>
-      <h1 id="project-title" data-i18n="polle.hero.project-title">뽈레<br><span>Android 네이티브 전환</span></h1>
-      <p class="project-employment"><strong data-i18n="polle.hero.strong">(주)어떤사람들</strong><span><time datetime="2026-01-02">2026.01.02</time> - <time datetime="2026-08-31">2026.08.31</time></span></p>
-      <ul class="project-facts"><li data-i18n="polle.hero.duration">8개월</li><li data-i18n="polle.hero.ownership">Android 개발 전담</li><li data-i18n="polle.hero.rewrite">전체 재구현</li></ul>
+      <div class="project-heading">
+        <h1 id="project-title" data-i18n="polle.hero.project-title">뽈레<br><span>Android 네이티브 전환</span></h1>
+        <p class="project-employment"><strong data-i18n="polle.hero.strong">(주)어떤사람들</strong><span><time datetime="2026-01-02">2026.01.02</time> - <time datetime="2026-08-31">2026.08.31</time></span></p>
+      </div>
       <p class="hero-description" data-i18n="polle.hero.p">React Native 기반 뽈레의 Android 앱을 Kotlin·Jetpack Compose로 전체 재구현했습니다. 홈에서 스크롤할 때 반복되는 작업을 줄이고, 탭을 바꿔도 탐색 상태가 유지되도록 했습니다. 사진은 편집부터 임시저장 복원, 뷰어와 업로드까지 구현했습니다.</p>
-      <div class="cta-group"><a class="cta-button cta-compact" href="#overview" data-i18n="polle.hero.a2">주요 기여 살펴보기 ↓</a><a class="cta-button cta-secondary cta-compact" href="https://github.com/smilechild7" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
     </section>
 
     <aside class="project-toc" aria-label="페이지 목차" data-i18n-aria-label="polle.toc.aria-label">
@@ -65,7 +64,7 @@
         <div class="toc-links">
           <a href="#overview" data-section="overview" aria-label="전환 배경과 주요 기여" data-i18n-aria-label="polle.toc.overview.aria"><span class="toc-label" data-i18n="polle.toc.overview"><span class="toc-number">01</span>전환 배경과 주요 기여</span><span class="toc-mark" aria-hidden="true"></span></a>
           <a href="#decisions" data-section="decisions" aria-label="홈 스크롤 성능 개선" data-i18n-aria-label="polle.toc.decisions.aria"><span class="toc-label" data-i18n="polle.toc.decisions"><span class="toc-number">02</span>홈 스크롤 성능 개선</span><span class="toc-mark" aria-hidden="true"></span></a>
-          <a href="#architecture" data-section="architecture" aria-label="탐색과 상태 유지" data-i18n-aria-label="polle.toc.architecture.aria"><span class="toc-label" data-i18n="polle.toc.architecture"><span class="toc-number">03</span>탐색과 상태 유지</span><span class="toc-mark" aria-hidden="true"></span></a>
+          <a href="#architecture" data-section="architecture" aria-label="탭별 탐색과 상태 유지" data-i18n-aria-label="polle.toc.architecture.aria"><span class="toc-label" data-i18n="polle.toc.architecture"><span class="toc-number">03</span>탭별 탐색과 상태 유지</span><span class="toc-mark" aria-hidden="true"></span></a>
           <a href="#motion" data-section="motion" aria-label="사진 편집·복원·파일 관리" data-i18n-aria-label="polle.toc.motion.aria"><span class="toc-label" data-i18n="polle.toc.motion"><span class="toc-number">04</span>사진 편집·복원·파일 관리</span><span class="toc-mark" aria-hidden="true"></span></a>
           <a href="#adaptive-ui" data-section="adaptive-ui" aria-label="Android UI와 기기 대응" data-i18n-aria-label="polle.toc.adaptive-ui.aria"><span class="toc-label" data-i18n="polle.toc.adaptive-ui"><span class="toc-number">05</span>Android UI와 기기 대응</span><span class="toc-mark" aria-hidden="true"></span></a>
           <a href="#recommendation" data-section="recommendation" aria-label="최근 사진 기반 방문 넛지" data-i18n-aria-label="polle.toc.recommendation.aria"><span class="toc-label" data-i18n="polle.toc.recommendation"><span class="toc-number">06</span>최근 사진 기반 방문 넛지</span><span class="toc-mark" aria-hidden="true"></span></a>
@@ -81,57 +80,79 @@
     <section class="case-section wrapper" id="overview" aria-labelledby="overview-title">
       <div class="eyebrow">01 · CONTEXT &amp; CONTRIBUTIONS</div>
       <h2 id="overview-title" data-i18n="polle.overview.title">전환 배경과 맡은 일</h2>
-      <div class="case-body text-only"><div><h3 data-i18n="polle.overview.context-title">전환의 배경</h3><p data-i18n="polle.overview.context">사진 편집의 자르기·회전과 제스처 반응을 세밀하게 조정하고, 데이터 미리보기는 멀티스레드를 활용해 반응성을 개선할 필요가 있었습니다. 이미지 처리와 백그라운드 작업, 화면 갱신을 Android에 맞게 직접 제어할 수 있도록 Kotlin·Jetpack Compose로 앱을 전체 재구현했습니다.</p></div><div><h3 data-i18n="polle.overview.scope-title">Android 개발 전담</h3><p data-i18n="polle.overview.scope">Android 개발을 전담했고, 대표가 iOS 개발을 맡았습니다. Kotlin·Jetpack Compose로 주요 탭과 상세 화면, 지도, 글쓰기와 사진 처리, API 연동을 구현했습니다. UI 디자인 회의에도 참여해 Android에서 고려할 점을 함께 이야기했습니다.</p></div></div>
-      <div class="outcome-grid"><a href="#decisions"><span class="outcome-number" data-i18n="polle.overview.feature0.label">01 / 성능</span><h3 data-i18n="polle.overview.feature0.title">홈 스크롤 병목을 단계별로</h3><p data-i18n="polle.overview.feature0.description">스크롤할 때 상태를 읽는 위치와 이미지 초기화, 카드 측정을 바꿨습니다. 릴리스 빌드를 확인한 뒤 불필요한 캐시는 제거했습니다.</p><span class="case-link" data-i18n="polle.overview.feature0.link">개선 과정 보기 →</span></a><a href="#architecture"><span class="outcome-number" data-i18n="polle.overview.feature1.label">02 / 탐색</span><h3 data-i18n="polle.overview.feature1.title">탭을 옮겨도 이어지는 탐색</h3><p data-i18n="polle.overview.feature1.description">탭마다 이동 이력을 따로 두고 지도 View를 유지했습니다. 상세 화면에서 돌아오면 이전 장소와 탐색 위치를 보여주도록 했습니다.</p><span class="case-link" data-i18n="polle.overview.feature1.link">상태 구조 보기 →</span></a><a href="#motion"><span class="outcome-number" data-i18n="polle.overview.feature2.label">03 / 사진</span><h3 data-i18n="polle.overview.feature2.title">편집부터 파일 정리까지</h3><p data-i18n="polle.overview.feature2.description">원본과 편집 정보를 함께 저장해 사진을 다시 편집할 수 있게 했습니다. 업로드 후에는 다른 초안에서 쓰는지 확인하고 파일을 정리했습니다.</p><span class="case-link" data-i18n="polle.overview.feature2.link">사진 처리 보기 →</span></a></div>
+      <div class="case-body text-only"><div><h3 data-i18n="polle.overview.context-title">전환의 배경</h3><p data-i18n="polle.overview.context">사진 편집과 화면 전환이 끊김 없이 이어지는 매끄러운 사용성을 목표로 했습니다. 자르기·회전과 제스처 반응을 세밀하게 조정하고, 데이터 미리보기는 멀티스레드를 활용해 반응성을 개선할 필요가 있었습니다. 이미지 처리와 백그라운드 작업, 화면 갱신을 Android에 맞게 직접 제어할 수 있도록 Kotlin·Jetpack Compose로 앱을 전체 재구현했습니다.</p></div><div><h3 data-i18n="polle.overview.scope-title">Android 개발 전담</h3><p data-i18n="polle.overview.scope">Android 앱의 전체 재구현을 맡아 화면과 기능부터 탐색 구조, 상태 관리, API·로컬 데이터 흐름까지 설계하고 구현했습니다. 사진 편집·뷰어·업로드, 사진 기반 장소 추천과 방문 넛지, 지도 동기화를 개발하고, 탭별 상태 유지와 홈 스크롤 성능 개선까지 진행했습니다. UI 디자인 단계에도 참여해 뒤로가기·시스템 영역·폴더블 화면 등 Android에서 고려할 요구사항을 구현에 반영했습니다.</p></div></div>
+      <div class="outcome-grid"><a href="#decisions"><span class="outcome-number" data-i18n="polle.overview.feature0.label">01 / 성능</span><h3 data-i18n="polle.overview.feature0.title">홈 스크롤 병목을 단계별로</h3><p data-i18n="polle.overview.feature0.description">스크롤 중 화면을 다시 구성하는 범위와 새 사진 카드의 준비·배치 비용을 줄였습니다. 상단 영역의 위치 갱신이 스크롤 입력을 지연시키는 문제도 수정했습니다.</p><span class="case-link" data-i18n="polle.overview.feature0.link">개선 과정 보기 →</span></a><a href="#architecture"><span class="outcome-number" data-i18n="polle.overview.feature1.label">02 / 탐색</span><h3 data-i18n="polle.overview.feature1.title">4개 탭의 탐색 상태 유지</h3><p data-i18n="polle.overview.feature1.description">4개 탭에 NavController를 각각 두어 이동 이력과 화면 상태를 유지했습니다. 지도도 다시 만들지 않고 이전 위치와 선택한 장소를 이어서 보여줬습니다.</p><span class="case-link" data-i18n="polle.overview.feature1.link">상태 구조 보기 →</span></a><a href="#motion"><span class="outcome-number" data-i18n="polle.overview.feature2.label">03 / 사진</span><h3 data-i18n="polle.overview.feature2.title">편집부터 파일 정리까지</h3><p data-i18n="polle.overview.feature2.description">원본과 편집 정보를 함께 저장해 사진을 다시 편집할 수 있게 했습니다. 업로드 후에는 다른 초안에서 쓰는지 확인하고 파일을 정리했습니다.</p><span class="case-link" data-i18n="polle.overview.feature2.link">사진 처리 보기 →</span></a></div>
       <p class="stack-line"><strong data-i18n="polle.overview.strong">사용 기술</strong> Kotlin · Jetpack Compose · Coroutines / Flow · Coil · Room · WorkManager · ML Kit · GraphQL · Naver Map SDK</p>
     </section>
 
     <section class="case-section wrapper" id="decisions" aria-labelledby="decisions-title">
       <div class="eyebrow">02 · HOMESCREEN SCROLL PERFORMANCE</div>
       <h2 id="decisions-title" data-i18n="polle.decisions.decisions-title">홈 스크롤의 병목을 나누어 개선</h2>
-      <p class="case-result" data-i18n="polle.decisions.p">HomeScreen은 여러 가로 목록을 세로로 쌓은 화면입니다. 빠르게 스크롤할 때 사진 카드가 끊겨 보여, 카드가 화면에 들어올 때 반복되는 작업부터 확인했습니다.</p>
+      <p class="case-result" data-i18n="polle.decisions.p">HomeScreen은 LazyColumn 안에 여러 LazyRow가 중첩된 구조였습니다. 세로로 빠르게 스크롤하면 새 LazyRow의 사진 카드들이 한꺼번에 구성되면서 이미지 초기화와 측정 작업이 몰렸고, 화면이 끊겨 보였습니다.</p>
       <p class="structure-note"><strong data-i18n="polle.decisions.strong">화면 구조</strong> <code data-i18n="polle.decisions.code">LazyColumn → 섹션별 LazyRow·HorizontalPager → 사진 카드</code></p>
-      <div class="case-body text-only"><div><h3 data-i18n="polle.architecture.h3">문제</h3><p data-i18n="polle.decisions.p2">사진 카드 여러 개가 한꺼번에 나타날 때 구성·이미지 초기화·측정 비용이 쌓였습니다. 스크롤에 따라 움직이는 헤더도 상태를 계속 갱신하고 있어 함께 살펴봤습니다.</p></div><div><h3 data-i18n="polle.architecture.h32">구현 과정</h3><p data-i18n="polle.decisions.p3">자주 바뀌는 상태를 읽는 위치부터 옮기고, 새 카드마다 반복되는 이미지 초기화와 레이아웃 작업을 줄였습니다. 헤더가 스크롤을 처리하는 방식도 바꾸면서 원인을 하나씩 좁혀 갔습니다.</p></div></div>
+      <div class="case-body text-only"><div><h3 data-i18n="polle.architecture.h3">문제</h3><p data-i18n="polle.decisions.p2">새로 들어오는 LazyRow의 카드 처리에 스크롤을 따라 움직이는 상단 영역(헤더)의 위치 갱신까지 겹쳤습니다. 새 카드를 준비하는 작업과 스크롤 중 계속 반복되는 작업을 나눠 살펴봤습니다.</p></div><div><h3 data-i18n="polle.architecture.h32">구현 과정</h3><p data-i18n="polle.decisions.p3">내용이 바뀌지 않은 부분을 다시 계산하는 일부터 줄이고, 이미지 표시를 준비하는 과정과 카드 구조를 단순화했습니다. 헤더 위치를 갱신하는 방식도 바꿔, 스크롤 입력마다 처리할 작업이 쌓이지 않도록 했습니다.</p></div></div>
       <div class="verification-note"><h3 data-i18n="polle.decisions.validation-title">확인 방법</h3><p data-i18n="polle.decisions.validation">Android Studio에서 디버그 빌드의 trace를 캡처해 스크롤 중 시간이 많이 걸리는 구간을 확인했습니다. 변경 후에는 릴리스 빌드를 직접 사용하면서 스크롤이 끊기는지 확인했습니다.</p></div>
-      <details class="case-details" id="diagnosis"><summary data-i18n="polle.decisions.summary">개선 과정 · 재구성에서 헤더 처리까지</summary><div class="details-content">
+      <details class="case-details" id="diagnosis"><summary data-i18n="polle.decisions.summary">개선 과정</summary><div class="details-content">
         <ol class="optimization-steps">
-          <li><div class="step-heading"><span>01 · 2026.06.01</span><h3 data-i18n="polle.decisions.h33">스크롤에 따라 다시 구성되는 범위 줄이기</h3></div><p data-i18n="polle.decisions.p5">헤더 위치처럼 자주 바뀌는 값은 offset·graphicsLayer·레이아웃 단계에서 읽도록 옮겼습니다. 모델의 안정성을 정리하고 Store와 섹션 인자를 ImmutableList로 바꿨습니다. 가로 목록에는 항목 키와 contentType을 지정했습니다.</p></li>
-          <li><div class="step-heading"><span>02 · 2026.06.02</span><h3 data-i18n="polle.decisions.h34">새 카드마다 반복되는 이미지 초기화 줄이기</h3></div><p data-i18n="polle.decisions.p6">빠르게 스크롤할 때 카드마다 AsyncImagePainter를 초기화하는 비용이 쌓였습니다. HomeScreen의 이미지 표시 9곳을 FastAsyncImage로 바꾸고, LaunchedEffect에서 ImageLoader.execute()를 호출하게 했습니다. Coil 로더와 캐시는 기존 것을 함께 사용했습니다.</p><div class="code-comparison"><div><span data-i18n="polle.decisions.span3">변경한 홈 카드의 이미지 경로</span><code>LaunchedEffect(uri) → ImageLoader.execute() → Image(bitmap)</code></div></div></li>
-          <li><div class="step-heading"><span>03 · 2026.06.02</span><h3 data-i18n="polle.decisions.h35">카드의 측정·배치와 로딩 준비 비용 줄이기</h3></div><p data-i18n="polle.decisions.p7">이미지를 감싸던 중복 Box를 제거하고 해당 modifier를 이미지에 적용했습니다. Spacer 일부는 padding·spacedBy로 바꿔 간격을 유지하면서 노드 수를 줄였습니다. 로딩용 임시 항목 수도 줄여 목록 생성과 묶음 계산의 부담을 낮췄습니다.</p></li>
-          <li><div class="step-heading"><span>04 · 2026.06.05</span><h3 data-i18n="polle.decisions.h36">헤더 스크롤의 멈춤과 터치 지연 처리</h3></div><p data-i18n="polle.decisions.p8">onPreScroll마다 실행하던 코루틴과 snapTo를 동기 상태 갱신으로 교체했습니다. 스크롤 연결 객체는 유지하고 최신 헤더 높이를 참조하게 했으며, 측정 도중 상태를 쓰던 코드는 onSizeChanged로 옮겼습니다.</p><p data-i18n="polle.decisions.p9">표시용 목록은 remember(places)로 재사용하고, 페이지마다 반복하던 Map 상태 구독은 페이저 바깥으로 모았습니다. 콘텐츠의 관성 스크롤이 헤더 애니메이션의 종료를 기다리지 않도록 분리했습니다.</p></li>
-          <li><div class="step-heading"><span>05 · 2026.06.22</span><h3 data-i18n="polle.decisions.h37">같은 구조의 홈 섹션 재사용 보강</h3></div><p data-i18n="polle.decisions.p10">세로 목록에서 반복되는 HomeDefaultSection에도 contentType을 지정했습니다. 같은 구조의 섹션을 재사용할 수 있도록 바깥 목록에도 유형을 알려줬습니다.</p></li>
-          <li><div class="step-heading"><span>06 · 2026.07.02</span><h3 data-i18n="polle.decisions.h38">릴리스에서 불필요한 최적화 다시 걷어내기</h3></div><p data-i18n="polle.decisions.p11">처음에는 TextStyle을 매번 만들지 않도록 최상위 캐시 9개를 추가했습니다. 이후 릴리스 빌드에서 직접 스크롤을 확인하고, 별도 캐시를 유지할 필요가 없다고 판단해 제거했습니다.</p></li>
+          <li>
+            <div class="step-heading"><span>01</span><h3 data-i18n="polle.decisions.steps.recomposition.title">스크롤할 때 다시 계산하는 화면 범위 줄이기</h3></div>
+            <p data-i18n="polle.decisions.steps.recomposition.body">스크롤 위치를 화면 구성 단계에서 읽으면, 위치가 바뀔 때마다 내용이 그대로인 부분도 다시 계산할 수 있었습니다. 위치값은 실제 배치·그리기 단계(<code>offset</code>·<code>graphicsLayer</code>)에서 읽도록 옮겼습니다. 목록도 데이터가 바뀔 때만 다시 만들도록 <code>remember</code>로 재사용했습니다.</p>
+          </li>
+          <li>
+            <div class="step-heading"><span>02</span><h3 data-i18n="polle.decisions.steps.images.title">새 사진 카드마다 반복되는 이미지 준비 작업 줄이기</h3></div>
+            <p data-i18n="polle.decisions.steps.images.body">여러 사진 카드가 한꺼번에 나타나면, 카드마다 이미지 표시 컴포넌트를 초기화하는 비용이 쌓였습니다. Coil 로더를 직접 호출해 결과 이미지를 그리는 <code>FastAsyncImage</code>를 만들어 표시 준비 과정을 줄였습니다. 기존 로더와 캐시는 그대로 공유했습니다.</p>
+          </li>
+          <li>
+            <div class="step-heading"><span>03</span><h3 data-i18n="polle.decisions.steps.layout.title">카드 크기와 배치를 계산하는 작업 줄이기</h3></div>
+            <p data-i18n="polle.decisions.steps.layout.body">사진 카드를 여러 레이아웃으로 감싸면서 크기와 위치를 계산해야 할 요소가 늘어났습니다. 불필요한 감싸기 구조를 제거하고 간격은 padding 등으로 처리했습니다. 목록에는 항목 유형(<code>contentType</code>)을 지정해 같은 구조의 카드와 섹션을 재사용할 수 있도록 했습니다.</p>
+          </li>
+          <li>
+            <div class="step-heading"><span>04</span><h3 data-i18n="polle.decisions.steps.header.title">헤더 처리가 스크롤 입력을 지연시키지 않도록 변경</h3></div>
+            <p data-i18n="polle.decisions.steps.header.body">스크롤을 따라 움직이는 헤더의 위치를 갱신하려고 입력마다 코루틴을 실행하면서 대기 작업이 쌓였습니다. 짧은 위치 갱신은 입력을 처리할 때 바로 반영하도록 바꿨습니다. 손을 뗀 뒤 본문이 움직이는 관성 스크롤도 헤더 애니메이션을 기다리지 않도록 분리했습니다.</p>
+          </li>
         </ol>
-        <p class="tradeoff" data-i18n="polle.decisions.p12"><strong>적용 범위</strong> FastAsyncImage는 비트맵 Drawable을 전제로 만들었고, crossfade와 범용 error painter는 넣지 않았습니다. 홈 카드에 필요한 기능을 확인해 적용하고, 다른 화면에서 쓰는 범용 이미지 컴포넌트는 유지했습니다.</p>
+        <p class="tradeoff" data-i18n="polle.decisions.p12"><strong>이미지 표시의 적용 범위</strong> 홈 카드에 필요한 비트맵 표시를 지원하고, 사진 전환 효과(crossfade)와 범용 오류 이미지는 생략했습니다. 이런 기능이 필요한 다른 화면에서는 기존 이미지 컴포넌트를 유지했습니다.</p>
       </div></details>
     </section>
 
     <section class="case-section wrapper" id="architecture" aria-labelledby="architecture-title">
       <div class="eyebrow">03 · NAVIGATION &amp; STATE</div>
-      <h2 id="architecture-title" data-i18n="polle.architecture.architecture-title">탭을 이동해도 탐색은 이어지도록</h2>
-      <p class="case-result" data-i18n="polle.architecture.p">탭마다 백스택을 따로 두고 지도 View는 화면 이동과 관계없이 유지했습니다. 상세 화면을 보고 돌아왔을 때 이전에 선택한 장소와 탐색 위치가 남아 있도록 했습니다.</p>
+      <h2 id="architecture-title" data-i18n="polle.architecture.architecture-title">4개의 NavController로 탭별 상태 유지</h2>
+      <p class="case-result" data-i18n="polle.architecture.p">홈·지도·타임라인·마이 탭에 NavController를 각각 두고, 탭마다 독립된 백스택을 유지했습니다. 다른 탭을 다녀와도 보던 상세 화면과 목록 위치가 남도록 하고, 지도는 같은 인스턴스를 유지해 카메라 위치와 선택한 장소를 이어서 보여줬습니다.</p>
+      <figure class="tab-navigation-diagram">
+        <figcaption><strong data-i18n="polle.architecture.tabs-title">탭마다 독립된 NavHost와 백스택</strong><span data-i18n="polle.architecture.tabs-caption">화면 이동 예시 · 탭을 바꿔도 각 경로를 유지</span></figcaption>
+        <div class="tab-stack-grid">
+          <div class="tab-stack"><h3 data-i18n="polle.architecture.tab-home">홈</h3><code>homeNavController</code><p data-i18n="polle.architecture.path-home">홈 → 상세 화면</p></div>
+          <div class="tab-stack"><h3 data-i18n="polle.architecture.tab-map">지도</h3><code>mapNavController</code><p data-i18n="polle.architecture.path-map">지도 → 상세 화면</p></div>
+          <div class="tab-stack"><h3 data-i18n="polle.architecture.tab-timeline">타임라인</h3><code>timelineNavController</code><p data-i18n="polle.architecture.path-timeline">타임라인 → 상세 화면</p></div>
+          <div class="tab-stack"><h3 data-i18n="polle.architecture.tab-me">마이</h3><code>meNavController</code><p data-i18n="polle.architecture.path-me">마이 → 상세 화면</p></div>
+        </div>
+        <p class="tab-switch-note" data-i18n="polle.architecture.tabs-switch">탭 전환 → 기존 NavHost와 백스택을 유지하고, 선택한 탭을 앞에 표시</p>
+        <div class="persistent-map"><strong data-i18n="polle.architecture.map-owner">MapScreen · NavHost 바깥에서 계속 유지</strong><p data-i18n="polle.architecture.map-lifetime">지도 탭의 NavController는 상세 화면 이동을 맡고, 지도 화면과 View는 루트에서 따로 유지했습니다. 탭 전환이나 상세 화면 복귀 때 지도를 다시 만들지 않아, 재로딩과 깜빡임을 피하고 카메라 위치·선택한 장소·시트 상태를 유지했습니다.</p></div>
+      </figure>
       <div class="case-body">
-        <div><h3 data-i18n="polle.architecture.h3">문제</h3><p data-i18n="polle.architecture.p2">탭을 옮기거나 상세 화면을 열었다고 지도와 목록이 초기화되면, 방금 보던 장소를 다시 찾아야 했습니다. 화면을 이동해도 탐색하던 위치는 남겨둘 필요가 있었습니다.</p><h3 data-i18n="polle.architecture.h32">구현 과정</h3><p data-i18n="polle.architecture.p3">각 탭이 자신의 백스택을 갖게 하고, 여러 탭에서 쓰는 상세 라우트는 공통으로 사용했습니다. 지도 View는 NavHost 바깥에 두어 화면을 이동할 때 다시 만들지 않도록 했습니다.</p></div>
+        <div><h3 data-i18n="polle.architecture.h3">문제</h3><p data-i18n="polle.architecture.p2">각 탭에서 상세 화면을 열어둔 채 다른 탭을 다녀와도, 보던 화면과 탐색 위치가 남아 있어야 했습니다. 지도 역시 탭 전환 때 다시 로딩되거나 카메라 위치가 초기화되면 탐색이 끊겼습니다.</p><h3 data-i18n="polle.architecture.h32">구현 과정</h3><p data-i18n="polle.architecture.p3">탭별로 NavController와 NavHost를 만들고, 네 NavHost를 Composition에 유지했습니다. 탭을 바꿀 때는 기존 백스택을 그대로 둔 채 zIndex와 활성 상태로 보이는 탭을 바꿨습니다. 공통 상세 화면은 commonNavGraph()로 각 탭에 등록해, 어느 탭에서 열었든 그 탭의 이동 이력에 쌓이게 했습니다.</p></div>
         <figure class="mockup" data-nav-demo>
-          <figcaption><span class="mockup-label" data-i18n="polle.architecture.span">동작 설명용 목업</span><span data-i18n="polle.architecture.span2">실제 앱 화면이 아닌 간단한 재구성입니다.</span></figcaption>
+          <figcaption><span class="mockup-label" data-i18n="polle.architecture.span">동작 설명용 목업</span><span data-i18n="polle.architecture.span2">지도와 타임라인만 단순화한 예시입니다. 실제 앱 화면은 아닙니다.</span></figcaption>
           <div class="phone-frame">
             <div class="phone-title"><strong data-i18n="polle.architecture.strong">장소 둘러보기</strong><span class="demo-tag">SAMPLE</span></div>
             <div class="nav-demo-map" data-demo-view="map">
               <div class="map-art"><span class="map-river"></span><span class="map-road road-one"></span><span class="map-road road-two"></span><span class="map-block block-one"></span><span class="map-block block-two"></span><button class="map-pin pin-a" type="button" data-place="cafe" aria-label="샘플 카페 선택" aria-pressed="true" data-i18n-aria-label="polle.architecture.aria-label">A</button><button class="map-pin pin-b" type="button" data-place="park" aria-label="샘플 공원 선택" aria-pressed="false" data-i18n-aria-label="polle.architecture.aria-label2">B</button></div>
               <div class="place-preview"><span class="place-symbol" aria-hidden="true">A</span><div><strong data-place-name data-i18n="polle.architecture.strong2">샘플 카페</strong><small data-i18n="polle.architecture.small">선택한 장소</small></div><span aria-hidden="true">↗</span></div>
             </div>
-            <div class="nav-demo-feed" data-demo-view="feed" hidden><span class="demo-feed-title" data-i18n="polle.architecture.span3">피드</span><div class="demo-feed-card"><div class="scene-art scene-cafe" aria-hidden="true"></div><strong data-i18n="polle.architecture.strong3">새로운 장소를 둘러보세요</strong><p data-i18n="polle.architecture.p4">지도로 돌아가면 선택한 장소가 유지됩니다.</p></div></div>
-            <div class="demo-tab-bar" role="group" aria-label="목업 화면 전환" data-i18n-aria-label="polle.architecture.aria-label3"><button type="button" data-demo-tab="feed" aria-pressed="false" data-i18n="polle.architecture.span3">피드</button><button type="button" data-demo-tab="map" aria-pressed="true" data-i18n="polle.architecture.button">지도</button></div>
+            <div class="nav-demo-feed" data-demo-view="feed" hidden><span class="demo-feed-title" data-i18n="polle.architecture.span3">타임라인</span><div class="demo-feed-card"><div class="scene-art scene-cafe" aria-hidden="true"></div><strong data-i18n="polle.architecture.strong3">새로운 장소를 둘러보세요</strong><p data-i18n="polle.architecture.p4">지도로 돌아가면 선택한 장소가 유지됩니다.</p></div></div>
+            <div class="demo-tab-bar" role="group" aria-label="목업 화면 전환" data-i18n-aria-label="polle.architecture.aria-label3"><button type="button" data-demo-tab="feed" aria-pressed="false" data-i18n="polle.architecture.span3">타임라인</button><button type="button" data-demo-tab="map" aria-pressed="true" data-i18n="polle.architecture.button">지도</button></div>
           </div>
-          <p class="demo-instruction" data-nav-status aria-live="polite" data-i18n="polle.architecture.p5">A 또는 B 선택 → 피드 → 지도 순서로 눌러 보세요.</p>
+          <p class="demo-instruction" data-nav-status aria-live="polite" data-i18n="polle.architecture.p5">A 또는 B 선택 → 타임라인 → 지도 순서로 눌러 보세요.</p>
         </figure>
       </div>
+      <details class="case-details" id="lifetime"><summary data-i18n="polle.architecture.summary">상세 구현 · 탭·페이지 상태와 작업의 수명</summary><div class="details-content">
       <figure class="lifetime-diagram"><figcaption><strong data-i18n="polle.architecture.diagram-title">상태를 어디에 두고 언제 정리했는지</strong><span data-i18n="polle.architecture.diagram-caption">세 영역의 역할과 정리 시점</span></figcaption><div class="lifetime-grid"><div class="lifetime-owner"><span class="owner-scope" data-i18n="polle.architecture.owner0.scope">탭·공유 기능</span><h3>Store</h3><p data-i18n="polle.architecture.owner0.state">목록 · 지도 · 공통 상태</p><span class="lifetime-arrow" aria-hidden="true">↓</span><p class="owner-boundary" data-i18n="polle.architecture.owner0.end">탭을 옮겨도 상태와 데이터 로딩 유지</p></div><div class="lifetime-owner"><span class="owner-scope" data-i18n="polle.architecture.owner1.scope">페이지·백스택 항목</span><h3>ViewModel</h3><p data-i18n="polle.architecture.owner1.state">상세 데이터 · 페이지 요청</p><span class="lifetime-arrow" aria-hidden="true">↓</span><p class="owner-boundary" data-i18n="polle.architecture.owner1.end">백스택 항목이 제거될 때 요청 정리</p></div><div class="lifetime-owner"><span class="owner-scope" data-i18n="polle.architecture.owner2.scope">화면 효과</span><h3>Composition</h3><p data-i18n="polle.architecture.owner2.state">LaunchedEffect · UI 작업</p><span class="lifetime-arrow" aria-hidden="true">↓</span><p class="owner-boundary" data-i18n="polle.architecture.owner2.end">컴포지션을 벗어날 때 작업 정리</p></div></div><p class="diagram-note" data-i18n="polle.architecture.visibility">다른 탭으로 옮겨도 이전 탭의 Composition이 남아 있을 수 있어, 현재 보이는 탭인지 따로 확인했습니다.</p></figure>
-      <details class="case-details" id="lifetime"><summary data-i18n="polle.architecture.summary">상세 구현 · 상태와 작업의 수명</summary><div class="details-content">
 
-        <p data-i18n="polle.architecture.p9">상태를 바꾸는 코드는 Store·ViewModel의 함수로 모았습니다. UI에는 읽기 전용 StateFlow를 전달했습니다. 글쓰기는 루트에서 모달로 여는 별도 흐름으로 만들었습니다.</p>
+
+        <p data-i18n="polle.architecture.p9">탭에서 함께 쓰는 상태는 Store에, 상세 화면의 상태는 해당 백스택 항목의 ViewModel에 뒀습니다. 상태 변경은 Store·ViewModel의 함수로 모으고 UI에는 읽기 전용 StateFlow를 전달했습니다. 로그인·글쓰기 진입은 별도의 rootNavController로, 글쓰기 내부 이동은 writeNavController로 처리했습니다.</p>
         <p data-i18n="polle.architecture.p10">목록·그리드·페이저의 위치는 섹션별 키로 구분해 스크롤이 멈출 때 저장했습니다. 다시 열었을 때 항목 수가 줄어들 수 있어, 복원할 인덱스를 현재 목록 크기에 맞췄습니다. 무한 반복 페이저는 실제 콘텐츠의 페이지를 저장해 복원했습니다.</p>
-        <p class="tradeoff" data-i18n="polle.architecture.p11"><strong>고려한 점</strong> 지도와 백스택을 따로 유지하면서 뒤로가기, 시트 복원, 탭의 가시성도 각각 관리해야 했습니다. 전역 Store를 쓰다 보니 테스트에서 다른 구현으로 바꾸기 어려운 점은 남았습니다.</p>
+        <p class="tradeoff" data-i18n="polle.architecture.p11"><strong>고려한 점</strong> 네 탭과 지도를 계속 유지하는 만큼 메모리 사용과 비활성 탭의 동작을 함께 관리해야 했습니다. 숨겨진 탭은 포커스와 접근성 탐색에서 제외하고, 뒤로가기는 현재 보이는 탭이 처리하도록 했습니다. 전역 Store를 테스트에서 다른 구현으로 바꾸기 어려운 점도 남았습니다.</p>
       </div></details>
     </section>
 
