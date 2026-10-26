@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/assets/polle.css?v=e12c19d0c86f">
   <script src="/assets/site.js?v=f44e21883037" defer></script>
   <script src="/assets/lang.js?v=7c950d1f8cc1" defer></script>
-  <script src="/assets/polle-translations.js?v=7b39ed54023d" defer></script>
+  <script src="/assets/polle-translations.js?v=58634d6397ad" defer></script>
   <script src="/assets/polle.js?v=66f3b1b43c1c" defer></script>
   <!-- Social sharing -->
   <link rel="canonical" href="https://kseapps.com/android_engineering_portfolio.html">
@@ -56,6 +56,7 @@
       <p class="hero-description" data-i18n="polle.hero.p">React Native 기반 뽈레의 Android 앱을 Kotlin·Jetpack Compose로 전체 재구현했습니다. 홈에서 스크롤할 때 반복되는 작업을 줄이고, 탭을 바꿔도 탐색 상태가 유지되도록 했습니다. 사진은 편집부터 임시저장 복원, 뷰어와 업로드까지 구현했습니다.</p>
       <ul class="project-facts">
         <li data-i18n="polle.hero.chip.sole">Android 단독 개발</li>
+        <li data-i18n="polle.hero.chip.screens">83개 화면</li>
         <li data-i18n="polle.hero.chip.rebuild">Kotlin · Jetpack Compose 전체 재구현</li>
       </ul>
     </section>
@@ -84,7 +85,7 @@
     <section class="case-section wrapper" id="overview" aria-labelledby="overview-title">
       <div class="eyebrow">01 · CONTEXT &amp; CONTRIBUTIONS</div>
       <h2 id="overview-title" data-i18n="polle.overview.title">전환 배경과 맡은 일</h2>
-      <div class="case-body text-only"><div><h3 data-i18n="polle.overview.context-title">전환의 배경</h3><p data-i18n="polle.overview.context">React Native 버전에서는 사진 자르기·회전과 제스처를 더 세밀하게 제어할 필요가 있었습니다. 데이터 미리보기는 멀티스레드를 활용해 반응성을 개선하고자 했습니다. 사진 편집과 화면 전환이 끊김 없이 이어지는 사용성을 목표로 Kotlin·Jetpack Compose로 앱을 전체 재구현했습니다.</p></div><div><h3 data-i18n="polle.overview.scope-title">Android 개발 전담</h3><p data-i18n="polle.overview.scope">Android 앱의 전체 재구현을 맡아 화면과 기능부터 탐색 구조, 상태 관리, API·로컬 데이터 흐름까지 설계하고 구현했습니다. 사진 편집·뷰어·업로드, 사진 기반 장소 추천과 방문 넛지, 지도 동기화를 개발하고, 탭별 상태 유지와 홈 스크롤 성능 개선까지 진행했습니다. UI 디자인 단계에도 참여해 뒤로가기·시스템 영역·폴더블 화면 등 Android에서 고려할 요구사항을 구현에 반영했습니다.</p></div></div>
+      <div class="case-body text-only"><div><h3 data-i18n="polle.overview.context-title">전환의 배경</h3><p data-i18n="polle.overview.context">회사가 React Native 앱의 네이티브 전환을 결정했고, Android 앱의 재구현을 맡았습니다. React Native 버전은 빠르게 스크롤할 때 네이티브 앱보다 덜 부드러웠고, 사진 자르기·회전과 제스처도 더 세밀하게 제어할 필요가 있었습니다. 재구현하면서 상세 화면에 진입할 때는 화면 전환 애니메이션이 진행되는 동안 데이터 요청을 다른 스레드에서 함께 시작해, 전환이 끝나는 시점에 내용을 더 빨리 보여주도록 했습니다. 사진 편집과 화면 전환이 끊김 없이 이어지는 사용성을 목표로 Kotlin·Jetpack Compose로 앱을 전체 재구현했습니다.</p></div><div><h3 data-i18n="polle.overview.scope-title">Android 개발 전담</h3><p data-i18n="polle.overview.scope">Android 앱의 전체 재구현을 맡아 화면과 기능부터 탐색 구조, 상태 관리, API·로컬 데이터 흐름까지 설계하고 구현했습니다. 사진 편집·뷰어·업로드, 사진 기반 장소 추천과 방문 넛지, 지도 동기화를 개발하고, 탭별 상태 유지와 홈 스크롤 성능 개선까지 진행했습니다. UI 디자인 단계에도 참여해 뒤로가기·시스템 영역·폴더블 화면 등 Android에서 고려할 요구사항을 구현에 반영했습니다.</p></div></div>
       <div class="outcome-grid"><a href="#decisions"><span class="outcome-number" data-i18n="polle.overview.feature0.label">01 / 성능</span><h3 data-i18n="polle.overview.feature0.title">홈 스크롤 병목을 단계별로</h3><p data-i18n="polle.overview.feature0.description">스크롤 중 화면을 다시 구성하는 범위와 새 사진 카드의 준비·배치 비용을 줄였습니다. 상단 영역의 위치 갱신이 스크롤 입력을 지연시키는 문제도 수정했습니다. 디버그 trace에서 카드 1회 composition을 11.5ms에서 5.4ms로 줄였습니다.</p><span class="case-link" data-i18n="polle.overview.feature0.link">개선 과정 보기 →</span></a><a href="#architecture"><span class="outcome-number" data-i18n="polle.overview.feature1.label">02 / 탐색</span><h3 data-i18n="polle.overview.feature1.title">4개 탭의 탐색 상태 유지</h3><p data-i18n="polle.overview.feature1.description">4개 탭에 NavController를 각각 두어 이동 이력과 화면 상태를 유지했습니다. 지도도 다시 만들지 않고 이전 위치와 선택한 장소를 이어서 보여줬습니다.</p><span class="case-link" data-i18n="polle.overview.feature1.link">상태 구조 보기 →</span></a><a href="#motion"><span class="outcome-number" data-i18n="polle.overview.feature2.label">03 / 사진</span><h3 data-i18n="polle.overview.feature2.title">편집부터 파일 정리까지</h3><p data-i18n="polle.overview.feature2.description">원본과 편집 정보를 함께 저장해 사진을 다시 편집할 수 있게 했습니다. 업로드 후에는 다른 초안에서 쓰는지 확인하고 파일을 정리했습니다.</p><span class="case-link" data-i18n="polle.overview.feature2.link">사진 처리 보기 →</span></a></div>
       <p class="stack-line"><strong data-i18n="polle.overview.strong">사용 기술</strong> Kotlin · Jetpack Compose · Coroutines / Flow · Coil · Room · WorkManager · ML Kit · GraphQL · Naver Map SDK</p>
     </section>
@@ -113,9 +114,9 @@
       <details class="case-details" id="diagnosis"><summary data-i18n="polle.decisions.summary">개선 과정</summary><div class="details-content">
         <ol class="optimization-steps">
           <li>
-            <div class="step-heading"><span>01 · 2026.06.01</span><h3 data-i18n="polle.decisions.steps.recomposition.title">스크롤할 때 다시 계산하는 범위 줄이기</h3></div>
-            <p data-i18n="polle.decisions.steps.recomposition.body">스크롤 위치를 화면 구성 단계에서 읽으면, 위치가 바뀔 때마다 내용이 그대로인 부분까지 다시 계산될 수 있었습니다. 위치값은 배치·그리기 단계에서 읽도록 옮겼습니다. 홈 Store의 목록과 섹션 인자를 <code>ImmutableList</code>로 바꾸고 모델의 안정성을 정리해, 데이터가 바뀌지 않았을 때 재구성을 건너뛸 수 있도록 했습니다.</p>
-            <p class="implementation-points" data-i18n="polle.decisions.steps.recomposition.points"><strong>구현 포인트</strong> <code>Modifier.offset { }</code>·<code>graphicsLayer { }</code> 람다에서 위치값 읽기 · <code>ImmutableList</code>로 목록 안정성 정리</p>
+            <div class="step-heading"><span>01 · 2026.06.01 / 06.05</span><h3 data-i18n="polle.decisions.steps.recomposition.title">스크롤할 때 다시 계산하는 범위 줄이기</h3></div>
+            <p data-i18n="polle.decisions.steps.recomposition.body">스크롤 위치를 화면 구성 단계에서 읽으면, 위치가 바뀔 때마다 내용이 그대로인 부분까지 다시 계산될 수 있었습니다. 위치값은 배치·그리기 단계에서 읽도록 옮겼습니다. 홈 Store의 목록과 섹션 인자를 <code>ImmutableList</code>로 바꾸고 모델의 안정성을 정리해, 데이터가 바뀌지 않았을 때 재구성을 건너뛸 수 있도록 했습니다. 표시용 목록은 <code>remember(places)</code>로 데이터가 바뀔 때만 다시 만들고, 페이지마다 반복하던 지도 상태 구독은 페이저 바깥으로 모았습니다.</p>
+            <p class="implementation-points" data-i18n="polle.decisions.steps.recomposition.points"><strong>구현 포인트</strong> <code>Modifier.offset { }</code>·<code>graphicsLayer { }</code> 람다에서 위치값 읽기 · <code>ImmutableList</code>로 목록 안정성 정리 · <code>remember(places)</code> · 지도 상태 구독을 페이저 바깥으로 이동</p>
           </li>
           <li>
             <div class="step-heading"><span>02 · 2026.06.02</span><h3 data-i18n="polle.decisions.steps.images.title">새 카드마다 반복되는 이미지 준비 줄이기</h3></div>
@@ -124,17 +125,17 @@
           </li>
           <li>
             <div class="step-heading"><span>03 · 2026.06.02 / 06.22</span><h3 data-i18n="polle.decisions.steps.layout.title">카드의 측정·배치와 목록 재사용 개선</h3></div>
-            <p data-i18n="polle.decisions.steps.layout.body">이미지를 감싸던 중복 <code>Box</code>를 없애고 modifier를 이미지에 직접 적용했습니다. 일부 <code>Spacer</code>는 <code>padding</code>·<code>spacedBy</code>로 바꿔 측정할 노드 수를 줄였습니다. 이 레이아웃 변경 후 빠른 스크롤 첫 프레임의 <code>doFrame</code>이 84.5ms에서 64.2ms로 줄었습니다. 로딩용 임시 항목 수도 줄였습니다. 앞서 가로 목록에 지정한 <code>key</code>·<code>contentType</code>에 이어, 6월 22일에는 바깥 세로 목록의 <code>HomeDefaultSection</code>에도 <code>contentType</code>을 지정했습니다.</p>
+            <p data-i18n="polle.decisions.steps.layout.body">이미지를 감싸던 중복 <code>Box</code>를 없애고 modifier를 이미지에 직접 적용했습니다. 일부 <code>Spacer</code>는 <code>padding</code>·<code>spacedBy</code>로 바꿔 측정할 노드 수를 줄였습니다. 가로 목록의 카드에는 <code>key</code>·<code>contentType</code>을 지정해 같은 구조를 재사용하게 했고, 6월 22일에는 바깥 세로 목록의 <code>HomeDefaultSection</code>에도 <code>contentType</code>을 지정했습니다. 6월 2일의 카드 레이아웃 변경 후 빠른 스크롤 첫 프레임의 <code>doFrame</code>이 84.5ms에서 64.2ms로 줄었습니다. 이후 별도 변경으로 로딩용 임시 항목 수도 줄였습니다.</p>
             <p class="implementation-points" data-i18n="polle.decisions.steps.layout.points"><strong>구현 포인트</strong> <code>padding</code>·<code>spacedBy</code> · 가로 목록 항목의 <code>key</code>·<code>contentType</code> · 바깥 <code>LazyColumn</code>의 섹션 <code>contentType</code></p>
           </li>
           <li>
             <div class="step-heading"><span>04 · 2026.06.05</span><h3 data-i18n="polle.decisions.steps.header.title">헤더 처리가 스크롤 입력을 지연시키지 않도록 변경</h3></div>
-            <p data-i18n="polle.decisions.steps.header.body">헤더 위치를 갱신하려고 스크롤 입력마다 코루틴을 실행하면서 대기 작업이 쌓이고, 터치 반응이 늦어졌습니다. 짧은 위치 갱신은 입력을 처리하는 시점에 동기로 반영하도록 바꿨습니다. 측정 도중 상태를 쓰던 코드는 크기가 확정된 뒤로 옮겼습니다. 손을 뗀 뒤의 관성 스크롤은 헤더 애니메이션이 끝나기를 기다리지 않도록 분리했습니다. 이때 표시용 목록을 재사용하고, 페이지마다 반복하던 지도 상태 구독도 페이저 바깥으로 옮겼습니다.</p>
-            <p class="implementation-points" data-i18n="polle.decisions.steps.header.points"><strong>구현 포인트</strong> <code>NestedScrollConnection.onPreScroll</code>의 코루틴·<code>snapTo</code> → <code>mutableFloatStateOf</code> 동기 갱신 · 연결 객체 유지 + <code>rememberUpdatedState</code> · <code>onSizeChanged</code> · <code>remember(places)</code> · <code>Map.state</code> 구독 이동</p>
+            <p data-i18n="polle.decisions.steps.header.body">헤더 위치를 갱신하려고 스크롤 입력마다 코루틴을 실행하면서 대기 작업이 쌓이고, 터치 반응이 늦어졌습니다. 짧은 위치 갱신은 입력을 처리하는 시점에 동기로 반영하도록 바꿨습니다. 측정 도중 상태를 쓰던 코드는 크기가 확정된 뒤로 옮겼습니다. 손을 뗀 뒤의 관성 스크롤은 헤더 애니메이션이 끝나기를 기다리지 않도록 분리했습니다.</p>
+            <p class="implementation-points" data-i18n="polle.decisions.steps.header.points"><strong>구현 포인트</strong> <code>NestedScrollConnection.onPreScroll</code>의 코루틴·<code>snapTo</code> → <code>mutableFloatStateOf</code> 동기 갱신 · 연결 객체 유지 + <code>rememberUpdatedState</code> · 측정 중 상태 쓰기를 <code>onSizeChanged</code>로 이동</p>
           </li>
           <li>
             <div class="step-heading"><span>05 · 2026.07.02</span><h3 data-i18n="polle.decisions.steps.cleanup.title">불필요한 캐시 걷어내기</h3></div>
-            <p data-i18n="polle.decisions.steps.cleanup.body">초기에 추가했던 최상위 <code>TextStyle</code> 캐시 9개를 제거하고 사용처에서 스타일을 만들도록 정리했습니다. 릴리스 빌드에서 직접 스크롤하며 버벅임이 없는지 확인했습니다. 불필요한 캐시를 유지하는 대신 스타일을 사용하는 코드 곁에 뒀습니다.</p>
+            <p data-i18n="polle.decisions.steps.cleanup.body">초기에 추가했던 최상위 <code>TextStyle</code> 캐시 9개를 릴리스 빌드에서 다시 검토했습니다. 릴리스 빌드의 스크롤 테스트에서 버벅임이 없는 것을 확인한 뒤 불필요한 캐시라고 판단해, 캐시를 제거하고 사용처에서 스타일을 만들도록 정리했습니다. 효과가 확인되지 않은 최적화는 남기지 않고 코드 복잡도를 줄이는 쪽을 택했습니다.</p>
             <p class="implementation-points" data-i18n="polle.decisions.steps.cleanup.points"><strong>구현 포인트</strong> 최상위 <code>TextStyle</code> 캐시 9개 제거 · 사용처에서 <code>TextStyle.copy()</code> 호출</p>
           </li>
         </ol>
