@@ -7,10 +7,10 @@
   <meta name="description" content="뽈레의 Android 앱을 Kotlin·Jetpack Compose로 전체 재구현했습니다. 홈 스크롤 개선, 탐색 상태 유지, 사진 편집·복원·업로드와 Android UI 대응 과정을 정리했습니다. 김성은 · (주)어떤사람들 · 2026.01.02–2026.08.31." data-i18n-content="polle.page.content">
   <title data-i18n="polle.page.title">뽈레 Android 네이티브 전환 — KSE Apps</title>
   <link rel="stylesheet" href="/assets/styles.css?v=9ccdfff1732a">
-  <link rel="stylesheet" href="/assets/polle.css?v=f239aa6871a5">
+  <link rel="stylesheet" href="/assets/polle.css?v=e12c19d0c86f">
   <script src="/assets/site.js?v=f44e21883037" defer></script>
   <script src="/assets/lang.js?v=7c950d1f8cc1" defer></script>
-  <script src="/assets/polle-translations.js?v=8b32608d69bc" defer></script>
+  <script src="/assets/polle-translations.js?v=7b39ed54023d" defer></script>
   <script src="/assets/polle.js?v=66f3b1b43c1c" defer></script>
   <!-- Social sharing -->
   <link rel="canonical" href="https://kseapps.com/android_engineering_portfolio.html">
@@ -51,9 +51,13 @@
       <div class="eyebrow">ANDROID · ENGINEERING CASE STUDIES</div>
       <div class="project-heading">
         <h1 id="project-title" data-i18n="polle.hero.project-title">뽈레<br><span>Android 네이티브 전환</span></h1>
-        <p class="project-employment"><strong data-i18n="polle.hero.strong">(주)어떤사람들</strong><span><time datetime="2026-01-02">2026.01.02</time> - <time datetime="2026-08-31">2026.08.31</time></span></p>
+        <p class="project-employment"><strong data-i18n="polle.hero.strong">김성은 · (주)어떤사람들</strong><span><time datetime="2026-01-02">2026.01.02</time> – <time datetime="2026-08-31">2026.08.31</time> <span data-i18n="polle.hero.duration">(8개월)</span></span></p>
       </div>
       <p class="hero-description" data-i18n="polle.hero.p">React Native 기반 뽈레의 Android 앱을 Kotlin·Jetpack Compose로 전체 재구현했습니다. 홈에서 스크롤할 때 반복되는 작업을 줄이고, 탭을 바꿔도 탐색 상태가 유지되도록 했습니다. 사진은 편집부터 임시저장 복원, 뷰어와 업로드까지 구현했습니다.</p>
+      <ul class="project-facts">
+        <li data-i18n="polle.hero.chip.sole">Android 단독 개발</li>
+        <li data-i18n="polle.hero.chip.rebuild">Kotlin · Jetpack Compose 전체 재구현</li>
+      </ul>
     </section>
 
     <aside class="project-toc" aria-label="페이지 목차" data-i18n-aria-label="polle.toc.aria-label">
@@ -80,38 +84,61 @@
     <section class="case-section wrapper" id="overview" aria-labelledby="overview-title">
       <div class="eyebrow">01 · CONTEXT &amp; CONTRIBUTIONS</div>
       <h2 id="overview-title" data-i18n="polle.overview.title">전환 배경과 맡은 일</h2>
-      <div class="case-body text-only"><div><h3 data-i18n="polle.overview.context-title">전환의 배경</h3><p data-i18n="polle.overview.context">사진 편집과 화면 전환이 끊김 없이 이어지는 매끄러운 사용성을 목표로 했습니다. 자르기·회전과 제스처 반응을 세밀하게 조정하고, 데이터 미리보기는 멀티스레드를 활용해 반응성을 개선할 필요가 있었습니다. 이미지 처리와 백그라운드 작업, 화면 갱신을 Android에 맞게 직접 제어할 수 있도록 Kotlin·Jetpack Compose로 앱을 전체 재구현했습니다.</p></div><div><h3 data-i18n="polle.overview.scope-title">Android 개발 전담</h3><p data-i18n="polle.overview.scope">Android 앱의 전체 재구현을 맡아 화면과 기능부터 탐색 구조, 상태 관리, API·로컬 데이터 흐름까지 설계하고 구현했습니다. 사진 편집·뷰어·업로드, 사진 기반 장소 추천과 방문 넛지, 지도 동기화를 개발하고, 탭별 상태 유지와 홈 스크롤 성능 개선까지 진행했습니다. UI 디자인 단계에도 참여해 뒤로가기·시스템 영역·폴더블 화면 등 Android에서 고려할 요구사항을 구현에 반영했습니다.</p></div></div>
-      <div class="outcome-grid"><a href="#decisions"><span class="outcome-number" data-i18n="polle.overview.feature0.label">01 / 성능</span><h3 data-i18n="polle.overview.feature0.title">홈 스크롤 병목을 단계별로</h3><p data-i18n="polle.overview.feature0.description">스크롤 중 화면을 다시 구성하는 범위와 새 사진 카드의 준비·배치 비용을 줄였습니다. 상단 영역의 위치 갱신이 스크롤 입력을 지연시키는 문제도 수정했습니다.</p><span class="case-link" data-i18n="polle.overview.feature0.link">개선 과정 보기 →</span></a><a href="#architecture"><span class="outcome-number" data-i18n="polle.overview.feature1.label">02 / 탐색</span><h3 data-i18n="polle.overview.feature1.title">4개 탭의 탐색 상태 유지</h3><p data-i18n="polle.overview.feature1.description">4개 탭에 NavController를 각각 두어 이동 이력과 화면 상태를 유지했습니다. 지도도 다시 만들지 않고 이전 위치와 선택한 장소를 이어서 보여줬습니다.</p><span class="case-link" data-i18n="polle.overview.feature1.link">상태 구조 보기 →</span></a><a href="#motion"><span class="outcome-number" data-i18n="polle.overview.feature2.label">03 / 사진</span><h3 data-i18n="polle.overview.feature2.title">편집부터 파일 정리까지</h3><p data-i18n="polle.overview.feature2.description">원본과 편집 정보를 함께 저장해 사진을 다시 편집할 수 있게 했습니다. 업로드 후에는 다른 초안에서 쓰는지 확인하고 파일을 정리했습니다.</p><span class="case-link" data-i18n="polle.overview.feature2.link">사진 처리 보기 →</span></a></div>
+      <div class="case-body text-only"><div><h3 data-i18n="polle.overview.context-title">전환의 배경</h3><p data-i18n="polle.overview.context">React Native 버전에서는 사진 자르기·회전과 제스처를 더 세밀하게 제어할 필요가 있었습니다. 데이터 미리보기는 멀티스레드를 활용해 반응성을 개선하고자 했습니다. 사진 편집과 화면 전환이 끊김 없이 이어지는 사용성을 목표로 Kotlin·Jetpack Compose로 앱을 전체 재구현했습니다.</p></div><div><h3 data-i18n="polle.overview.scope-title">Android 개발 전담</h3><p data-i18n="polle.overview.scope">Android 앱의 전체 재구현을 맡아 화면과 기능부터 탐색 구조, 상태 관리, API·로컬 데이터 흐름까지 설계하고 구현했습니다. 사진 편집·뷰어·업로드, 사진 기반 장소 추천과 방문 넛지, 지도 동기화를 개발하고, 탭별 상태 유지와 홈 스크롤 성능 개선까지 진행했습니다. UI 디자인 단계에도 참여해 뒤로가기·시스템 영역·폴더블 화면 등 Android에서 고려할 요구사항을 구현에 반영했습니다.</p></div></div>
+      <div class="outcome-grid"><a href="#decisions"><span class="outcome-number" data-i18n="polle.overview.feature0.label">01 / 성능</span><h3 data-i18n="polle.overview.feature0.title">홈 스크롤 병목을 단계별로</h3><p data-i18n="polle.overview.feature0.description">스크롤 중 화면을 다시 구성하는 범위와 새 사진 카드의 준비·배치 비용을 줄였습니다. 상단 영역의 위치 갱신이 스크롤 입력을 지연시키는 문제도 수정했습니다. 디버그 trace에서 카드 1회 composition을 11.5ms에서 5.4ms로 줄였습니다.</p><span class="case-link" data-i18n="polle.overview.feature0.link">개선 과정 보기 →</span></a><a href="#architecture"><span class="outcome-number" data-i18n="polle.overview.feature1.label">02 / 탐색</span><h3 data-i18n="polle.overview.feature1.title">4개 탭의 탐색 상태 유지</h3><p data-i18n="polle.overview.feature1.description">4개 탭에 NavController를 각각 두어 이동 이력과 화면 상태를 유지했습니다. 지도도 다시 만들지 않고 이전 위치와 선택한 장소를 이어서 보여줬습니다.</p><span class="case-link" data-i18n="polle.overview.feature1.link">상태 구조 보기 →</span></a><a href="#motion"><span class="outcome-number" data-i18n="polle.overview.feature2.label">03 / 사진</span><h3 data-i18n="polle.overview.feature2.title">편집부터 파일 정리까지</h3><p data-i18n="polle.overview.feature2.description">원본과 편집 정보를 함께 저장해 사진을 다시 편집할 수 있게 했습니다. 업로드 후에는 다른 초안에서 쓰는지 확인하고 파일을 정리했습니다.</p><span class="case-link" data-i18n="polle.overview.feature2.link">사진 처리 보기 →</span></a></div>
       <p class="stack-line"><strong data-i18n="polle.overview.strong">사용 기술</strong> Kotlin · Jetpack Compose · Coroutines / Flow · Coil · Room · WorkManager · ML Kit · GraphQL · Naver Map SDK</p>
     </section>
 
     <section class="case-section wrapper" id="decisions" aria-labelledby="decisions-title">
       <div class="eyebrow">02 · HOMESCREEN SCROLL PERFORMANCE</div>
       <h2 id="decisions-title" data-i18n="polle.decisions.decisions-title">홈 스크롤의 병목을 나누어 개선</h2>
-      <p class="case-result" data-i18n="polle.decisions.p">HomeScreen은 LazyColumn 안에 여러 LazyRow가 중첩된 구조였습니다. 세로로 빠르게 스크롤하면 새 LazyRow의 사진 카드들이 한꺼번에 구성되면서 이미지 초기화와 측정 작업이 몰렸고, 화면이 끊겨 보였습니다.</p>
+      <p class="case-result" data-i18n="polle.decisions.p"><code>HomeScreen</code>은 <code>LazyColumn</code> 안에 섹션별 <code>LazyRow</code>·<code>HorizontalPager</code>가 중첩된 구조였습니다. 세로로 빠르게 플링하면 새 섹션의 사진 카드들이 한꺼번에 구성되면서 이미지 초기화와 측정 작업이 몰렸습니다. 스크롤을 따라 움직이는 헤더의 위치 갱신까지 겹쳐 화면이 끊겼습니다.</p>
+      <div class="performance-records">
+        <div>
+          <span class="record-label" data-i18n="polle.decisions.metric.image.label">이미지 표시 경로 변경</span>
+          <h3 data-i18n="polle.decisions.metric.image.title"><code>HomePlaceCard</code> 1회 composition</h3>
+          <p class="record-value"><span>11.5ms</span><span>→</span><strong>5.4ms</strong></p>
+        </div>
+        <div>
+          <span class="record-label" data-i18n="polle.decisions.metric.layout.label">카드 레이아웃 단순화</span>
+          <h3 data-i18n="polle.decisions.metric.layout.title">빠른 스크롤 첫 프레임 <code>doFrame</code></h3>
+          <p class="record-value"><span>84.5ms</span><span>→</span><strong>64.2ms</strong></p>
+        </div>
+      </div>
+      <p class="record-note" data-i18n="polle.decisions.metric.note">디버그 빌드에서 빠르게 플링하며 캡처한 trace로 변경 전후를 비교했습니다. 디버그 환경의 절대값보다는 변경에 따른 차이를 확인하는 데 사용했습니다. 두 수치는 서로 다른 단계에서 기록했습니다.</p>
+
       <p class="structure-note"><strong data-i18n="polle.decisions.strong">화면 구조</strong> <code data-i18n="polle.decisions.code">LazyColumn → 섹션별 LazyRow·HorizontalPager → 사진 카드</code></p>
-      <div class="case-body text-only"><div><h3 data-i18n="polle.architecture.h3">문제</h3><p data-i18n="polle.decisions.p2">새로 들어오는 LazyRow의 카드 처리에 스크롤을 따라 움직이는 상단 영역(헤더)의 위치 갱신까지 겹쳤습니다. 새 카드를 준비하는 작업과 스크롤 중 계속 반복되는 작업을 나눠 살펴봤습니다.</p></div><div><h3 data-i18n="polle.architecture.h32">구현 과정</h3><p data-i18n="polle.decisions.p3">내용이 바뀌지 않은 부분을 다시 계산하는 일부터 줄이고, 이미지 표시를 준비하는 과정과 카드 구조를 단순화했습니다. 헤더 위치를 갱신하는 방식도 바꿔, 스크롤 입력마다 처리할 작업이 쌓이지 않도록 했습니다.</p></div></div>
-      <div class="verification-note"><h3 data-i18n="polle.decisions.validation-title">확인 방법</h3><p data-i18n="polle.decisions.validation">Android Studio에서 디버그 빌드의 trace를 캡처해 스크롤 중 시간이 많이 걸리는 구간을 확인했습니다. 변경 후에는 릴리스 빌드를 직접 사용하면서 스크롤이 끊기는지 확인했습니다.</p></div>
+      <div class="case-body text-only"><div><h3 data-i18n="polle.architecture.h3">문제</h3><p data-i18n="polle.decisions.p2">새로 들어오는 섹션의 카드 준비 작업과, 스크롤 입력마다 반복되는 헤더 위치 갱신이 같은 프레임에 겹쳤습니다. 두 종류의 작업을 나눠 각각의 비용을 줄였습니다.</p></div><div><h3 data-i18n="polle.architecture.h32">구현 과정</h3><p data-i18n="polle.decisions.p3">바뀌지 않은 부분을 다시 계산하는 일부터 줄이고, 이미지 준비 경로와 카드 구조를 단순화했습니다. 헤더는 스크롤 입력마다 작업이 쌓이지 않는 방식으로 바꿨습니다. 마지막에는 릴리스 빌드에서 동작을 확인하며 불필요한 캐시를 걷어냈습니다.</p></div></div>
+      <div class="verification-note"><h3 data-i18n="polle.decisions.validation-title">확인 방법</h3><p data-i18n="polle.decisions.validation">Compose compiler reports·metrics로 모델의 안정성과 재구성을 건너뛸 수 있는 대상을 확인했습니다. Android Studio에서 디버그 빌드의 trace를 캡처해 빠른 스크롤의 변경 전후를 비교했습니다. 이후 릴리스 빌드에서 빠르게 플링하며 끊김을 직접 확인했습니다.</p></div>
       <details class="case-details" id="diagnosis"><summary data-i18n="polle.decisions.summary">개선 과정</summary><div class="details-content">
         <ol class="optimization-steps">
           <li>
-            <div class="step-heading"><span>01</span><h3 data-i18n="polle.decisions.steps.recomposition.title">스크롤할 때 다시 계산하는 화면 범위 줄이기</h3></div>
-            <p data-i18n="polle.decisions.steps.recomposition.body">스크롤 위치를 화면 구성 단계에서 읽으면, 위치가 바뀔 때마다 내용이 그대로인 부분도 다시 계산할 수 있었습니다. 위치값은 실제 배치·그리기 단계(<code>offset</code>·<code>graphicsLayer</code>)에서 읽도록 옮겼습니다. 목록도 데이터가 바뀔 때만 다시 만들도록 <code>remember</code>로 재사용했습니다.</p>
+            <div class="step-heading"><span>01 · 2026.06.01</span><h3 data-i18n="polle.decisions.steps.recomposition.title">스크롤할 때 다시 계산하는 범위 줄이기</h3></div>
+            <p data-i18n="polle.decisions.steps.recomposition.body">스크롤 위치를 화면 구성 단계에서 읽으면, 위치가 바뀔 때마다 내용이 그대로인 부분까지 다시 계산될 수 있었습니다. 위치값은 배치·그리기 단계에서 읽도록 옮겼습니다. 홈 Store의 목록과 섹션 인자를 <code>ImmutableList</code>로 바꾸고 모델의 안정성을 정리해, 데이터가 바뀌지 않았을 때 재구성을 건너뛸 수 있도록 했습니다.</p>
+            <p class="implementation-points" data-i18n="polle.decisions.steps.recomposition.points"><strong>구현 포인트</strong> <code>Modifier.offset { }</code>·<code>graphicsLayer { }</code> 람다에서 위치값 읽기 · <code>ImmutableList</code>로 목록 안정성 정리</p>
           </li>
           <li>
-            <div class="step-heading"><span>02</span><h3 data-i18n="polle.decisions.steps.images.title">새 사진 카드마다 반복되는 이미지 준비 작업 줄이기</h3></div>
-            <p data-i18n="polle.decisions.steps.images.body">여러 사진 카드가 한꺼번에 나타나면, 카드마다 이미지 표시 컴포넌트를 초기화하는 비용이 쌓였습니다. Coil 로더를 직접 호출해 결과 이미지를 그리는 <code>FastAsyncImage</code>를 만들어 표시 준비 과정을 줄였습니다. 기존 로더와 캐시는 그대로 공유했습니다.</p>
+            <div class="step-heading"><span>02 · 2026.06.02</span><h3 data-i18n="polle.decisions.steps.images.title">새 카드마다 반복되는 이미지 준비 줄이기</h3></div>
+            <p data-i18n="polle.decisions.steps.images.body">빠른 스크롤 중에는 카드마다 <code>AsyncImagePainter</code>를 초기화하는 비용이 누적됐습니다. Coil 로더를 직접 호출해 결과 비트맵을 그리는 <code>FastAsyncImage</code>를 만들고, 홈 화면의 이미지 표시 9곳에 적용했습니다. 로더와 캐시는 기존 것을 그대로 공유했습니다. 이 변경으로 <code>HomePlaceCard</code> 1회 composition 시간이 11.5ms에서 5.4ms로 줄었습니다.</p>
+            <p class="implementation-points" data-i18n="polle.decisions.steps.images.points"><strong>구현 포인트</strong> <code>LaunchedEffect(uri)</code> → <code>ImageLoader.execute()</code> → <code>Image(bitmap)</code></p>
           </li>
           <li>
-            <div class="step-heading"><span>03</span><h3 data-i18n="polle.decisions.steps.layout.title">카드 크기와 배치를 계산하는 작업 줄이기</h3></div>
-            <p data-i18n="polle.decisions.steps.layout.body">사진 카드를 여러 레이아웃으로 감싸면서 크기와 위치를 계산해야 할 요소가 늘어났습니다. 불필요한 감싸기 구조를 제거하고 간격은 padding 등으로 처리했습니다. 목록에는 항목 유형(<code>contentType</code>)을 지정해 같은 구조의 카드와 섹션을 재사용할 수 있도록 했습니다.</p>
+            <div class="step-heading"><span>03 · 2026.06.02 / 06.22</span><h3 data-i18n="polle.decisions.steps.layout.title">카드의 측정·배치와 목록 재사용 개선</h3></div>
+            <p data-i18n="polle.decisions.steps.layout.body">이미지를 감싸던 중복 <code>Box</code>를 없애고 modifier를 이미지에 직접 적용했습니다. 일부 <code>Spacer</code>는 <code>padding</code>·<code>spacedBy</code>로 바꿔 측정할 노드 수를 줄였습니다. 이 레이아웃 변경 후 빠른 스크롤 첫 프레임의 <code>doFrame</code>이 84.5ms에서 64.2ms로 줄었습니다. 로딩용 임시 항목 수도 줄였습니다. 앞서 가로 목록에 지정한 <code>key</code>·<code>contentType</code>에 이어, 6월 22일에는 바깥 세로 목록의 <code>HomeDefaultSection</code>에도 <code>contentType</code>을 지정했습니다.</p>
+            <p class="implementation-points" data-i18n="polle.decisions.steps.layout.points"><strong>구현 포인트</strong> <code>padding</code>·<code>spacedBy</code> · 가로 목록 항목의 <code>key</code>·<code>contentType</code> · 바깥 <code>LazyColumn</code>의 섹션 <code>contentType</code></p>
           </li>
           <li>
-            <div class="step-heading"><span>04</span><h3 data-i18n="polle.decisions.steps.header.title">헤더 처리가 스크롤 입력을 지연시키지 않도록 변경</h3></div>
-            <p data-i18n="polle.decisions.steps.header.body">스크롤을 따라 움직이는 헤더의 위치를 갱신하려고 입력마다 코루틴을 실행하면서 대기 작업이 쌓였습니다. 짧은 위치 갱신은 입력을 처리할 때 바로 반영하도록 바꿨습니다. 손을 뗀 뒤 본문이 움직이는 관성 스크롤도 헤더 애니메이션을 기다리지 않도록 분리했습니다.</p>
+            <div class="step-heading"><span>04 · 2026.06.05</span><h3 data-i18n="polle.decisions.steps.header.title">헤더 처리가 스크롤 입력을 지연시키지 않도록 변경</h3></div>
+            <p data-i18n="polle.decisions.steps.header.body">헤더 위치를 갱신하려고 스크롤 입력마다 코루틴을 실행하면서 대기 작업이 쌓이고, 터치 반응이 늦어졌습니다. 짧은 위치 갱신은 입력을 처리하는 시점에 동기로 반영하도록 바꿨습니다. 측정 도중 상태를 쓰던 코드는 크기가 확정된 뒤로 옮겼습니다. 손을 뗀 뒤의 관성 스크롤은 헤더 애니메이션이 끝나기를 기다리지 않도록 분리했습니다. 이때 표시용 목록을 재사용하고, 페이지마다 반복하던 지도 상태 구독도 페이저 바깥으로 옮겼습니다.</p>
+            <p class="implementation-points" data-i18n="polle.decisions.steps.header.points"><strong>구현 포인트</strong> <code>NestedScrollConnection.onPreScroll</code>의 코루틴·<code>snapTo</code> → <code>mutableFloatStateOf</code> 동기 갱신 · 연결 객체 유지 + <code>rememberUpdatedState</code> · <code>onSizeChanged</code> · <code>remember(places)</code> · <code>Map.state</code> 구독 이동</p>
+          </li>
+          <li>
+            <div class="step-heading"><span>05 · 2026.07.02</span><h3 data-i18n="polle.decisions.steps.cleanup.title">불필요한 캐시 걷어내기</h3></div>
+            <p data-i18n="polle.decisions.steps.cleanup.body">초기에 추가했던 최상위 <code>TextStyle</code> 캐시 9개를 제거하고 사용처에서 스타일을 만들도록 정리했습니다. 릴리스 빌드에서 직접 스크롤하며 버벅임이 없는지 확인했습니다. 불필요한 캐시를 유지하는 대신 스타일을 사용하는 코드 곁에 뒀습니다.</p>
+            <p class="implementation-points" data-i18n="polle.decisions.steps.cleanup.points"><strong>구현 포인트</strong> 최상위 <code>TextStyle</code> 캐시 9개 제거 · 사용처에서 <code>TextStyle.copy()</code> 호출</p>
           </li>
         </ol>
-        <p class="tradeoff" data-i18n="polle.decisions.p12"><strong>이미지 표시의 적용 범위</strong> 홈 카드에 필요한 비트맵 표시를 지원하고, 사진 전환 효과(crossfade)와 범용 오류 이미지는 생략했습니다. 이런 기능이 필요한 다른 화면에서는 기존 이미지 컴포넌트를 유지했습니다.</p>
+        <p class="tradeoff" data-i18n="polle.decisions.p12"><strong>이미지 표시의 적용 범위</strong> <code>FastAsyncImage</code>는 홈 카드에 필요한 비트맵 표시만 지원하고, 전환 효과(crossfade)와 범용 오류 이미지는 생략했습니다. 이 기능이 필요한 다른 화면에서는 기존 이미지 컴포넌트를 그대로 사용했습니다.</p>
       </div></details>
     </section>
 
@@ -216,7 +243,7 @@
       <div class="eyebrow">05 · ANDROID UI &amp; DEVICE ADAPTATION</div>
       <h2 id="adaptive-ui-title" data-i18n="polle.adaptive.title">화면 크기와 시스템 동작을 고려한 Android UI</h2>
       <p class="case-result" data-i18n="polle.adaptive.result">UI 디자인 회의에서 Android의 뒤로가기와 시스템 내비게이션 바를 고려해 달라고 요청했습니다. 폴더블처럼 화면이 넓어져도 자연스럽게 보이도록 이야기하고, 화면 폭에 따른 배치와 크기 제한을 구현했습니다.</p>
-      <div class="platform-grid"><div><span class="platform-number">01</span><h3 data-i18n="polle.adaptive.item0.title">넓어져도 과도하게 커지지 않게</h3><p data-i18n="polle.adaptive.item0.body">화면 폭을 구간별로 나누어 배치를 바꾸고, 크기가 달라지면 화면 정보를 갱신했습니다. 넓은 화면에서 홈 페이저의 카드가 너무 커지지 않도록 폭을 제한하고, 사진과 배너의 확대 비율에도 상한을 뒀습니다.</p></div><div><span class="platform-number">02</span><h3 data-i18n="polle.adaptive.item1.title">시스템 영역과 콘텐츠의 경계</h3><p data-i18n="polle.adaptive.item1.body">하단 탭에는 시스템 내비게이션 바 높이를 더하고, 편집·입력 화면에는 내비게이션 바와 키보드 인셋을 적용했습니다. 지도 탭의 기본 화면에서는 뒤로가기로 검색을 먼저 닫도록 했습니다.</p></div><div><span class="platform-number">03</span><h3 data-i18n="polle.adaptive.item2.title">에뮬레이터에서 직접 확인</h3><p data-i18n="polle.adaptive.item2.body">화면 폭에 맞춰 배치를 바꾼 뒤 에뮬레이터에서 앱을 직접 실행했습니다. 폴더블을 고려해 수정한 UI가 이상 없이 동작하는지 확인했습니다.</p></div></div>
+      <div class="platform-grid"><div><span class="platform-number">01</span><h3 data-i18n="polle.adaptive.item0.title">넓어져도 과도하게 커지지 않게</h3><p data-i18n="polle.adaptive.item0.body">자체 <code>WindowWidthClass</code>로 화면 폭을 600dp 미만·600–839dp·840dp 이상으로 나눴습니다. 크기가 달라지면 구간 정보를 갱신했습니다. 넓은 화면에서는 홈 페이저의 카드 폭을 <code>PageSize.Fixed(360.dp)</code>로 고정했습니다. 사진과 배너에 쓰는 <code>screenRatioCapped</code>는 디자인 기준 402dp 대비 확대 비율이 1을 넘지 않게 했습니다.</p></div><div><span class="platform-number">02</span><h3 data-i18n="polle.adaptive.item1.title">시스템 영역과 콘텐츠의 경계</h3><p data-i18n="polle.adaptive.item1.body">하단 탭에는 시스템 내비게이션 바 높이를 더하고, 편집·입력 화면에는 내비게이션 바와 키보드 인셋을 적용했습니다. 지도 탭의 기본 화면에서는 뒤로가기로 검색을 먼저 닫도록 했습니다.</p></div><div><span class="platform-number">03</span><h3 data-i18n="polle.adaptive.item2.title">에뮬레이터에서 직접 확인</h3><p data-i18n="polle.adaptive.item2.body">화면 폭에 맞춰 배치를 바꾼 뒤 에뮬레이터에서 앱을 직접 실행했습니다. 폴더블을 고려해 수정한 UI가 이상 없이 동작하는지 확인했습니다.</p></div></div>
     </section>
 
     <section class="case-section wrapper" id="recommendation" aria-labelledby="recommendation-title">
@@ -224,7 +251,7 @@
       <h2 id="recommendation-title" data-i18n="polle.recommendation.recommendation-title">최근 사진에서 시작되는 방문 넛지</h2>
       <p class="case-result" data-i18n="polle.recommendation.p">기기의 최근 사진을 보고 “이 장소에 다녀오셨나요?”라고 묻는 넛지를 만들었습니다. 사진과 위치 메타데이터 접근 권한을 먼저 확인하고, 음식 분류는 기기에서 처리했습니다. 주변 장소를 찾을 때는 방문 묶음의 대표 좌표를 서버에 전달했습니다.</p>
       <div class="case-body">
-        <div><h3 data-i18n="polle.architecture.h3">문제</h3><p data-i18n="polle.recommendation.p2">방문 사진을 찍어도 리뷰를 남기려면 직접 글쓰기를 열고 장소를 찾아야 했습니다. 최근 사진에서 방문한 곳을 추정해 앱이 먼저 방문 여부를 묻고, 리뷰 작성을 제안하도록 했습니다.</p><h3 data-i18n="polle.architecture.h32">구현 과정</h3><p data-i18n="polle.recommendation.p3">로그인 상태에서 필요한 권한이 있으면 최근 사진을 확인했습니다. 비슷한 시간과 위치에서 찍힌 사진을 한 번의 방문으로 묶고, ML Kit의 음식 라벨에 주변 장소의 메뉴·업종·거리·촬영 당시 영업 여부를 함께 반영해 후보를 골랐습니다.</p><p data-i18n="polle.recommendation.p4">사진과 장소 후보를 팝업으로 보여주고, 다른 장소를 고르거나 닫을 수 있게 했습니다.</p></div>
+        <div><h3 data-i18n="polle.architecture.h3">문제</h3><p data-i18n="polle.recommendation.p2">방문 사진을 찍어도 리뷰를 남기려면 직접 글쓰기를 열고 장소를 찾아야 했습니다. 최근 사진에서 방문한 곳을 추정해 앱이 먼저 방문 여부를 묻고, 리뷰 작성을 제안하도록 했습니다.</p><h3 data-i18n="polle.architecture.h32">구현 과정</h3><p data-i18n="polle.recommendation.p3">로그인 상태에서 필요한 권한이 있으면 최근 사진을 확인했습니다. 비슷한 시간과 위치에서 찍힌 사진을 한 번의 방문으로 묶고, ML Kit의 음식 라벨에 주변 장소의 메뉴·업종·거리·촬영 당시 영업 여부를 함께 반영해 후보를 골랐습니다. <code>startedThisProcess</code>로 같은 앱 프로세스에서는 검사를 한 번만 시도하도록 했습니다.</p><p data-i18n="polle.recommendation.p4">사진과 장소 후보를 팝업으로 보여주고, 다른 장소를 고르거나 닫을 수 있게 했습니다.</p></div>
         <figure class="mockup" data-nudge-demo>
           <figcaption><span class="mockup-label" data-i18n="polle.architecture.span">동작 설명용 목업</span><span data-i18n="polle.recommendation.span">최근 사진 확인 후 나타나는 넛지의 예시입니다.</span></figcaption>
           <div class="phone-frame">
